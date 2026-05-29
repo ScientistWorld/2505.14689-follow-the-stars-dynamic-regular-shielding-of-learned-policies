@@ -3,4 +3,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim_plus
-notes: "Core FactoryBot STARs reproduction is packaged. Main scoring now includes all declared benefit, robustness, and reward-constraint metrics; validate.py --compare passes."
+notes: "Final verification passed at core_claim_plus; method-agnostic docs, reusable eval, train/test split, and scoring checks are ready for gym use."

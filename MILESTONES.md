@@ -33,5 +33,9 @@
 - Main scoring now reports the declared category-robustness and reward-budget constraint metrics in addition to the primary Buchi/reward tradeoff.
 - `python validate.py --compare`, `scripts/evaluate.sh`, and Python bytecode compilation all pass after the scoring-completeness fix.
 
+### [2026-05-29 04:12] - core_claim_plus
+- Final verification confirmed method/problem separation, reusable evaluation, train/test scoring consistency, shared-free downloads, and reasonable metric coefficients.
+- Removed stale tracked trajectory logs from the repository index and cleaned generated Python bytecode caches.
+
 ## Stop Justification
 - Completed at milestone `core_claim_plus`.
