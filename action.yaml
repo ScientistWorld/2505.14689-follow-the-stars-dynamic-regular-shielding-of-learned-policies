@@ -27,8 +27,8 @@
 #   milestone: core_claim
 #   notes: "Reproduced the core claim. Environment packaged."
 
-action: pending
-gpus: 1
+action: submit
+gpus: 0
 test: false
-milestone: none
-notes: ""
+milestone: method_runs
+notes: "Run the longer CPU FactoryBot STARs reproduction and evaluation to test the core Buchi-frequency/reward tradeoff."
