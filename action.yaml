@@ -5,4 +5,4 @@ action: submit
 gpus: 0
 test: true
 milestone: core_claim
-notes: "CPU validation rerun for corrected FactoryBot Close/Far distances, 50-instance suite, 100000-step horizon, and reward-gap scoring."
+notes: "Resubmitting CPU validation rerun at 2026-05-29 03:22 UTC for corrected FactoryBot Close/Far distances, 50-instance suite, 100000-step horizon, and reward-gap scoring."
