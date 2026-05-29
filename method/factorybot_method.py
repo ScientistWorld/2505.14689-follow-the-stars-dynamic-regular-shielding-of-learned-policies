@@ -131,9 +131,10 @@ def main() -> None:
     parser.add_argument("--theta", type=float, default=0.02)
     parser.add_argument("--epsilon", type=float, default=0.04)
     parser.add_argument("--seed", type=int, default=7)
+    parser.add_argument("--regenerate-suite", action="store_true")
     args = parser.parse_args()
 
-    if not args.suite.exists():
+    if args.regenerate_suite or not args.suite.exists():
         write_suite(args.suite)
     instances = read_suite(args.suite)
 

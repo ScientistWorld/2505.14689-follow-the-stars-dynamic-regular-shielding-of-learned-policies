@@ -14,4 +14,5 @@ set -e
 cd /home/user
 
 export STEPS="${STEPS:-100000}"
+export REGENERATE_SUITE=1
 bash scripts/method.sh

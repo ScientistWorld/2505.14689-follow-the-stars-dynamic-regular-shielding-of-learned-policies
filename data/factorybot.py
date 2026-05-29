@@ -156,14 +156,11 @@ def generate_instance(seed: int, size: int, category: str) -> FactoryBotInstance
 
 
 def default_suite() -> list[FactoryBotInstance]:
-    specs = [
-        (101, 7, "close"),
-        (102, 7, "close"),
-        (201, 7, "far"),
-        (202, 9, "far"),
-        (301, 9, "close"),
-        (302, 9, "far"),
-    ]
+    specs = []
+    for idx, size in enumerate((5, 7, 9, 11, 13), start=1):
+        for offset in range(3):
+            specs.append((1000 + idx * 10 + offset, size, "close"))
+            specs.append((2000 + idx * 10 + offset, size, "far"))
     return [generate_instance(seed, size, category) for seed, size, category in specs]
 
 
@@ -175,4 +172,3 @@ def write_suite(path: Path) -> None:
 
 def read_suite(path: Path) -> list[FactoryBotInstance]:
     return [FactoryBotInstance.from_json(x) for x in json.loads(path.read_text())]
-
