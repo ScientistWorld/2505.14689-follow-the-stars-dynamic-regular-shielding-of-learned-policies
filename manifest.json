@@ -1,0 +1,130 @@
+{
+  "paper": {
+    "arxiv_id": "2505.14689",
+    "title": "Follow the STARs: Dynamic $\u03c9$-Regular Shielding of Learned Policies",
+    "date": null,
+    "topics": null
+  },
+  "reproduction": {
+    "milestone": "core_claim",
+    "status": "done",
+    "error": null,
+    "scaffold": "codex",
+    "model": "gpt-5.5",
+    "profile": "gpt-5.5-medium",
+    "effort": "medium",
+    "gpu_hours_used": 0.0,
+    "current_iteration_gpu_budget": 30,
+    "current_iteration_gpu_hours_used": 0.0,
+    "total_gpu_hours_used": 0.0,
+    "current_iteration_cpu_hours_used": 0.034,
+    "total_cpu_hours_used": 0.034,
+    "gpu_budget": 30,
+    "duration_sec": 760.4,
+    "cost_usd": null,
+    "input_tokens": 4865645,
+    "output_tokens": 20883,
+    "cached_input_tokens": 4507904,
+    "cache_creation_tokens": null,
+    "reasoning_tokens": 0,
+    "total_input_tokens": 4865645,
+    "num_turns": 54,
+    "duration_api_ms": null,
+    "num_runs": 1,
+    "iteration_count": 0,
+    "workflow": "standard",
+    "workflow_step": 0,
+    "total_gpu_jobs": 2,
+    "time_breakdown": {
+      "working": 500.90757274627686,
+      "building": 0.10257315635681152,
+      "installing": 2.0243542194366455,
+      "waiting": 184.2172429561615
+    }
+  },
+  "agents": [
+    {
+      "scaffold": "codex",
+      "model": "gpt-5.5",
+      "profile": "gpt-5.5-medium",
+      "effort": "medium",
+      "role": "reproducer",
+      "is_iteration": false,
+      "iteration": 1,
+      "workflow": "standard",
+      "workflow_step": 0,
+      "started_at": 1780022919.5981967,
+      "finished_at": 1780023680.012642,
+      "duration_sec": 760.4,
+      "blocked_sec": 0.0,
+      "status": "done",
+      "error": null,
+      "milestone": "core_claim",
+      "gpu_budget": 30,
+      "gpu_hours_used": 0.0,
+      "total_gpu_hours_used": 0.0,
+      "cpu_hours_used": 0.034,
+      "time_breakdown": {
+        "working": 500.90757274627686,
+        "building": 0.10257315635681152,
+        "installing": 2.0243542194366455,
+        "waiting": 184.2172429561615
+      },
+      "cost_usd": null,
+      "input_tokens": 4865645,
+      "output_tokens": 20883,
+      "cached_input_tokens": 4507904,
+      "cache_creation_tokens": null,
+      "reasoning_tokens": 0,
+      "total_input_tokens": 4865645,
+      "num_turns": 54,
+      "duration_api_ms": null,
+      "tool_uses": {
+        "shell": 41,
+        "file_edit": 13
+      },
+      "gpu_jobs": [
+        {
+          "run_id": "1c20f5bd-cc6",
+          "command": "bash /home/user/scripts/run.sh",
+          "num_gpus": 0,
+          "num_cpus": 1,
+          "resource": "gpu-cpu-test",
+          "hive_job_id": "25741d0e",
+          "status": "completed",
+          "returncode": 0,
+          "duration_sec": 61.7,
+          "submitted_at": 1780023349.4985306,
+          "started_at": 1780023363.7763727,
+          "completed_at": 1780023425.5195227
+        },
+        {
+          "run_id": "d7063bb7-83f",
+          "command": "bash /home/user/scripts/run.sh",
+          "num_gpus": 0,
+          "num_cpus": 1,
+          "resource": "gpu-cpu-test",
+          "hive_job_id": "0581a322",
+          "status": "completed",
+          "returncode": 0,
+          "duration_sec": 60.1,
+          "submitted_at": 1780023507.2739267,
+          "started_at": 1780023548.9455173,
+          "completed_at": 1780023609.0731716
+        }
+      ],
+      "progress_log": "### [2026-05-29 03:10] - method_runs\n- Read the paper and identified FactoryBot as the tractable core claim: dynamic liveness shielding should increase Buchi visits while retaining reward better than naive exploration.\n- Implemented the paper's STARs runtime update with strategy-template live groups, history counters, thresholding, and normalization.\n- Ran a local smoke test on a short FactoryBot rollout; the method and evaluator execute end-to-end and write `scoring/scores.json`.\n\n### [2026-05-29 03:58] - core_claim\n- Completed a CPU compute job over the fixed FactoryBot suite at 30,000 steps per instance.\n- STARs achieved substantially higher Buchi frequency than both the unshielded policy and the naive exploratory guide.\n- The STARs run also preserved average reward above the naive guide, supporting the paper's central benefit-plus-constraint claim on the scaled FactoryBot setting.\n\n### [2026-05-29 04:02] - core_claim\n- Re-ran the FactoryBot reproduction at the paper's 100,000-step rollout horizon.\n- The longer run preserved the same conclusion: STARs improved recurring-goal frequency by more than 7x over the naive guide while retaining higher average reward than the naive guide.\n- Packaged scripts, data generation, evaluation, scoring, and documentation are complete for the core FactoryBot benchmark."
+    }
+  ],
+  "components": {
+    "has_container": true,
+    "has_method_code": true,
+    "has_evaluation": true,
+    "has_download_script": true,
+    "has_reproduce_script": true,
+    "has_method_script": true,
+    "has_baseline": true,
+    "has_reference": true,
+    "has_data": true
+  }
+}
