@@ -27,7 +27,7 @@
   - `apply_naive`: Buchi frequency 0.02150, average reward 0.42373.
   - `unshielded`: Buchi frequency 0.00889, average reward 0.76857.
   - The selected STARs setting is more conservative after fixing evaluation to score every method on the same 30 instances.
-- Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b visual estimates: ApplySTARs around 0.24 Buchi frequency at the 0.5 reward-closeness threshold versus ApplyNaive around 0.015.
+- Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b/Figure 5 visual estimates at the stricter 0.2 reward-closeness operating point: ApplySTARs around 0.09 Buchi frequency versus ApplyNaive around 0.033.
 
 ## Remaining
 
@@ -36,6 +36,7 @@
 ## Issues
 
 - The paper does not publish FactoryBot table values; the reference file uses visual estimates from Figure 4b and documents this.
+- The initial reference used the 0.5 reward-closeness point from Figure 4b/Figure 5, which was too aggressive for this gym's corrected matched-reward operating point. It was corrected to the stricter 0.2 point after validation flagged the inconsistency.
 - The expanded reproduction uses 30 fixed FactoryBot instances rather than the paper's 383 instances while keeping the 100,000-step horizon.
 - An evaluator bug was found and fixed after job `ce1da14c-3e3`: the previous selection logic filtered individual STARs rows by reward before aggregation, which could compare STARs against baselines on different instance subsets.
 - On the compact suite, the best aggregate STARs setting is driven mostly by close instances; far instances remain harder, consistent with the paper's discussion that larger reward-to-Buchi distance requires a stronger reward/frequency tradeoff.
