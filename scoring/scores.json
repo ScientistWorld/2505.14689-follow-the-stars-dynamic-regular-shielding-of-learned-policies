@@ -3,25 +3,25 @@
     "factorybot_buchi_reward_tradeoff": {
       "results": {
         "apply_naive": {
-          "average_reward": 0.4378722222220501,
-          "buchi_frequency": 0.01718333333333333,
+          "average_reward": 0.4368149999999595,
+          "buchi_frequency": 0.017621666666666667,
           "buchi_frequency_gain_over_naive": 0.0,
-          "mean_tv_interference": 0.2915386666665858,
-          "override_rate": 0.49225555555555556
+          "mean_tv_interference": 0.2912708000003913,
+          "override_rate": 0.49381
         },
         "apply_stars": {
-          "average_reward": 0.5143666666664785,
-          "buchi_frequency": 0.12851666666666667,
-          "buchi_frequency_gain_over_naive": 0.11133333333333334,
-          "mean_tv_interference": 0.3510633613521944,
-          "override_rate": 0.48475
+          "average_reward": 0.5137499999997139,
+          "buchi_frequency": 0.12894,
+          "buchi_frequency_gain_over_naive": 0.11131833333333332,
+          "mean_tv_interference": 0.35047089811820753,
+          "override_rate": 0.487695
         },
         "unshielded": {
-          "average_reward": 0.8018833333336616,
-          "buchi_frequency": 0.0002444444444444445,
-          "buchi_frequency_gain_over_naive": -0.01693888888888889,
+          "average_reward": 0.8020083333340977,
+          "buchi_frequency": 0.00025,
+          "buchi_frequency_gain_over_naive": -0.017371666666666667,
           "mean_tv_interference": 0.0,
-          "override_rate": 0.3027722222222222
+          "override_rate": 0.30405
         }
       }
     }
