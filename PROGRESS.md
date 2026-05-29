@@ -11,6 +11,7 @@
 - A broader compute job completed on 30 FactoryBot instances across grid sizes 5, 7, 9, 11, and 13, preserving the paper's Close/Far split.
 - The evaluator now selects a STARs enforcement setting using full-suite aggregate reward, so baselines and STARs are scored on the same instance set.
 - The FactoryBot generator has been corrected to the paper's Close/Far distance bands and expanded to 50 fixed instances. The next submitted job validates the corrected suite.
+- The baseline runner is now self-contained over `data/` and no longer imports the proposed method implementation.
 
 ## Results
 
@@ -40,6 +41,7 @@
 - The initial reference used a raw average-reward score that was not on the same scale as the paper figure. It has been corrected to a reward-gap-to-nominal constraint at the epsilon=0.4 operating point.
 - The expanded reproduction uses 50 fixed FactoryBot instances rather than the paper's 383 instances while keeping the 100,000-step horizon.
 - An evaluator bug was found and fixed after job `ce1da14c-3e3`: the previous selection logic filtered individual STARs rows by reward before aggregation, which could compare STARs against baselines on different instance subsets.
+- A continuation audit found the baseline script importing from `method/`; this was fixed so `baseline/` remains independent of the proposed STARs code.
 - On the compact suite, the best aggregate STARs setting is driven mostly by close instances; far instances remain harder, consistent with the paper's discussion that larger reward-to-Buchi distance requires a stronger reward/frequency tradeoff.
 
 ## Deviations from Paper
