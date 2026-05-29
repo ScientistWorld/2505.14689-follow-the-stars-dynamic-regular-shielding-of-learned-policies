@@ -4,5 +4,5 @@
 action: submit
 gpus: 0
 test: false
-milestone: method_runs
-notes: "Full CPU validation for corrected FactoryBot STARs pipeline: synthesized Büchi ReachTemplate live groups, average-reward nominal policy, 50-instance suite, 100000-step horizon, and reward-gap scoring."
+milestone: core_claim
+notes: "Core claim verified on corrected 50-instance FactoryBot suite at 2000 steps; submit full CPU validation at the paper's 100000-step horizon for the corrected STARs pipeline."

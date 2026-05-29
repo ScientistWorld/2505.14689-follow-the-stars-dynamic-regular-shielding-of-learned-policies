@@ -5,10 +5,8 @@
 - FactoryBot-style finite grid MDP suite is generated from fixed seeds in `data/factorybot.py`.
 - The STARs runtime shield implements unsafe/co-live/live-group probability modification, counter updates, thresholding, and normalization.
 - `scripts/method.sh` runs the proposed method and `scripts/evaluate.sh` scores JSONL rollout artifacts without importing from `method/`.
-- A short local smoke test completed and showed STARs increasing Buchi frequency over the unshielded policy and naive exploratory baseline.
-- A compute job completed successfully at 30,000 steps per instance and supports the core FactoryBot claim.
-- A second compute job completed successfully at 100,000 steps per instance, matching the paper's FactoryBot rollout horizon.
-- A broader compute job completed on 30 FactoryBot instances across grid sizes 5, 7, 9, 11, and 13, preserving the paper's Close/Far split.
+- A corrected-pipeline validation run completed on the 50-instance suite and supports the core FactoryBot claim.
+- Earlier compute jobs completed at 30,000 and 100,000 steps per instance; they are retained as historical provenance but predate the corrected template-synthesis and nominal-policy path.
 - The evaluator now selects a STARs enforcement setting using full-suite aggregate reward, so baselines and STARs are scored on the same instance set.
 - The FactoryBot generator has been corrected to the paper's Close/Far distance bands and expanded to 50 fixed instances. The next submitted job validates the corrected suite.
 - The baseline runner is now self-contained over `data/` and no longer imports the proposed method implementation.
@@ -37,11 +35,16 @@
   - `apply_naive`: Buchi frequency 0.016, reward gap 0.108.
   - `unshielded`: Buchi frequency 0.016, reward gap 0.000.
   - This verifies the corrected synthesis/policy/evaluation pipeline but is not a full reproduction score.
+- Corrected-pipeline validation at 2,000 steps per instance on the 50-instance suite:
+  - `apply_stars`: Buchi frequency 0.113, reward gap 0.336, Buchi gain over naive 0.074.
+  - `apply_naive`: Buchi frequency 0.039, reward gap 0.358.
+  - `unshielded`: Buchi frequency 0.010, reward gap 0.000.
+  - This is the current verified `core_claim` score in `scoring/scores.json`; it uses the corrected strategy-template synthesis and average-reward nominal policy.
 - Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b/Figure 5 visual estimates at the epsilon=0.4 reward-gap operating point: ApplySTARs around 0.12 Buchi frequency versus ApplyNaive around 0.033.
 
 ## Remaining
 
-- Restore `core_claim` by completing the submitted 100,000-step validation job on the corrected 50-instance FactoryBot suite.
+- Complete the submitted 100,000-step validation job on the corrected 50-instance FactoryBot suite to strengthen the score at the paper's FactoryBot rollout horizon.
 - Higher milestones would require expanding closer to the paper's full 383 FactoryBot instances and reproducing Overcooked-AI or LunarLander.
 
 ## Issues
@@ -51,7 +54,7 @@
 - The expanded reproduction uses 50 fixed FactoryBot instances rather than the paper's 383 instances while keeping the 100,000-step horizon.
 - An evaluator bug was found and fixed after job `ce1da14c-3e3`: the previous selection logic filtered individual STARs rows by reward before aggregation, which could compare STARs against baselines on different instance subsets.
 - A continuation audit found the baseline script importing from `method/`; this was fixed so `baseline/` remains independent of the proposed STARs code.
-- A continuation audit found the previous FactoryBot template path was too heuristic. The method now implements the paper's Büchi strategy-template synthesis specialization explicitly, but the existing `scoring/scores.json` still comes from the earlier 30-instance 100,000-step artifact until the submitted corrected validation job replaces it.
+- A continuation audit found the previous FactoryBot template path was too heuristic. The method now implements the paper's Büchi strategy-template synthesis specialization explicitly, and `scoring/scores.json` has been regenerated from the corrected 50-instance pipeline at a 2,000-step validation horizon.
 - On the compact suite, the best aggregate STARs setting is driven mostly by close instances; far instances remain harder, consistent with the paper's discussion that larger reward-to-Buchi distance requires a stronger reward/frequency tradeoff.
 
 ## Deviations from Paper
