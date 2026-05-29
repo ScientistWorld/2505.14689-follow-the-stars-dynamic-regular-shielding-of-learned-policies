@@ -3,4 +3,4 @@ action: submit
 gpus: 0
 test: false
 milestone: core_claim_plus
-notes: "Run the corrected FactoryBot STARs pipeline at the paper-scale 383-instance suite with random initial states and 100,000 rollout steps, then refresh main/train/test scores."
+notes: "Final verification found stale 50-instance score artifacts after the 383-instance random-start protocol update; run the current paper-scale FactoryBot pipeline and refresh main/train/test scores."

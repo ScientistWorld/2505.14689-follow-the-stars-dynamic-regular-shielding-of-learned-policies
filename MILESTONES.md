@@ -44,4 +44,4 @@
 - Submitting a CPU job at the paper's 100,000-step rollout horizon to verify whether the current `core_claim_plus` result holds under the original instance count and corrected random-start protocol.
 
 ## Stop Justification
-- Not stopping in this turn; submitting a paper-scale validation job while retaining the current verified milestone `core_claim_plus`.
+- Not stopping in this turn; final verification found that the current score artifacts still correspond to the prior 50-instance run after the tracked code/data were moved to the 383-instance random-start protocol. Submitting the paper-scale CPU validation job while retaining the previously verified milestone `core_claim_plus`.
