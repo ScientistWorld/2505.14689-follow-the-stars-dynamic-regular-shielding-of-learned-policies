@@ -11,21 +11,8 @@ from typing import Mapping
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from data.factorybot import ACTIONS, FactoryBotInstance, read_suite, shortest_distances, write_suite
-
-
-def soft_nominal_policy(
-    instance: FactoryBotInstance,
-    state: tuple[int, int],
-    epsilon: float,
-    reward_dist: dict[tuple[int, int], int],
-) -> dict[str, float]:
-    best = min(reward_dist.get(instance.step(state, a), 10**6) for a in ACTIONS)
-    greedy = [a for a in ACTIONS if reward_dist.get(instance.step(state, a), 10**6) == best]
-    probs = {a: epsilon / len(ACTIONS) for a in ACTIONS}
-    for action in greedy:
-        probs[action] += (1.0 - epsilon) / len(greedy)
-    return probs
+from data.factorybot import ACTIONS, FactoryBotInstance, read_suite, write_suite
+from data.factorybot_nominal import PolicyTable, optimal_average_reward_policy
 
 
 def total_variation(p: Mapping[str, float], q: Mapping[str, float]) -> float:
@@ -49,19 +36,18 @@ def run_baseline_episode(
     instance: FactoryBotInstance,
     method: str,
     steps: int,
-    epsilon: float,
+    nominal_policy: PolicyTable,
     seed: int,
 ) -> dict:
     rng = random.Random(seed)
     state = instance.start
-    reward_dist = shortest_distances(instance, instance.reward)
     visits = 0
     reward_sum = 0.0
     tv_sum = 0.0
     overrides = 0
 
     for _ in range(steps):
-        nominal = soft_nominal_policy(instance, state, epsilon=epsilon, reward_dist=reward_dist)
+        nominal = nominal_policy[state]
         if method == "apply_naive":
             policy = {a: 0.5 * nominal[a] + 0.5 / len(ACTIONS) for a in ACTIONS}
         elif method == "unshielded":
@@ -90,6 +76,7 @@ def run_baseline_episode(
         "average_reward": reward_sum / steps,
         "mean_tv_interference": tv_sum / steps,
         "override_rate": overrides / steps,
+        "nominal_policy": "relative_value_iteration_average_reward",
     }
 
 
@@ -108,8 +95,9 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w") as f:
         for idx, instance in enumerate(instances):
+            nominal_policy = optimal_average_reward_policy(instance, epsilon=args.epsilon)
             for method in ("unshielded", "apply_naive"):
-                row = run_baseline_episode(instance, method, args.steps, args.epsilon, args.seed + idx)
+                row = run_baseline_episode(instance, method, args.steps, nominal_policy, args.seed + idx)
                 f.write(json.dumps(row) + "\n")
 
 

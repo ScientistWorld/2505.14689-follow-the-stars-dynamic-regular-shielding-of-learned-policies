@@ -10,47 +10,10 @@ import sys
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from data.factorybot import ACTIONS, FactoryBotInstance, read_suite, shortest_distances, write_suite
+from data.factorybot import ACTIONS, FactoryBotInstance, read_suite, write_suite
+from data.factorybot_nominal import PolicyTable, optimal_average_reward_policy
 from method.stars import StarShield, StrategyTemplate, total_variation
-
-
-def soft_nominal_policy(
-    instance: FactoryBotInstance,
-    state: tuple[int, int],
-    epsilon: float,
-    reward_dist: dict[tuple[int, int], int],
-) -> dict[str, float]:
-    """Reward-seeking stochastic policy, independent of the Buchi objective."""
-    best = min(reward_dist.get(instance.step(state, a), 10**6) for a in ACTIONS)
-    greedy = [a for a in ACTIONS if reward_dist.get(instance.step(state, a), 10**6) == best]
-    probs = {a: epsilon / len(ACTIONS) for a in ACTIONS}
-    for a in greedy:
-        probs[a] += (1.0 - epsilon) / len(greedy)
-    return probs
-
-
-def buchi_template(instance: FactoryBotInstance) -> StrategyTemplate:
-    """Construct the Büchi live-group template used by STARs.
-
-    For a reach-infinitely-often objective on a strongly connected grid, the
-    distance layers to the Büchi cell form the live groups: each group contains
-    edges from layer i to layer i-1. Repeatedly taking these groups guarantees
-    visits to the Büchi cell.
-    """
-    dist = shortest_distances(instance, instance.buchi)
-    max_d = max(dist.values())
-    groups = []
-    for d in range(1, max_d + 1):
-        edges = []
-        for state, state_d in dist.items():
-            if state_d != d:
-                continue
-            for action in ACTIONS:
-                if dist.get(instance.step(state, action), 10**6) < d:
-                    edges.append((state, action))
-        if edges:
-            groups.append(frozenset(edges))
-    return StrategyTemplate(live_groups=tuple(groups))
+from method.template_synthesis import synthesize_buchi_reach_template, template_summary
 
 
 def sample_action(probs: dict[str, float], rng: random.Random) -> str:
@@ -71,20 +34,21 @@ def run_episode(
     steps: int,
     gamma: float,
     theta: float,
-    epsilon: float,
+    nominal_policy: PolicyTable,
+    template: StrategyTemplate,
     seed: int,
 ) -> dict:
     rng = random.Random(seed)
     state = instance.start
-    shield = StarShield(buchi_template(instance), gamma=gamma, theta=theta)
-    reward_dist = shortest_distances(instance, instance.reward)
+    shield = StarShield(template, gamma=gamma, theta=theta)
+    summary = template_summary(template)
     visits = 0
     reward_sum = 0.0
     tv_sum = 0.0
     overrides = 0
 
     for _ in range(steps):
-        nominal = soft_nominal_policy(instance, state, epsilon=epsilon, reward_dist=reward_dist)
+        nominal = nominal_policy[state]
         if method == "apply_stars":
             policy = shield.distribution(state, nominal, ACTIONS)
         elif method == "apply_naive":
@@ -119,6 +83,10 @@ def run_episode(
         "average_reward": reward_sum / steps,
         "mean_tv_interference": tv_sum / steps,
         "override_rate": overrides / steps,
+        "template_live_groups": summary["live_groups"],
+        "template_live_edges": summary["live_edges"],
+        "template_unsafe_edges": summary["unsafe_edges"],
+        "nominal_policy": "relative_value_iteration_average_reward",
     }
 
 
@@ -141,11 +109,31 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w") as f:
         for inst_idx, instance in enumerate(instances):
+            nominal_policy = optimal_average_reward_policy(instance, epsilon=args.epsilon)
+            template = synthesize_buchi_reach_template(instance, {instance.buchi})
             for method in ("unshielded", "apply_naive"):
-                row = run_episode(instance, method, args.steps, args.gamma[0], args.theta, args.epsilon, args.seed + inst_idx)
+                row = run_episode(
+                    instance,
+                    method,
+                    args.steps,
+                    args.gamma[0],
+                    args.theta,
+                    nominal_policy,
+                    template,
+                    args.seed + inst_idx,
+                )
                 f.write(json.dumps(row) + "\n")
             for gamma in args.gamma:
-                row = run_episode(instance, "apply_stars", args.steps, gamma, args.theta, args.epsilon, args.seed + inst_idx)
+                row = run_episode(
+                    instance,
+                    "apply_stars",
+                    args.steps,
+                    gamma,
+                    args.theta,
+                    nominal_policy,
+                    template,
+                    args.seed + inst_idx,
+                )
                 f.write(json.dumps(row) + "\n")
 
 

@@ -75,30 +75,53 @@ def aggregate(rows: list[dict], *, scored_only: bool = True) -> dict[str, dict[s
     return out
 
 
-def best_stars_by_reward_gap(rows: list[dict], reward_gap_budget: float) -> tuple[float | None, list[dict]]:
-    stars = [r for r in rows if r["method"] == "apply_stars"]
-    if not stars:
-        return None, []
-
-    grouped: dict[float, list[dict]] = {}
-    for row in stars:
-        grouped.setdefault(float(row["gamma"]), []).append(row)
-    candidates = {
-        gamma: items
-        for gamma, items in grouped.items()
-        if mean(x["reward_gap_to_nominal"] for x in items) <= reward_gap_budget
-    }
-    if not candidates:
-        candidates = grouped
-
-    best_gamma = max(
-        candidates,
-        key=lambda g: (
-            mean(x["buchi_frequency"] for x in candidates[g]),
-            -mean(x["reward_gap_to_nominal"] for x in candidates[g]),
-        ),
+def method_config_key(row: dict) -> tuple:
+    return (
+        row.get("gamma"),
+        row.get("theta"),
+        row.get("config"),
     )
-    return best_gamma, grouped[best_gamma]
+
+
+def select_rows_by_reward_gap(
+    rows: list[dict],
+    reward_gap_budget: float,
+    *,
+    baseline_methods: set[str],
+) -> tuple[list[dict], dict[str, dict]]:
+    selected = [row for row in rows if row["method"] in baseline_methods]
+    selection: dict[str, dict] = {}
+
+    candidate_methods = sorted({row["method"] for row in rows} - baseline_methods)
+    for method in candidate_methods:
+        method_rows = [row for row in rows if row["method"] == method]
+        grouped: dict[tuple, list[dict]] = {}
+        for row in method_rows:
+            grouped.setdefault(method_config_key(row), []).append(row)
+
+        candidates = {
+            key: items
+            for key, items in grouped.items()
+            if mean(x["reward_gap_to_nominal"] for x in items) <= reward_gap_budget
+        }
+        if not candidates:
+            candidates = grouped
+
+        best_key = max(
+            candidates,
+            key=lambda key: (
+                mean(x["buchi_frequency"] for x in candidates[key]),
+                -mean(x["reward_gap_to_nominal"] for x in candidates[key]),
+            ),
+        )
+        selected.extend(grouped[best_key])
+        selection[method] = {
+            "gamma": best_key[0],
+            "theta": best_key[1],
+            "config": best_key[2],
+        }
+
+    return selected, selection
 
 
 def category_diagnostics(rows: list[dict]) -> dict[str, dict]:
@@ -110,6 +133,25 @@ def category_diagnostics(rows: list[dict]) -> dict[str, dict]:
     return out
 
 
+def run_diagnostics(rows: list[dict]) -> dict:
+    instances = sorted({row["instance"] for row in rows})
+    categories = sorted({row["category"] for row in rows})
+    methods = sorted({row["method"] for row in rows})
+    steps = sorted({int(row["steps"]) for row in rows})
+    gammas = sorted({float(row["gamma"]) for row in rows if row.get("gamma") is not None})
+    return {
+        "row_count": len(rows),
+        "instance_count": len(instances),
+        "categories": {
+            category: len({row["instance"] for row in rows if row["category"] == category})
+            for category in categories
+        },
+        "methods": methods,
+        "steps": steps,
+        "stars_gammas": gammas,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, default=Path("checkpoints/factorybot_results.jsonl"))
@@ -119,8 +161,11 @@ def main() -> None:
 
     raw_rows = read_jsonl(args.input)
     rows = with_reward_gap(raw_rows, nominal_rewards(raw_rows))
-    selected_gamma, best_stars = best_stars_by_reward_gap(rows, args.reward_gap_budget)
-    filtered = [r for r in rows if r["method"] in {"unshielded", "apply_naive"}] + best_stars
+    filtered, selected_configs = select_rows_by_reward_gap(
+        rows,
+        args.reward_gap_budget,
+        baseline_methods={"unshielded", "apply_naive"},
+    )
     agg = aggregate(filtered, scored_only=True)
     scores = {
         "experiments": {
@@ -129,7 +174,15 @@ def main() -> None:
             },
             "_diagnostics": {
                 "reward_gap_budget": args.reward_gap_budget,
-                "selected_gamma": selected_gamma if selected_gamma is not None else -1.0,
+                "selected_gamma": (
+                    selected_configs.get("apply_stars", {}).get("gamma")
+                    if "apply_stars" in selected_configs
+                    else -1.0
+                ),
+                "selected_configs": selected_configs,
+                "evaluated_artifact": str(args.input),
+                "run": run_diagnostics(filtered),
+                "raw_artifact": run_diagnostics(rows),
                 "metrics": list(SCORED_METRICS + DIAGNOSTIC_METRICS),
                 "by_category": category_diagnostics(filtered),
             },

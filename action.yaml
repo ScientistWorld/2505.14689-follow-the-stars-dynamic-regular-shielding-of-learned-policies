@@ -4,5 +4,5 @@
 action: submit
 gpus: 0
 test: false
-milestone: core_claim
-notes: "Normal CPU validation rerun at 2026-05-29 03:23 UTC for corrected FactoryBot Close/Far distances, 50-instance suite, 100000-step horizon, and reward-gap scoring."
+milestone: method_runs
+notes: "Full CPU validation for corrected FactoryBot STARs pipeline: synthesized Büchi ReachTemplate live groups, average-reward nominal policy, 50-instance suite, 100000-step horizon, and reward-gap scoring."

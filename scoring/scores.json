@@ -59,6 +59,7 @@
           }
         }
       },
+      "evaluated_artifact": "checkpoints/factorybot_results.jsonl",
       "metrics": [
         "buchi_frequency",
         "reward_gap_to_nominal",
@@ -67,7 +68,56 @@
         "mean_tv_interference",
         "override_rate"
       ],
+      "raw_artifact": {
+        "categories": {
+          "close": 15,
+          "far": 15
+        },
+        "instance_count": 30,
+        "methods": [
+          "apply_naive",
+          "apply_stars",
+          "unshielded"
+        ],
+        "row_count": 210,
+        "stars_gammas": [
+          0.03,
+          0.1,
+          0.2,
+          0.5,
+          1.0
+        ],
+        "steps": [
+          100000
+        ]
+      },
       "reward_gap_budget": 0.4,
+      "run": {
+        "categories": {
+          "close": 15,
+          "far": 15
+        },
+        "instance_count": 30,
+        "methods": [
+          "apply_naive",
+          "apply_stars",
+          "unshielded"
+        ],
+        "row_count": 90,
+        "stars_gammas": [
+          1.0
+        ],
+        "steps": [
+          100000
+        ]
+      },
+      "selected_configs": {
+        "apply_stars": {
+          "config": null,
+          "gamma": 1.0,
+          "theta": 0.02
+        }
+      },
       "selected_gamma": 1.0
     },
     "factorybot_buchi_reward_tradeoff": {
