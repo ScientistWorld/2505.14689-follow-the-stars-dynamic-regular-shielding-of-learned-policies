@@ -1,78 +1,36 @@
 # Scientist Constraints
 
-<!-- Do not edit this unless you decide to stop -->
+These constraints define what future scientist agents must hold fixed when trying to improve the benchmark scores. They are intended to prevent trivial gains from changing the benchmark rather than improving runtime guidance.
 
-<!--
-A scientist agent will attempt to improve on your reproduced results.
-These constraints define what the scientist must hold fixed, so that
-any improvement reflects genuine methodological innovation — not just
-throwing more resources at the problem.
+## Problem Setting
 
-CONTEXT: Your reproduction becomes a benchmark environment. The scientist
-gets your code, data, evaluation pipeline, and these constraints. They
-must beat your scores while respecting every constraint listed here.
-Without good constraints, a scientist can trivially "improve" by swapping
-in a larger model, using a richer dataset that is simply publicly avaliable, or more 
-— none of which demonstrate real scientific insight.
+The scientist must solve the same post-shielding problem: guide a pre-existing probabilistic policy at runtime in FactoryBot. The nominal policy must remain a reward-optimized policy that does not train directly on the Buchi objective used for evaluation. Retraining the nominal policy on the evaluation objective would sidestep the paper's runtime-guidance question.
 
-Your job is to act as a judge: distinguish between flexible innovation
-and non-genuine improvement. Constraints should block trivial gains
-(e.g. just swapping in a bigger model) while leaving room for creative
-methodology (e.g. a clever augmentation strategy, a better loss
-function, a novel use of existing tools). When in doubt, ask: "does
-this require insight, or just more resources?" Lock down the resources,
-leave the insight open. Do not block innovation.
+## Data and Instances
 
-For example, if a scientist downloads online IMDB reviews to supplement a
-sentiment dataset, that's resource scaling. But if they use an LLM to
-augment the existing training data, that's methodology — they designed
-that pipeline. This is just an example, but keep this kind of distinction 
-in mind when writing constraints.
+The scientist must evaluate on the provided FactoryBot instance suite and its fixed random seeds. The suite should preserve the paper's structure: square grids of sizes 5 through 13, Close instances where reward and Buchi regions are near, and Far instances where they are separated. New generated instances may be used for development, but the reported score must use the fixed evaluation suite.
 
-Be SPECIFIC to this paper. Generic constraints are useless. Name the
-exact model, the exact dataset, the exact splits. Explain the reasoning
-so the scientist understands the intent behind each constraint, not
-just the rule — this helps them judge edge cases on their own.
+No external task data may be added to the evaluation. FactoryBot is procedurally generated, so extra public datasets are not relevant; using them would change the problem.
 
-Think about at least:
-- Model: architecture, size, pretrained weights
-- Data: which datasets, which splits, whether external data is allowed
+## Evaluation Protocol
 
-You may add other constraint categories if relevant to this paper
-(e.g. training procedure, evaluation protocol, problem formulation).
+The scientist must use the same rollout horizon, initial-state protocol, reward function, safety constraints, Buchi-region definitions, and Far/Close labels as the benchmark evaluation. They may not filter out hard instances, shorten runs only for their method, or tune per-instance using evaluation outcomes.
 
-Example for a sentiment analysis paper:
+The method must be evaluated through the common runtime-guidance interface. Evaluation code must remain independent of the submitted method implementation and must not import from `method/`.
 
-## Model
-The scientist must use BERT-base-uncased (110M parameters, HuggingFace
-`bert-base-uncased`). The paper's contribution is a novel fine-tuning
-strategy, not architecture design. Switching to a larger model (e.g.
-DeBERTa-v3-large, 304M params) would improve accuracy but would not
-demonstrate any methodological insight. The scientist may modify the
-fine-tuning procedure, add adapter layers, change the classification
-head, or alter the training loop — but the base encoder must remain
-BERT-base-uncased with its standard pretrained weights.
+## Nominal Policy
 
-## Data
-The scientist must use only the provided SST-2 binary sentiment
-dataset (67,349 training examples, 872 validation, 1,821 test).
-No external sentiment corpora or additional human-labeled data.
-The test split must not be used for training or validation.
+The scientist must use the benchmark's provided nominal policy or nominal-policy generation procedure. The policy may be queried as a black-box action distribution during runtime guidance, but its weights, transition preferences, or training objective may not be changed for the reported score.
 
-Delete this comment block and fill in your actual constraints below.
+## Allowed Method Inputs
 
-At the very end, write a compliance checklist for the scientist agent.
-Each item should be a concrete, verifiable condition the scientist can
-check off before submitting. These should mirror your constraints above
-but phrased as yes/no checks.
-
-Example checklist (for the sentiment analysis example above):
+At evaluation time, a method may use the current FactoryBot state, execution history, the nominal action distribution, and the formal problem description supplied by the benchmark. It may not use hidden evaluation labels, future random choices, or rollout outcomes from the same evaluation seed before selecting actions.
 
 ## Compliance Checklist
-- [ ] Model is BERT-base-uncased (110M params), not a larger variant
-- [ ] No external sentiment datasets used beyond SST-2
-- [ ] Test split not used for training or validation
 
-ONLY WRITE ABOUT WHAT TO RESTRICT. NEVER WRITE ABOUT WHAT REMAINS OPEN.
-
--->
+- [ ] Reported scores use the fixed FactoryBot evaluation suite and Far/Close split.
+- [ ] The nominal reward policy is not retrained or fine-tuned on the evaluation Buchi objective.
+- [ ] Rollout horizon, initial-state protocol, rewards, safety rules, and Buchi regions match the benchmark evaluation.
+- [ ] Evaluation code does not import from `method/`.
+- [ ] No hard instances are removed or reweighted outside the benchmark scoring rules.
+- [ ] Method decisions do not use future trajectory information or hidden evaluation outcomes.

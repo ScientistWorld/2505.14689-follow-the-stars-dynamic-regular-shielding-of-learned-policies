@@ -1,50 +1,35 @@
 # Evaluation Targets
 
-<!-- Do not edit this unless you decide to stop -->
+This benchmark is FactoryBot-centered. All targets must be measured with method-agnostic evaluation code that can run any runtime guide through the same action-distribution interface.
 
-<!--
-Describe what a scientist could optimize and how to measure it.
+## Primary: factorybot_buchi_reward_tradeoff
 
-If a paper claims "we get X without sacrificing Y." Your targets must
-capture BOTH sides. Without constraint targets, a scientist can trivially
-"improve" by breaking the property the paper was designed to satisfy.
+Tests whether a runtime guide can increase recurring-goal satisfaction while preserving the nominal reward objective on the paper's random FactoryBot gridworld distribution.
 
-Three kinds of targets:
+- **Metric:** `buchi_frequency` (higher is better)
+- **Constraint metrics:** `average_reward` (higher is better), `reward_gap_to_instance_best` (lower is better), `safety_violation_rate` (lower is better)
+- **How to run evaluation:** Evaluate each method on the fixed FactoryBot instance suite, separately aggregate Close and Far instances, and compute the best Buchi frequency achievable at each reward-closeness threshold.
 
-  PRIMARY    — the main thing the paper optimizes (accuracy, PSNR, etc.)
-  CONSTRAINT — what the paper must maintain (security, fairness, param count,
-               baseline comparison). Constraint metrics guard against cheating:
-               a scientist who ignores the constraint should score WORSE.
-  ABLATION   — what breaks when the key idea is removed (wrong-key test,
-               no-module test). Proves the method actually does something. 
-               This can be ignored if truly not important.
+## Constraint: factorybot_reward_preservation
 
-For each target, write:
-- What the experiment tests (one sentence)
-- The primary metric and direction (higher/lower is better)
-- How to run evaluation
+Tests whether improvements in recurring-goal visits are obtained without simply sacrificing the reward objective the nominal policy was built to optimize.
 
-Every target here MUST appear in both reference.json and scores.json.
-Do not list targets you cannot measure — phantom targets are worse than
-missing targets.
+- **Metric:** `reward_gap_to_instance_best` (lower is better)
+- **Supporting metric:** `average_reward` (higher is better)
+- **How to run evaluation:** Compare method rollouts against the per-instance best reward reference over the same initial-state protocol and horizon used for the primary benchmark.
 
-Example for a steganography paper:
+## Constraint: factorybot_safety_compliance
 
-## Primary: reconstruction_quality
-Cover and hidden scene PSNR on Blender Synthetic.
-- **Metric**: psnr (higher is better)
+Tests whether the runtime guide respects safety constraints while pursuing recurring goals and reward.
 
-## Constraint: key_security
-Wrong-key rendering must produce incoherent output.
-- **Metric**: wrong_key_psnr (lower is better — high means security is broken)
+- **Metric:** `safety_violation_rate` (lower is better)
+- **Supporting metric:** `valid_run_rate` (higher is better)
+- **How to run evaluation:** During the same FactoryBot rollouts, count transitions into blocked/unsafe states or any state-action choices that violate the instance's safety constraints.
 
-## Ablation: vs_standalone_baseline
-Cover quality should match standalone model (no hidden scene embedded).
-- **Metric**: psnr_gap (lower is better — large gap means hiding costs quality)
+## Ablation: factorybot_vs_naive_baseline
 
-Delete this comment block and fill in your actual targets below.
--->
+Tests whether the recurring-goal improvement exceeds what can be obtained by generic stochastic exploration at matched reward levels.
 
-<!-- This is high-level. IT IS ABOUT CONCEPT, NOT NUMBERS. DO NOT INCLUDE ANY ACTUAL VALUES FROM THE PAPER OR YOUR EXPERIMENTS HERE. -->
-
-<!-- This should EXACTLY corresponds to the structure in your scores.json. -->
+- **Metric:** `buchi_frequency_gain_over_naive` (higher is better)
+- **Constraint metric:** `matched_reward_gap` (lower is better)
+- **How to run evaluation:** Run the same instance suite with a naive exploratory runtime guide and compare Buchi frequency only at reward-closeness thresholds where both methods satisfy the same reward constraint.
