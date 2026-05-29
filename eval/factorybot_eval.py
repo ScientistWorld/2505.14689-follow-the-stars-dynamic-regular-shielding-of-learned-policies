@@ -42,18 +42,25 @@ def best_stars_by_reward(rows: list[dict], reward_floor: float | None = None) ->
     if reward_floor is None:
         naive = [r for r in rows if r["method"] == "apply_naive"]
         reward_floor = mean(r["average_reward"] for r in naive) - 0.05 if naive else None
-    candidates = stars if reward_floor is None else [r for r in stars if r["average_reward"] >= reward_floor]
-    if not candidates:
-        candidates = stars
 
     grouped: dict[float, list[dict]] = {}
-    for row in candidates:
+    for row in stars:
         grouped.setdefault(float(row["gamma"]), []).append(row)
+    candidates = grouped
+    if reward_floor is not None:
+        candidates = {
+            gamma: items
+            for gamma, items in grouped.items()
+            if mean(x["average_reward"] for x in items) >= reward_floor
+        }
+    if not candidates:
+        candidates = grouped
+
     best_gamma = max(
-        grouped,
+        candidates,
         key=lambda g: (
-            mean(x["buchi_frequency"] for x in grouped[g]),
-            mean(x["average_reward"] for x in grouped[g]),
+            mean(x["buchi_frequency"] for x in candidates[g]),
+            mean(x["average_reward"] for x in candidates[g]),
         ),
     )
     return grouped[best_gamma]
