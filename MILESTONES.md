@@ -54,4 +54,4 @@
 - The final main/train/test score files now all reflect the current 383-instance protocol and pass `python validate.py --compare`.
 
 ## Stop Justification
-- Final verification is complete at `core_claim_plus`. The paper's core FactoryBot reward/liveness tradeoff is reproduced on the full 383-instance suite and the reusable gym artifacts validate successfully.
+- Completed at milestone `core_claim_plus`.
