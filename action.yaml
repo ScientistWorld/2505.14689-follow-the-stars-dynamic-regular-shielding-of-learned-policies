@@ -1,8 +1,8 @@
 # IMPORTANT: Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends. Sleeping blocks the entire pipeline.
-action: done
-gpus: 0
+action: pending
+gpus: 1
 test: false
-milestone: core_claim_plus
-notes: "Completed expanded FactoryBot STARs reproduction on 30 fixed Close/Far instances. Fixed evaluator to select STARs gamma by full-suite aggregate reward. Corrected scores show ApplySTARs Buchi frequency 0.07349 vs ApplyNaive 0.02150 with matched reward tolerance."
+milestone: core_claim
+notes: ""
