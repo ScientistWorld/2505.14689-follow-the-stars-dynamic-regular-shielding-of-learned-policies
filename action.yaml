@@ -3,4 +3,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim_plus
-notes: "Deterministic instance split with train-selected config applied to held-out test; 18 scored train metrics, 18 scored test metrics. apply_stars Buchi frequency is close across slices (0.1178 train, 0.1099 test) with reward-gap constraint exposed by higher test violation rate (0.24 train, 0.52 test); no nulls or byte-identical split scores."
+notes: "Packaging audit passed: procedural data is tracked/regenerable, download.sh needs no external fetches, and no committed code references shared paths."
