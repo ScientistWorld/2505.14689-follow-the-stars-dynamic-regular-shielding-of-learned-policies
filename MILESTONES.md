@@ -30,5 +30,4 @@
 - This restores `core_claim_plus`: the core reward-versus-liveness claim now holds at the paper's rollout horizon with the corrected template synthesis and nominal-policy path.
 
 ## Stop Justification
-- Stopping at `core_claim_plus`. The corrected FactoryBot reproduction is packaged, validated, and now run at the paper's 100,000-step horizon.
-- Higher milestones would require implementing distinct secondary paper settings: dynamic objective/action-failure adaptation, Overcooked-AI scalability, or LunarLander abstraction experiments.
+- Completed at milestone `core_claim_plus`.
