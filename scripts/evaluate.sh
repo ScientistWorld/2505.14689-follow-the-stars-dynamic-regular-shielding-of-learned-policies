@@ -27,4 +27,9 @@ cd /home/user
 mkdir -p scoring
 
 INPUT="${1:-checkpoints/factorybot_results.jsonl}"
-python eval/factorybot_eval.py --input "$INPUT" --output scoring/scores.json
+REWARD_GAP_BUDGET="${REWARD_GAP_BUDGET:-0.4}"
+
+python eval/factorybot_eval.py \
+  --input "$INPUT" \
+  --output scoring/scores.json \
+  --reward-gap-budget "$REWARD_GAP_BUDGET"

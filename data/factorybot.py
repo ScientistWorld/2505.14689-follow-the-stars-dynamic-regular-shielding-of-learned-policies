@@ -123,7 +123,7 @@ def connected(cells: Iterable[tuple[int, int]], size: int, walls: set[tuple[int,
 
 def generate_instance(seed: int, size: int, category: str) -> FactoryBotInstance:
     rng = random.Random(seed)
-    min_frac, max_frac = (0.65, 0.9) if category == "far" else (0.15, 0.3)
+    min_frac, max_frac = (0.7, 0.9) if category == "far" else (0.1, 0.2)
     cells = [(r, c) for r in range(size) for c in range(size)]
 
     for _ in range(500):
@@ -158,7 +158,7 @@ def generate_instance(seed: int, size: int, category: str) -> FactoryBotInstance
 def default_suite() -> list[FactoryBotInstance]:
     specs = []
     for idx, size in enumerate((5, 7, 9, 11, 13), start=1):
-        for offset in range(3):
+        for offset in range(5):
             specs.append((1000 + idx * 10 + offset, size, "close"))
             specs.append((2000 + idx * 10 + offset, size, "far"))
     return [generate_instance(seed, size, category) for seed, size, category in specs]

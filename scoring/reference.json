@@ -1,7 +1,7 @@
 {
   "experiments": {
     "factorybot_buchi_reward_tradeoff": {
-      "description": "FactoryBot matched-reward shielding quality, based on the paper's Figure 4b/Figure 5 visual estimates at the stricter 0.2 reward-closeness operating point. The paper reports the proposed shield achieving much higher Buchi frequency than the naive exploratory shield while staying within the same reward-closeness condition.",
+      "description": "FactoryBot matched-reward shielding quality, based on the paper's Figure 4b/Figure 5 visual estimates at the epsilon=0.4 reward-gap operating point. The paper reports the proposed shield achieving much higher Buchi frequency than the naive exploratory shield while staying within the same reward-closeness condition.",
       "weight": 1.0,
       "primary_metric": "buchi_frequency",
       "metrics": {
@@ -9,17 +9,9 @@
           "higher_is_better": true,
           "coefficient": 1.0
         },
-        "average_reward": {
-          "higher_is_better": true,
-          "coefficient": 0.4
-        },
-        "mean_tv_interference": {
+        "reward_gap_to_nominal": {
           "higher_is_better": false,
-          "coefficient": -0.2
-        },
-        "override_rate": {
-          "higher_is_better": false,
-          "coefficient": -0.1
+          "coefficient": -0.5
         },
         "buchi_frequency_gain_over_naive": {
           "higher_is_better": true,
@@ -30,26 +22,20 @@
         "unshielded": {
           "type": "baseline",
           "buchi_frequency": 0.015,
-          "average_reward": 1.0,
-          "mean_tv_interference": 0.0,
-          "override_rate": 0.0,
-          "buchi_frequency_gain_over_naive": 0.0
+          "reward_gap_to_nominal": 0.0,
+          "buchi_frequency_gain_over_naive": -0.018
         },
         "apply_naive": {
           "type": "baseline",
           "buchi_frequency": 0.033,
-          "average_reward": 1.0,
-          "mean_tv_interference": 0.5,
-          "override_rate": 0.5,
+          "reward_gap_to_nominal": 0.4,
           "buchi_frequency_gain_over_naive": 0.0
         },
         "apply_stars": {
           "type": "proposed",
-          "buchi_frequency": 0.09,
-          "average_reward": 1.0,
-          "mean_tv_interference": 0.5,
-          "override_rate": 0.5,
-          "buchi_frequency_gain_over_naive": 0.057
+          "buchi_frequency": 0.12,
+          "reward_gap_to_nominal": 0.4,
+          "buchi_frequency_gain_over_naive": 0.087
         }
       }
     }

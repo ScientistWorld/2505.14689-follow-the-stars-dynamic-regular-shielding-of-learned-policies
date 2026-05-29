@@ -10,6 +10,7 @@
 - A second compute job completed successfully at 100,000 steps per instance, matching the paper's FactoryBot rollout horizon.
 - A broader compute job completed on 30 FactoryBot instances across grid sizes 5, 7, 9, 11, and 13, preserving the paper's Close/Far split.
 - The evaluator now selects a STARs enforcement setting using full-suite aggregate reward, so baselines and STARs are scored on the same instance set.
+- The FactoryBot generator has been corrected to the paper's Close/Far distance bands and expanded to 50 fixed instances. The next submitted job validates the corrected suite.
 
 ## Results
 
@@ -27,21 +28,21 @@
   - `apply_naive`: Buchi frequency 0.02150, average reward 0.42373.
   - `unshielded`: Buchi frequency 0.00889, average reward 0.76857.
   - The selected STARs setting is more conservative after fixing evaluation to score every method on the same 30 instances.
-- Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b/Figure 5 visual estimates at the stricter 0.2 reward-closeness operating point: ApplySTARs around 0.09 Buchi frequency versus ApplyNaive around 0.033.
+- Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b/Figure 5 visual estimates at the epsilon=0.4 reward-gap operating point: ApplySTARs around 0.12 Buchi frequency versus ApplyNaive around 0.033.
 
 ## Remaining
 
-- Higher milestones would require adding explicit Far/Close scoring, expanding closer to the paper's full 383 FactoryBot instances, and reproducing Overcooked-AI or LunarLander. The current environment is complete for the expanded FactoryBot core claim.
+- Higher milestones would require expanding closer to the paper's full 383 FactoryBot instances and reproducing Overcooked-AI or LunarLander. The current environment is complete for the FactoryBot core claim once the corrected 50-instance validation job finishes.
 
 ## Issues
 
 - The paper does not publish FactoryBot table values; the reference file uses visual estimates from Figure 4b and documents this.
-- The initial reference used the 0.5 reward-closeness point from Figure 4b/Figure 5, which was too aggressive for this gym's corrected matched-reward operating point. It was corrected to the stricter 0.2 point after validation flagged the inconsistency.
-- The expanded reproduction uses 30 fixed FactoryBot instances rather than the paper's 383 instances while keeping the 100,000-step horizon.
+- The initial reference used a raw average-reward score that was not on the same scale as the paper figure. It has been corrected to a reward-gap-to-nominal constraint at the epsilon=0.4 operating point.
+- The expanded reproduction uses 50 fixed FactoryBot instances rather than the paper's 383 instances while keeping the 100,000-step horizon.
 - An evaluator bug was found and fixed after job `ce1da14c-3e3`: the previous selection logic filtered individual STARs rows by reward before aggregation, which could compare STARs against baselines on different instance subsets.
 - On the compact suite, the best aggregate STARs setting is driven mostly by close instances; far instances remain harder, consistent with the paper's discussion that larger reward-to-Buchi distance requires a stronger reward/frequency tradeoff.
 
 ## Deviations from Paper
 
-- **FactoryBot scale:** The paper evaluates 383 random instances for 100,000 steps each. The current expanded reproduction uses 30 fixed generated instances. The algorithmic procedure is unchanged; only the number of instances is scaled down.
+- **FactoryBot scale:** The paper evaluates 383 random instances for 100,000 steps each. The current expanded reproduction uses 50 fixed generated instances. The algorithmic procedure is unchanged; only the number of instances is scaled down.
 - **Nominal policy:** The paper starts from an average-reward optimized learned policy. This reproduction uses a stochastic shortest-path reward-seeking policy over the same finite grid MDP setting, preserving the key condition that the nominal policy optimizes reward without the Buchi objective.
