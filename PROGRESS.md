@@ -15,6 +15,7 @@
 - The evaluator now scores any non-baseline method name by selecting its best global configuration under the reward-gap budget, while preserving `apply_stars` for comparison against the paper reference.
 - A continuation audit verified that `eval/` remains method-independent, `scripts/evaluate.sh` works standalone, the packaged scores validate against `reference.json`, and the Python modules compile.
 - The next submitted job regenerates the FactoryBot suite at the paper's original 383-instance Close/Far scale and uses a random initial state per instance, matching the paper's rollout protocol more closely than the previous fixed-start 50-instance artifact.
+- The STARs runtime shield now caches live-group edge/source lookups and the method runner flushes JSONL rows after each instance, so paper-scale CPU validation reports progress and preserves partial output under preemption.
 
 ## Results
 
@@ -51,17 +52,19 @@
   - Test `apply_stars`: Buchi frequency 0.10987, reward gap 0.36448, reward-budget violation rate 0.52.
   - The train/test split is not byte-identical and preserves the core signal while exposing held-out reward-budget failures.
 - Packaging audit at 2026-05-29 04:05 updated the main evaluator to emit every declared scored metric. Current `apply_stars` main scores include worst-category Buchi frequency 0.01737, worst-category gain over naive 0.01691, and reward-budget violation rate 0.38.
+- Cancelled job `30cb6c1e-1e7` after 40 minutes because the previous runner produced no flushed output under the 383-instance workload. A post-fix one-instance 100,000-step smoke run completed successfully and wrote the expected seven method/configuration rows.
 - Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b/Figure 5 visual estimates at the epsilon=0.4 reward-gap operating point: ApplySTARs around 0.12 Buchi frequency versus ApplyNaive around 0.033.
 
 ## Remaining
 
-- The current submitted job is intended to replace the 50-instance result with a paper-scale 383-instance FactoryBot result. Higher milestones after that would require reproducing secondary claims: dynamic objective/action-failure adaptation, Overcooked-AI scalability, or LunarLander landing outcomes.
+- The next submitted job is intended to replace the 50-instance result with a paper-scale 383-instance FactoryBot result. Higher milestones after that would require reproducing secondary claims: dynamic objective/action-failure adaptation, Overcooked-AI scalability, or LunarLander landing outcomes.
 
 ## Issues
 
 - The paper does not publish FactoryBot table values; the reference file uses visual estimates from Figure 4b and documents this.
 - The initial reference used a raw average-reward score that was not on the same scale as the paper figure. It has been corrected to a reward-gap-to-nominal constraint at the epsilon=0.4 operating point.
 - The latest completed reproduction uses 50 fixed FactoryBot instances rather than the paper's 383 instances while keeping the 100,000-step horizon. A paper-scale 383-instance CPU rerun has been prepared for submission.
+- The first paper-scale rerun was cancelled before producing scores because repeated live-group bookkeeping made the job too slow and the runner buffered output. This was fixed by caching template lookups in the STARs shield and flushing after each instance; the algorithm and evaluation metrics are unchanged.
 - An evaluator bug was found and fixed after job `ce1da14c-3e3`: the previous selection logic filtered individual STARs rows by reward before aggregation, which could compare STARs against baselines on different instance subsets.
 - A continuation audit found the baseline script importing from `method/`; this was fixed so `baseline/` remains independent of the proposed STARs code.
 - A continuation audit found the previous FactoryBot template path was too heuristic. The method now implements the paper's Büchi strategy-template synthesis specialization explicitly, and `scoring/scores.json` has been regenerated from the corrected 50-instance pipeline at a 2,000-step validation horizon.

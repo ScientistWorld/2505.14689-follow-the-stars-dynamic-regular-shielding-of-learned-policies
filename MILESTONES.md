@@ -43,5 +43,10 @@
 - Updated `scripts/run.sh` to regenerate the suite and rerun the method before evaluation, so submission no longer depends on an ignored preexisting checkpoint artifact.
 - Submitting a CPU job at the paper's 100,000-step rollout horizon to verify whether the current `core_claim_plus` result holds under the original instance count and corrected random-start protocol.
 
+### [2026-05-29 05:00] - core_claim_plus
+- Cancelled the first paper-scale CPU validation after 40 minutes because the runner produced no flushed result rows and was unlikely to finish within the test-node window.
+- Cached STARs live-group template lookups and added per-instance progress/flushing to the method runner, preserving the same STARs computation while removing repeated bookkeeping overhead.
+- A one-instance 100,000-step smoke run completed successfully after the fix; resubmitting the paper-scale 383-instance validation.
+
 ## Stop Justification
-- Not stopping in this turn; final verification found that the current score artifacts still correspond to the prior 50-instance run after the tracked code/data were moved to the 383-instance random-start protocol. Submitting the paper-scale CPU validation job while retaining the previously verified milestone `core_claim_plus`.
+- Not stopping in this turn; final verification found that the current score artifacts still correspond to the prior 50-instance run after the tracked code/data were moved to the 383-instance random-start protocol. Resubmitting the optimized paper-scale CPU validation job while retaining the previously verified milestone `core_claim_plus`.

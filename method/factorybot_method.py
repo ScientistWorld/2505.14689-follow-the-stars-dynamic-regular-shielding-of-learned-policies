@@ -100,6 +100,7 @@ def main() -> None:
     parser.add_argument("--epsilon", type=float, default=0.04)
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--regenerate-suite", action="store_true")
+    parser.add_argument("--progress-every", type=int, default=25)
     args = parser.parse_args()
 
     if args.regenerate_suite or not args.suite.exists():
@@ -109,6 +110,8 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w") as f:
         for inst_idx, instance in enumerate(instances):
+            if args.progress_every and inst_idx % args.progress_every == 0:
+                print(f"[factorybot_method] instance {inst_idx + 1}/{len(instances)}", flush=True)
             nominal_policy = optimal_average_reward_policy(instance, epsilon=args.epsilon)
             template = synthesize_buchi_reach_template(instance, {instance.buchi})
             for method in ("unshielded", "apply_naive"):
@@ -135,6 +138,7 @@ def main() -> None:
                     args.seed + inst_idx,
                 )
                 f.write(json.dumps(row) + "\n")
+            f.flush()
 
 
 if __name__ == "__main__":

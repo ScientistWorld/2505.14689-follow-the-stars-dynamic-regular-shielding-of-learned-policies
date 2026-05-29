@@ -30,6 +30,17 @@ class StarShield:
     theta: float
     colive_counts: dict[Edge, int] = field(default_factory=dict)
     live_counts: dict[int, int] = field(default_factory=dict)
+    _edge_to_live_group: dict[Edge, int] = field(default_factory=dict, init=False, repr=False)
+    _edge_to_live_groups: dict[Edge, list[int]] = field(default_factory=dict, init=False, repr=False)
+    _live_group_sources: dict[int, frozenset[State]] = field(default_factory=dict, init=False, repr=False)
+
+    def __post_init__(self) -> None:
+        for idx, group in enumerate(self.template.live_groups):
+            self._live_group_sources[idx] = frozenset(state for state, _ in group)
+            for edge in group:
+                self._edge_to_live_groups.setdefault(edge, []).append(idx)
+                if edge not in self._edge_to_live_group:
+                    self._edge_to_live_group[edge] = idx
 
     def distribution(
         self,
@@ -46,10 +57,9 @@ class StarShield:
             elif edge in self.template.colive:
                 value -= self.gamma * self.colive_counts.get(edge, 0)
             else:
-                for idx, group in enumerate(self.template.live_groups):
-                    if edge in group:
-                        value += self.gamma * self.live_counts.get(idx, 0)
-                        break
+                live_group = self._edge_to_live_group.get(edge)
+                if live_group is not None:
+                    value += self.gamma * self.live_counts.get(live_group, 0)
             adjusted[action] = max(value, 0.0)
 
         first = normalize(adjusted)
@@ -65,9 +75,9 @@ class StarShield:
         if edge in self.template.colive:
             self.colive_counts[edge] = self.colive_counts.get(edge, 0) + 1
 
-        for idx, group in enumerate(self.template.live_groups):
-            sources = {s for s, _ in group}
-            if edge in group:
+        live_groups = self._edge_to_live_groups.get(edge, ())
+        for idx, sources in self._live_group_sources.items():
+            if idx in live_groups:
                 self.live_counts[idx] = 0
             elif state in sources:
                 self.live_counts[idx] = self.live_counts.get(idx, 0) + 1
@@ -84,4 +94,3 @@ def normalize(values: Mapping[Action, float]) -> dict[Action, float]:
 def total_variation(p: Mapping[Action, float], q: Mapping[Action, float]) -> float:
     keys = set(p) | set(q)
     return 0.5 * sum(abs(float(p.get(k, 0.0)) - float(q.get(k, 0.0))) for k in keys)
-

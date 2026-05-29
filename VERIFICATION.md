@@ -9,13 +9,18 @@ The previous iteration also made two important protocol improvements after that 
 ## Issues Found
 
 - Critical for final sign-off: `scoring/scores.json`, `scoring/scores_train.json`, and `scoring/scores_test.json` still correspond to the prior 50-instance artifact, while the current tracked suite contains 383 instances. The milestone should not be lowered because the prior result supports `core_claim_plus`, but the current gym baseline must be regenerated before this can be marked fully ready.
+- Operational: the first 383-instance CPU validation was cancelled after 40 minutes because the STARs runner produced no flushed JSONL rows and was unlikely to complete within the test-node window.
 - Minor: generated Python bytecode caches existed under source/data/eval folders. They were ignored by git but cluttered the workspace.
+- Minor: system job and trajectory logs were tracked in git even though they are scheduler artifacts, not reusable benchmark inputs.
 
 No method-agnostic leak was found in `briefing/problem.md`, `briefing/evaluation.md`, or `scoring/EXPERIMENTS.md`. The evaluation code does not import from `method/`, `scripts/download.sh` is self-contained and `shared/`-free, and the scoring rubric has no wall-clock or paper-deviation metric.
 
 ## Fixes Applied
 
 - Removed generated `__pycache__` directories from source/data/eval/scoring folders.
+- Cached live-group edge/source lookups inside `StarShield`, which preserves the same STARs distribution and counter semantics while avoiding repeated set construction in every rollout step.
+- Added per-instance progress logging and row flushing to the method runner so long CPU validations visibly progress and keep partial artifacts under preemption.
+- Removed tracked scheduler job/trajectory logs from the git index and added `jobs/` to `.gitignore`.
 - Kept `action.yaml` in submit mode so the queued CPU job regenerates main, train, and test scores from the current 383-instance, random-start protocol.
 - Re-ran `python validate.py --compare`; structure and scoring validation pass, with the caveat that the compared scores are the stale 50-instance artifact described above.
 
