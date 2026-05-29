@@ -1,8 +1,9 @@
-# IMPORTANT: Once you set action to 'submit' or 'done', STOP immediately.
-# Do NOT sleep, poll, or wait for jobs. The system reads this file
-# only after your turn ends. Sleeping blocks the entire pipeline.
-action: done
+# This iteration writes files only — do NOT submit compute jobs.
+# Once you set action to 'done', STOP immediately.
+# Do NOT sleep, poll, or wait. The system reads this file
+# only after your turn ends.
+action: pending
 gpus: 0
 test: false
 milestone: core_claim_plus
-notes: "Corrected FactoryBot reproduction completed at the paper's 100000-step horizon: ApplySTARs reaches 0.11381 Buchi frequency at 0.33948 reward gap versus ApplyNaive 0.03985 at 0.35620. Secondary Overcooked/LunarLander/dynamic adaptation claims remain out of scope."
+notes: ""
