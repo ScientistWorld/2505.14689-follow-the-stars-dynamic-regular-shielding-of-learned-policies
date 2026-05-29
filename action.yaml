@@ -27,8 +27,8 @@
 #   milestone: core_claim
 #   notes: "Reproduced the core claim. Environment packaged."
 
-action: submit
+action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Run the FactoryBot STARs reproduction at the paper's 100,000-step horizon to strengthen the core-claim score."
+notes: "Reproduced the core FactoryBot STARs claim at the paper's 100,000-step horizon and packaged the reusable environment."

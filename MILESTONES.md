@@ -25,5 +25,10 @@
 - STARs achieved substantially higher Buchi frequency than both the unshielded policy and the naive exploratory guide.
 - The STARs run also preserved average reward above the naive guide, supporting the paper's central benefit-plus-constraint claim on the scaled FactoryBot setting.
 
+### [2026-05-29 04:02] - core_claim
+- Re-ran the FactoryBot reproduction at the paper's 100,000-step rollout horizon.
+- The longer run preserved the same conclusion: STARs improved recurring-goal frequency by more than 7x over the naive guide while retaining higher average reward than the naive guide.
+- Packaged scripts, data generation, evaluation, scoring, and documentation are complete for the core FactoryBot benchmark.
+
 ## Stop Justification
-- Not stopped.
+- Completed at milestone `core_claim`.
