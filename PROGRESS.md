@@ -45,6 +45,10 @@
   - `apply_naive`: Buchi frequency 0.03985, reward gap 0.35620.
   - `unshielded`: Buchi frequency 0.01015, reward gap 0.00000.
   - This is the current verified `core_claim_plus` score in `scoring/scores.json`; it uses the corrected strategy-template synthesis and average-reward nominal policy at the paper's rollout horizon.
+- Split-evaluation job `e9aad67a-ae9` scored the current artifact for the ResearchGym train/test harness:
+  - Train `apply_stars`: Buchi frequency 0.11775, reward gap 0.31447, reward-budget violation rate 0.24.
+  - Test `apply_stars`: Buchi frequency 0.10987, reward gap 0.36448, reward-budget violation rate 0.52.
+  - The train/test split is not byte-identical and preserves the core signal while exposing held-out reward-budget failures.
 - Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b/Figure 5 visual estimates at the epsilon=0.4 reward-gap operating point: ApplySTARs around 0.12 Buchi frequency versus ApplyNaive around 0.033.
 
 ## Remaining
