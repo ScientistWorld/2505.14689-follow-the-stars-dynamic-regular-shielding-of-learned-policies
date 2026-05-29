@@ -9,4 +9,7 @@ Tests whether a runtime guide can increase recurring-goal satisfaction while pre
 - **Metric:** `buchi_frequency` (higher is better)
 - **Constraint metric:** `reward_gap_to_nominal` (lower is better)
 - **Ablation metric:** `buchi_frequency_gain_over_naive` (higher is better)
+- **Robustness metric:** `worst_category_buchi_frequency` (higher is better)
+- **Robustness metric:** `worst_category_buchi_gain_over_naive` (higher is better)
+- **Constraint metric:** `reward_budget_violation_rate` (lower is better)
 - **How to run evaluation:** Evaluate each method on the fixed FactoryBot instance suite and compute aggregate rollout metrics. The recurring-goal metric must improve over both the unshielded nominal policy and the naive exploratory baseline while the reward gap to the nominal reward policy remains within the configured budget. Interference and override rates are emitted as diagnostics, not scored targets.

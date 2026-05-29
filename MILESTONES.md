@@ -29,5 +29,9 @@
 - `apply_stars` reached Buchi frequency 0.11381 at reward gap 0.33948, versus `apply_naive` Buchi frequency 0.03985 at reward gap 0.35620.
 - This restores `core_claim_plus`: the core reward-versus-liveness claim now holds at the paper's rollout horizon with the corrected template synthesis and nominal-policy path.
 
+### [2026-05-29 04:05] - core_claim_plus
+- Main scoring now reports the declared category-robustness and reward-budget constraint metrics in addition to the primary Buchi/reward tradeoff.
+- `python validate.py --compare`, `scripts/evaluate.sh`, and Python bytecode compilation all pass after the scoring-completeness fix.
+
 ## Stop Justification
 - Completed at milestone `core_claim_plus`.

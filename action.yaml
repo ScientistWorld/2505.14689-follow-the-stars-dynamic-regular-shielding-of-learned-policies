@@ -3,4 +3,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim_plus
-notes: "Packaging audit passed: procedural data is tracked/regenerable, download.sh needs no external fetches, and no committed code references shared paths."
+notes: "Core FactoryBot STARs reproduction is packaged. Main scoring now includes all declared benefit, robustness, and reward-constraint metrics; validate.py --compare passes."

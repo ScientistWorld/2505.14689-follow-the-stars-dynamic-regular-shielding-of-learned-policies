@@ -49,6 +49,7 @@
   - Train `apply_stars`: Buchi frequency 0.11775, reward gap 0.31447, reward-budget violation rate 0.24.
   - Test `apply_stars`: Buchi frequency 0.10987, reward gap 0.36448, reward-budget violation rate 0.52.
   - The train/test split is not byte-identical and preserves the core signal while exposing held-out reward-budget failures.
+- Packaging audit at 2026-05-29 04:05 updated the main evaluator to emit every declared scored metric. Current `apply_stars` main scores include worst-category Buchi frequency 0.01737, worst-category gain over naive 0.01691, and reward-budget violation rate 0.38.
 - Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b/Figure 5 visual estimates at the epsilon=0.4 reward-gap operating point: ApplySTARs around 0.12 Buchi frequency versus ApplyNaive around 0.033.
 
 ## Remaining
