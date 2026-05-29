@@ -177,6 +177,41 @@ Sweep the method's enforcement or intervention strength when it has such a param
 
 </details>
 
+### Iteration 4: gpt-5.5 (designer_stage_1)
+- **Milestone**: `core_claim_plus` | **Status**: done
+- **Working time**: 5m | **GPU**: 0.0h
+- **Jobs**: 4 total (4 completed, 0 failed)
+
+<details>
+<summary>Progress Log</summary>
+
+### [2026-05-29 03:17] - core_claim
+- Existing 100,000-step FactoryBot job supports the core STARs tradeoff claim.
+- Corrected the generated FactoryBot Close/Far distance bands and reward-gap scoring scale before submitting a validation rerun on the expanded 50-instance suite.
+- Continuation audit found and fixed baseline coupling to `method/`; validation still passes.
+
+### [2026-05-29 03:35] - method_runs
+- Continuation audit found that the existing method used the STARs runtime reweighting formula but hand-built the FactoryBot live groups as a distance heuristic.
+- Replaced that path with an explicit Büchi ReachTemplate/ParityTemplate specialization that synthesizes live groups from attractor partitions, and moved the nominal reward policy to a computed average-reward policy in `data/`.
+- A 5-step smoke run over the corrected 50-instance suite completed and evaluated successfully; submitting a 100,000-step CPU validation job before restoring `core_claim`.
+
+### [2026-05-29 03:49] - core_claim
+- Ran the corrected STARs pipeline over the full 50-instance FactoryBot suite for a 2,000-step validation horizon.
+- `apply_stars` reached Buchi frequency 0.113 at reward gap 0.336, versus `apply_naive` Buchi frequency 0.039 at reward gap 0.358.
+- The result comes from synthesized Büchi live groups and the computed average-reward nominal policy, so the corrected implementation now supports the core reward-versus-liveness claim.
+
+### [2026-05-29 03:50] - core_claim
+- Continuation audit confirmed the implementation contains the paper's STARs runtime reweighting and the FactoryBot Büchi ReachTemplate synthesis rather than a surrogate model.
+- `python validate.py --compare`, standalone `scripts/evaluate.sh`, and Python bytecode compilation all pass on the corrected 2,000-step artifact.
+- Submitting the corrected 50-instance suite at the paper's 100,000-step rollout horizon to try to restore `core_claim_plus`.
+
+### [2026-05-29 03:50] - core_claim_plus
+- Compute job `983173c2-f20` completed the corrected 50-instance FactoryBot suite at 100,000 steps per instance.
+- `apply_stars` reached Buchi frequency 0.11381 at reward gap 0.33948, versus `apply_naive` Buchi frequency 0.03985 at reward gap 0.35620.
+- This restores `core_claim_plus`: the core reward-versus-liveness claim now holds at the paper's rollout horizon with the corrected template synthesis and nominal-policy path.
+
+</details>
+
 
 ---
 
