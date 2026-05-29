@@ -1,0 +1,29 @@
+{
+  "experiments": {
+    "factorybot_buchi_reward_tradeoff": {
+      "results": {
+        "apply_naive": {
+          "average_reward": 0.4151666666666716,
+          "buchi_frequency": 0.017333333333333333,
+          "buchi_frequency_gain_over_naive": 0.0,
+          "mean_tv_interference": 0.29318000000000577,
+          "override_rate": 0.5018333333333334
+        },
+        "apply_stars": {
+          "average_reward": 0.4447500000000058,
+          "buchi_frequency": 0.096,
+          "buchi_frequency_gain_over_naive": 0.07866666666666666,
+          "mean_tv_interference": 0.3219127920640076,
+          "override_rate": 0.4535
+        },
+        "unshielded": {
+          "average_reward": 0.797500000000007,
+          "buchi_frequency": 0.00016666666666666666,
+          "buchi_frequency_gain_over_naive": -0.017166666666666667,
+          "mean_tv_interference": 0.0,
+          "override_rate": 0.29833333333333334
+        }
+      }
+    }
+  }
+}

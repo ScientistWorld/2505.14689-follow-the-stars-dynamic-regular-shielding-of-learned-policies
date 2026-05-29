@@ -17,4 +17,8 @@ set -e
 
 cd /home/user
 
-# TODO: run baseline
+STEPS="${STEPS:-20000}"
+OUTPUT="${OUTPUT:-checkpoints/factorybot_baseline_results.jsonl}"
+
+python baseline/factorybot_baseline.py --steps "$STEPS" --output "$OUTPUT"
+bash scripts/evaluate.sh "$OUTPUT"

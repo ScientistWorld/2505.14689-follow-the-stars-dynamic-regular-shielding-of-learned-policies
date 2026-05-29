@@ -10,5 +10,10 @@ set -e
 
 cd /home/user
 
-# TODO: run the paper's method
-# TODO: call scripts/evaluate.sh to score
+STEPS="${STEPS:-20000}"
+
+python method/factorybot_method.py \
+  --steps "$STEPS" \
+  --output checkpoints/factorybot_results.jsonl
+
+bash scripts/evaluate.sh checkpoints/factorybot_results.jsonl
