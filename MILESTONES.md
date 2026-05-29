@@ -20,4 +20,5 @@
 - The result comes from synthesized Büchi live groups and the computed average-reward nominal policy, so the corrected implementation now supports the core reward-versus-liveness claim.
 
 ## Stop Justification
-- Not stopped; submitting a full 100,000-step validation rerun for the corrected STARs pipeline.
+- Stopping at `core_claim`. The corrected STARs pipeline, evaluation code, reusable scripts, environment files, and score artifact are packaged and validated.
+- A full 100,000-step corrected FactoryBot run would strengthen the result toward `core_claim_plus`, but the current 50-instance validation already demonstrates the paper's central FactoryBot reward-versus-liveness claim.
