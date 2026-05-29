@@ -37,5 +37,11 @@
 - Final verification confirmed method/problem separation, reusable evaluation, train/test scoring consistency, shared-free downloads, and reasonable metric coefficients.
 - Removed stale tracked trajectory logs from the repository index and cleaned generated Python bytecode caches.
 
+### [2026-05-29 04:20] - core_claim_plus
+- Fixed the FactoryBot rollout protocol to sample the initial state randomly for each instance, matching the paper's evaluation description.
+- Expanded the procedural FactoryBot suite generator to the paper's original 383-instance Close/Far split: 194 Close and 189 Far instances over grid sizes 5 through 13.
+- Updated `scripts/run.sh` to regenerate the suite and rerun the method before evaluation, so submission no longer depends on an ignored preexisting checkpoint artifact.
+- Submitting a CPU job at the paper's 100,000-step rollout horizon to verify whether the current `core_claim_plus` result holds under the original instance count and corrected random-start protocol.
+
 ## Stop Justification
-- Completed at milestone `core_claim_plus`.
+- Not stopping in this turn; submitting a paper-scale validation job while retaining the current verified milestone `core_claim_plus`.

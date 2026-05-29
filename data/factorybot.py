@@ -157,10 +157,12 @@ def generate_instance(seed: int, size: int, category: str) -> FactoryBotInstance
 
 def default_suite() -> list[FactoryBotInstance]:
     specs = []
-    for idx, size in enumerate((5, 7, 9, 11, 13), start=1):
-        for offset in range(5):
-            specs.append((1000 + idx * 10 + offset, size, "close"))
-            specs.append((2000 + idx * 10 + offset, size, "far"))
+    for idx in range(194):
+        size = 5 + (idx % 9)
+        specs.append((1000 + idx, size, "close"))
+    for idx in range(189):
+        size = 5 + ((idx + 4) % 9)
+        specs.append((2000 + idx, size, "far"))
     return [generate_instance(seed, size, category) for seed, size, category in specs]
 
 

@@ -14,5 +14,10 @@ set -e
 cd /home/user
 
 export REWARD_GAP_BUDGET="${REWARD_GAP_BUDGET:-0.4}"
+export STEPS="${STEPS:-100000}"
+export REGENERATE_SUITE=1
+
+bash scripts/download.sh
+bash scripts/method.sh
 bash scripts/evaluate_train.sh checkpoints/factorybot_results.jsonl
 bash scripts/evaluate_test.sh checkpoints/factorybot_results.jsonl

@@ -40,7 +40,7 @@ def run_baseline_episode(
     seed: int,
 ) -> dict:
     rng = random.Random(seed)
-    state = instance.start
+    state = rng.choice(list(instance.states))
     visits = 0
     reward_sum = 0.0
     tv_sum = 0.0

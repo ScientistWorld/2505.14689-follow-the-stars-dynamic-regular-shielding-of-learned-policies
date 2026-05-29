@@ -39,7 +39,7 @@ def run_episode(
     seed: int,
 ) -> dict:
     rng = random.Random(seed)
-    state = instance.start
+    state = rng.choice(list(instance.states))
     shield = StarShield(template, gamma=gamma, theta=theta)
     summary = template_summary(template)
     visits = 0
