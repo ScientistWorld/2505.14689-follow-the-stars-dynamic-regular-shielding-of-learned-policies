@@ -1,8 +1,8 @@
 # IMPORTANT: Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends. Sleeping blocks the entire pipeline.
-action: done
+action: submit
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Core claim verified and packaged: corrected STARs template synthesis, average-reward nominal policy, method-independent evaluation, and 50-instance FactoryBot scores at 2000 steps."
+notes: "Full corrected FactoryBot validation: 50-instance suite, 100000-step horizon, synthesized Buchi ReachTemplate STARs, average-reward nominal policy, and reward-gap scoring."

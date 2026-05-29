@@ -19,6 +19,10 @@
 - `apply_stars` reached Buchi frequency 0.113 at reward gap 0.336, versus `apply_naive` Buchi frequency 0.039 at reward gap 0.358.
 - The result comes from synthesized Büchi live groups and the computed average-reward nominal policy, so the corrected implementation now supports the core reward-versus-liveness claim.
 
+### [2026-05-29 03:50] - core_claim
+- Continuation audit confirmed the implementation contains the paper's STARs runtime reweighting and the FactoryBot Büchi ReachTemplate synthesis rather than a surrogate model.
+- `python validate.py --compare`, standalone `scripts/evaluate.sh`, and Python bytecode compilation all pass on the corrected 2,000-step artifact.
+- Submitting the corrected 50-instance suite at the paper's 100,000-step rollout horizon to try to restore `core_claim_plus`.
+
 ## Stop Justification
-- Stopping at `core_claim`. The corrected STARs pipeline, evaluation code, reusable scripts, environment files, and score artifact are packaged and validated.
-- A full 100,000-step corrected FactoryBot run would strengthen the result toward `core_claim_plus`, but the current 50-instance validation already demonstrates the paper's central FactoryBot reward-versus-liveness claim.
+- Not stopping. The current packaged result remains `core_claim`, and the next submitted job scales the corrected pipeline to the paper's rollout horizon.
