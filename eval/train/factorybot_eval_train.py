@@ -23,6 +23,9 @@ SCORED_METRICS = (
     "buchi_frequency",
     "reward_gap_to_nominal",
     "buchi_frequency_gain_over_naive",
+    "worst_category_buchi_frequency",
+    "worst_category_buchi_gain_over_naive",
+    "reward_budget_violation_rate",
 )
 
 DIAGNOSTIC_METRICS = (
@@ -91,7 +94,12 @@ def with_reward_gap(rows: list[dict], nominal: dict[str, float]) -> list[dict]:
     return out
 
 
-def aggregate(rows: list[dict], *, scored_only: bool = True) -> dict[str, dict[str, float]]:
+def aggregate(
+    rows: list[dict],
+    *,
+    scored_only: bool = True,
+    reward_gap_budget: float | None = None,
+) -> dict[str, dict[str, float]]:
     by_method: dict[str, list[dict]] = {}
     for row in rows:
         by_method.setdefault(row["method"], []).append(row)
@@ -101,13 +109,36 @@ def aggregate(rows: list[dict], *, scored_only: bool = True) -> dict[str, dict[s
         if "apply_naive" in by_method
         else 0.0
     )
+    naive_by_category = {
+        category: mean(
+            x["buchi_frequency"]
+            for x in by_method.get("apply_naive", [])
+            if x["category"] == category
+        )
+        for category in sorted({row["category"] for row in rows})
+        if any(x["category"] == category for x in by_method.get("apply_naive", []))
+    }
     out = {}
     for method, items in by_method.items():
+        category_buchi = {
+            category: mean(x["buchi_frequency"] for x in items if x["category"] == category)
+            for category in sorted({row["category"] for row in items})
+        }
         metrics = {
             "buchi_frequency": mean(x["buchi_frequency"] for x in items),
             "reward_gap_to_nominal": mean(x["reward_gap_to_nominal"] for x in items),
             "buchi_frequency_gain_over_naive": mean(x["buchi_frequency"] for x in items) - naive_freq,
+            "worst_category_buchi_frequency": min(category_buchi.values()),
+            "worst_category_buchi_gain_over_naive": min(
+                category_buchi[category] - naive_by_category.get(category, 0.0)
+                for category in category_buchi
+            ),
         }
+        if reward_gap_budget is not None:
+            metrics["reward_budget_violation_rate"] = mean(
+                1.0 if x["reward_gap_to_nominal"] > reward_gap_budget else 0.0
+                for x in items
+            )
         if not scored_only:
             metrics.update(
                 {
@@ -173,12 +204,18 @@ def select_rows_by_reward_gap(
     return selected, selection
 
 
-def category_diagnostics(rows: list[dict]) -> dict[str, dict]:
+def category_diagnostics(rows: list[dict], reward_gap_budget: float) -> dict[str, dict]:
     out = {}
     categories = sorted({row["category"] for row in rows})
     for category in categories:
         subset = [row for row in rows if row["category"] == category]
-        out[category] = {"results": aggregate(subset, scored_only=False)}
+        out[category] = {
+            "results": aggregate(
+                subset,
+                scored_only=False,
+                reward_gap_budget=reward_gap_budget,
+            )
+        }
     return out
 
 
@@ -226,7 +263,11 @@ def main() -> None:
         args.reward_gap_budget,
         baseline_methods=BASELINE_METHODS,
     )
-    agg = aggregate(filtered, scored_only=True)
+    agg = aggregate(
+        filtered,
+        scored_only=True,
+        reward_gap_budget=args.reward_gap_budget,
+    )
     scores = {
         "experiments": {
             EXPERIMENT: {
@@ -242,7 +283,7 @@ def main() -> None:
                 "run": run_diagnostics(filtered),
                 "raw_slice_artifact": run_diagnostics(rows),
                 "metrics": list(SCORED_METRICS + DIAGNOSTIC_METRICS),
-                "by_category": category_diagnostics(filtered),
+                "by_category": category_diagnostics(filtered, args.reward_gap_budget),
             },
         }
     }

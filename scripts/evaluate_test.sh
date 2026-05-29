@@ -2,7 +2,8 @@
 # Held-out test-slice evaluation for FactoryBot method artifacts.
 #
 # Mirrors scripts/evaluate.sh: pass the JSONL method artifact as the first
-# optional argument. Writes scoring/scores_test.json.
+# optional argument. Requires scoring/scores_train.json so held-out scoring
+# uses the visible train-selected method/configuration set.
 
 set -e
 

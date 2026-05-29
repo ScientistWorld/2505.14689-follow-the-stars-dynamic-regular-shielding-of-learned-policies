@@ -7,15 +7,33 @@
       "metrics": {
         "buchi_frequency": {
           "higher_is_better": true,
-          "coefficient": 1.0
+          "coefficient": 1.0,
+          "description": "Mean frequency of visits to the required Buchi region; this is the paper's headline liveness benefit."
         },
         "reward_gap_to_nominal": {
           "higher_is_better": false,
-          "coefficient": -0.5
+          "coefficient": -0.5,
+          "description": "Mean drop in average reward relative to the unshielded nominal policy, measuring the reward-preservation constraint."
         },
         "buchi_frequency_gain_over_naive": {
           "higher_is_better": true,
-          "coefficient": 0.8
+          "coefficient": 0.8,
+          "description": "Mean Buchi-frequency improvement over the naive exploratory shielding baseline at the same evaluation slice."
+        },
+        "worst_category_buchi_frequency": {
+          "higher_is_better": true,
+          "coefficient": 0.4,
+          "description": "Lowest category-level Buchi frequency across FactoryBot Close/Far groups, catching methods that improve only one regime."
+        },
+        "worst_category_buchi_gain_over_naive": {
+          "higher_is_better": true,
+          "coefficient": 0.4,
+          "description": "Lowest category-level Buchi-frequency gain over the naive baseline, checking that the advantage generalizes across regimes."
+        },
+        "reward_budget_violation_rate": {
+          "higher_is_better": false,
+          "coefficient": -0.3,
+          "description": "Fraction of evaluated instances exceeding the reward-gap budget, catching methods that hide constraint failures in the mean."
         }
       },
       "results": {
