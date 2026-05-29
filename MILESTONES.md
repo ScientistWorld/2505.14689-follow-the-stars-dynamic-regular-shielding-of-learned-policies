@@ -1,6 +1,6 @@
 # Reproduction Milestones
 
-**Current: method_runs**
+**Current: core_claim**
 
 <!-- Milestone levels (update "Current" above as you progress):
   none             — just started, no meaningful progress yet
@@ -19,6 +19,11 @@
 - Read the paper and identified FactoryBot as the tractable core claim: dynamic liveness shielding should increase Buchi visits while retaining reward better than naive exploration.
 - Implemented the paper's STARs runtime update with strategy-template live groups, history counters, thresholding, and normalization.
 - Ran a local smoke test on a short FactoryBot rollout; the method and evaluator execute end-to-end and write `scoring/scores.json`.
+
+### [2026-05-29 03:58] - core_claim
+- Completed a CPU compute job over the fixed FactoryBot suite at 30,000 steps per instance.
+- STARs achieved substantially higher Buchi frequency than both the unshielded policy and the naive exploratory guide.
+- The STARs run also preserved average reward above the naive guide, supporting the paper's central benefit-plus-constraint claim on the scaled FactoryBot setting.
 
 ## Stop Justification
 - Not stopped.

@@ -6,16 +6,20 @@
 - The STARs runtime shield implements unsafe/co-live/live-group probability modification, counter updates, thresholding, and normalization.
 - `scripts/method.sh` runs the proposed method and `scripts/evaluate.sh` scores JSONL rollout artifacts without importing from `method/`.
 - A short local smoke test completed and showed STARs increasing Buchi frequency over the unshielded policy and naive exploratory baseline.
+- A compute job completed successfully at 30,000 steps per instance and supports the core FactoryBot claim.
 
 ## Results
 
 - Local smoke test at 1,000 steps per instance: `apply_stars` Buchi frequency 0.096 versus `apply_naive` 0.017 and `unshielded` 0.000. This is only a smoke test, not the submitted reproduction score.
+- Compute job `1c20f5bd-cc6` at 30,000 steps per instance:
+  - `apply_stars`: Buchi frequency 0.1285, average reward 0.5144, Buchi gain over naive 0.1113.
+  - `apply_naive`: Buchi frequency 0.0172, average reward 0.4379.
+  - `unshielded`: Buchi frequency 0.00024, average reward 0.8019.
 - Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b visual estimates: ApplySTARs around 0.24 Buchi frequency at the 0.5 reward-closeness threshold versus ApplyNaive around 0.015.
 
 ## Remaining
 
-- Run the full CPU reproduction job with a longer horizon.
-- Inspect the job scores and update the milestone to `core_claim` only if the full run supports the claimed tradeoff.
+- Run one additional CPU reproduction job at the paper's 100,000-step horizon for a stronger final score.
 - Optionally add Far/Close split scoring after the core aggregate is confirmed.
 
 ## Issues

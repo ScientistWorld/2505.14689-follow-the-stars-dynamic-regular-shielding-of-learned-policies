@@ -13,5 +13,5 @@ set -e
 
 cd /home/user
 
-export STEPS="${STEPS:-30000}"
+export STEPS="${STEPS:-100000}"
 bash scripts/method.sh

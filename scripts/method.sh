@@ -10,7 +10,7 @@ set -e
 
 cd /home/user
 
-STEPS="${STEPS:-20000}"
+STEPS="${STEPS:-100000}"
 
 python method/factorybot_method.py \
   --steps "$STEPS" \

@@ -30,5 +30,5 @@
 action: submit
 gpus: 0
 test: false
-milestone: method_runs
-notes: "Run the longer CPU FactoryBot STARs reproduction and evaluation to test the core Buchi-frequency/reward tradeoff."
+milestone: core_claim
+notes: "Run the FactoryBot STARs reproduction at the paper's 100,000-step horizon to strengthen the core-claim score."
