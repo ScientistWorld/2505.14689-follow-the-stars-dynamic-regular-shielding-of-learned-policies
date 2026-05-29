@@ -1,9 +1,5 @@
-# This iteration writes files only — do NOT submit compute jobs.
-# Once you set action to 'done', STOP immediately.
-# Do NOT sleep, poll, or wait. The system reads this file
-# only after your turn ends.
-action: done
+# The system reads this file after every turn.
+action: submit
 gpus: 0
 test: false
-milestone: core_claim_plus
-notes: "Improvements: removed held-out test self-selection fallback; added category robustness and reward-budget violation metrics; documented handoff. Notes: test evaluation now requires visible train scores first."
+notes: "Run evaluate_train.sh and evaluate_test.sh against checkpoints/factorybot_results.jsonl; populate split scores."
