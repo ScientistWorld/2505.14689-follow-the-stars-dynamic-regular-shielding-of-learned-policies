@@ -5,7 +5,7 @@
 - FactoryBot-style finite grid MDP suite is generated from fixed seeds in `data/factorybot.py`.
 - The STARs runtime shield implements unsafe/co-live/live-group probability modification, counter updates, thresholding, and normalization.
 - `scripts/method.sh` runs the proposed method and `scripts/evaluate.sh` scores JSONL rollout artifacts without importing from `method/`.
-- A corrected-pipeline validation run completed on the 50-instance suite and supports the core FactoryBot claim.
+- A corrected-pipeline validation run completed on the 50-instance suite at the paper's 100,000-step horizon and supports the core FactoryBot claim.
 - Earlier compute jobs completed at 30,000 and 100,000 steps per instance; they are retained as historical provenance but predate the corrected template-synthesis and nominal-policy path.
 - The evaluator now selects a STARs enforcement setting using full-suite aggregate reward, so baselines and STARs are scored on the same instance set.
 - The FactoryBot generator has been corrected to the paper's Close/Far distance bands and expanded to 50 fixed instances. The current score artifact validates this corrected suite at a 2,000-step horizon.
@@ -40,13 +40,16 @@
   - `apply_stars`: Buchi frequency 0.113, reward gap 0.336, Buchi gain over naive 0.074.
   - `apply_naive`: Buchi frequency 0.039, reward gap 0.358.
   - `unshielded`: Buchi frequency 0.010, reward gap 0.000.
-  - This is the current verified `core_claim` score in `scoring/scores.json`; it uses the corrected strategy-template synthesis and average-reward nominal policy.
+- Compute job `983173c2-f20` at 100,000 steps per instance on the corrected 50-instance suite:
+  - `apply_stars`: Buchi frequency 0.11381, reward gap 0.33948, Buchi gain over naive 0.07396.
+  - `apply_naive`: Buchi frequency 0.03985, reward gap 0.35620.
+  - `unshielded`: Buchi frequency 0.01015, reward gap 0.00000.
+  - This is the current verified `core_claim_plus` score in `scoring/scores.json`; it uses the corrected strategy-template synthesis and average-reward nominal policy at the paper's rollout horizon.
 - Paper reference for the FactoryBot matched-reward comparison is encoded in `scoring/reference.json` from Figure 4b/Figure 5 visual estimates at the epsilon=0.4 reward-gap operating point: ApplySTARs around 0.12 Buchi frequency versus ApplyNaive around 0.033.
 
 ## Remaining
 
-- A corrected 50-instance run at the paper's 100,000-step horizon is being submitted as the next validation step. If it preserves the STARs improvement under the reward-gap constraint, it should restore `core_claim_plus`.
-- Higher milestones after that would require expanding closer to the full 383 FactoryBot instances and reproducing Overcooked-AI or LunarLander.
+- Higher milestones would require expanding closer to the full 383 FactoryBot instances and reproducing secondary claims: dynamic objective/action-failure adaptation, Overcooked-AI scalability, or LunarLander landing outcomes.
 
 ## Issues
 

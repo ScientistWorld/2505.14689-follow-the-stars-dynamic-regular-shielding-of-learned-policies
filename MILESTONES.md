@@ -1,6 +1,6 @@
 # Reproduction Milestones
 
-**Current: core_claim**
+**Current: core_claim_plus**
 
 ## Progress Log
 
@@ -24,5 +24,11 @@
 - `python validate.py --compare`, standalone `scripts/evaluate.sh`, and Python bytecode compilation all pass on the corrected 2,000-step artifact.
 - Submitting the corrected 50-instance suite at the paper's 100,000-step rollout horizon to try to restore `core_claim_plus`.
 
+### [2026-05-29 03:50] - core_claim_plus
+- Compute job `983173c2-f20` completed the corrected 50-instance FactoryBot suite at 100,000 steps per instance.
+- `apply_stars` reached Buchi frequency 0.11381 at reward gap 0.33948, versus `apply_naive` Buchi frequency 0.03985 at reward gap 0.35620.
+- This restores `core_claim_plus`: the core reward-versus-liveness claim now holds at the paper's rollout horizon with the corrected template synthesis and nominal-policy path.
+
 ## Stop Justification
-- Not stopping. The current packaged result remains `core_claim`, and the next submitted job scales the corrected pipeline to the paper's rollout horizon.
+- Stopping at `core_claim_plus`. The corrected FactoryBot reproduction is packaged, validated, and now run at the paper's 100,000-step horizon.
+- Higher milestones would require implementing distinct secondary paper settings: dynamic objective/action-failure adaptation, Overcooked-AI scalability, or LunarLander abstraction experiments.
