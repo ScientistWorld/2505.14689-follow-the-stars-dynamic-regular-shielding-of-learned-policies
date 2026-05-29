@@ -48,5 +48,10 @@
 - Cached STARs live-group template lookups and added per-instance progress/flushing to the method runner, preserving the same STARs computation while removing repeated bookkeeping overhead.
 - A one-instance 100,000-step smoke run completed successfully after the fix; resubmitting the paper-scale 383-instance validation.
 
+### [2026-05-29 05:50] - core_claim_plus
+- Compute job `56dfe94c-d10` completed the full 383-instance FactoryBot random-start suite at 100,000 steps per instance.
+- `apply_stars` reached Buchi frequency 0.11431 at reward gap 0.34310, versus `apply_naive` Buchi frequency 0.03910 at reward gap 0.36740.
+- The final main/train/test score files now all reflect the current 383-instance protocol and pass `python validate.py --compare`.
+
 ## Stop Justification
-- Not stopping in this turn; final verification found that the current score artifacts still correspond to the prior 50-instance run after the tracked code/data were moved to the 383-instance random-start protocol. Resubmitting the optimized paper-scale CPU validation job while retaining the previously verified milestone `core_claim_plus`.
+- Final verification is complete at `core_claim_plus`. The paper's core FactoryBot reward/liveness tradeoff is reproduced on the full 383-instance suite and the reusable gym artifacts validate successfully.

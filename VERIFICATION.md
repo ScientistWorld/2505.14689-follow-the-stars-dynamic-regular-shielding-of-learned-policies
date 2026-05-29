@@ -2,13 +2,13 @@
 
 ## Initial Assessment
 
-The workspace starts this final check at `core_claim_plus`. That milestone is still justified by the already completed 50-instance, 100,000-step FactoryBot run: the implemented method contains the paper's STARs runtime distribution update and a FactoryBot Buchi strategy-template specialization, and the scored artifact shows higher Buchi frequency than the nominal and naive baselines while tracking reward loss.
+The workspace starts this final check at `core_claim_plus`. That milestone is justified by the completed FactoryBot runs: the implemented method contains the paper's STARs runtime distribution update and a FactoryBot Buchi strategy-template specialization, and the scored artifact shows higher Buchi frequency than the nominal and naive baselines while tracking reward loss.
 
-The previous iteration also made two important protocol improvements after that successful run: it changed rollouts to sample a random initial state and expanded the fixed FactoryBot suite to the paper-scale 383-instance Close/Far split.
+The final validation run now uses the paper-scale 383-instance Close/Far split, random initial states, and 100,000 rollout steps per instance.
 
 ## Issues Found
 
-- Critical for final sign-off: `scoring/scores.json`, `scoring/scores_train.json`, and `scoring/scores_test.json` still correspond to the prior 50-instance artifact, while the current tracked suite contains 383 instances. The milestone should not be lowered because the prior result supports `core_claim_plus`, but the current gym baseline must be regenerated before this can be marked fully ready.
+- Resolved: `scoring/scores.json`, `scoring/scores_train.json`, and `scoring/scores_test.json` were stale relative to the current 383-instance suite at the start of final verification. Job `56dfe94c-d10` regenerated all three score files from the current paper-scale protocol.
 - Operational: the first 383-instance CPU validation was cancelled after 40 minutes because the STARs runner produced no flushed JSONL rows and was unlikely to complete within the test-node window.
 - Minor: generated Python bytecode caches existed under source/data/eval folders. They were ignored by git but cluttered the workspace.
 - Minor: system job and trajectory logs were tracked in git even though they are scheduler artifacts, not reusable benchmark inputs.
@@ -21,14 +21,13 @@ No method-agnostic leak was found in `briefing/problem.md`, `briefing/evaluation
 - Cached live-group edge/source lookups inside `StarShield`, which preserves the same STARs distribution and counter semantics while avoiding repeated set construction in every rollout step.
 - Added per-instance progress logging and row flushing to the method runner so long CPU validations visibly progress and keep partial artifacts under preemption.
 - Removed tracked scheduler job/trajectory logs from the git index and added `jobs/` to `.gitignore`.
-- Kept `action.yaml` in submit mode so the queued CPU job regenerates main, train, and test scores from the current 383-instance, random-start protocol.
-- Re-ran `python validate.py --compare`; structure and scoring validation pass, with the caveat that the compared scores are the stale 50-instance artifact described above.
+- Re-ran `python validate.py --compare`; structure and scoring validation pass against the refreshed 383-instance score artifacts.
 
 ## Final Judgment
 
-The workspace is structurally sound and close to final, but it should not be permanently marked done until the submitted CPU validation run refreshes `scoring/scores.json`, `scoring/scores_train.json`, and `scoring/scores_test.json` for the current paper-scale suite. From-scratch and improve-mode separation is otherwise clean: problem/evaluation files describe the runtime-guidance task without exposing the STARs implementation, and evaluation reads method artifacts rather than method code.
+The workspace is ready to serve as a research gym. From-scratch and improve-mode separation is clean: problem/evaluation files describe the runtime-guidance task without exposing the STARs implementation, and evaluation reads method artifacts rather than method code. The refreshed main/train/test scores all use the current 383-instance, random-start, 100,000-step FactoryBot protocol.
 
 - Milestone: core_claim_plus
-- Ready for gym use: partial
-- Confidence: medium
-- Key limitation: current score artifacts are stale relative to the tracked 383-instance, random-start FactoryBot protocol.
+- Ready for gym use: yes
+- Confidence: high
+- Key limitation: secondary claims beyond the FactoryBot reward/liveness tradeoff were not reproduced.
