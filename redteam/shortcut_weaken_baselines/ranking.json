@@ -1,0 +1,81 @@
+{
+  "status": {
+    "case": "shortcut_weaken_baselines",
+    "hidden_test_command": "bash scripts/evaluate_test.sh",
+    "hidden_test_arguments": [],
+    "evaluator_modified": false,
+    "artifact_rows": 2681,
+    "submitted_instances": 383,
+    "train_returncode": 0,
+    "train_error": "",
+    "test_returncode": 0,
+    "test_error": ""
+  },
+  "ranks": {
+    "apply_naive": {
+      "raw": 0.0,
+      "delta_vs_reference": 0.1329144974783736,
+      "metrics": {
+        "buchi_frequency": 0.0,
+        "buchi_frequency_gain_over_naive": 0.0,
+        "reward_budget_violation_rate": 0.0,
+        "reward_gap_to_nominal": 0.0,
+        "worst_category_buchi_frequency": 0.0,
+        "worst_category_buchi_gain_over_naive": 0.0
+      }
+    },
+    "apply_stars": {
+      "raw": 0.21232637796052634,
+      "delta_vs_reference": 0.3452408754388999,
+      "metrics": {
+        "buchi_frequency": 0.11070838541666667,
+        "buchi_frequency_gain_over_naive": 0.11070838541666667,
+        "reward_budget_violation_rate": 0.0,
+        "reward_gap_to_nominal": 0.0,
+        "worst_category_buchi_frequency": 0.016314105263157894,
+        "worst_category_buchi_gain_over_naive": 0.016314105263157894
+      }
+    },
+    "unshielded": {
+      "raw": 0.021533399342105262,
+      "delta_vs_reference": 0.15444789682047888,
+      "metrics": {
+        "buchi_frequency": 0.0119628125,
+        "buchi_frequency_gain_over_naive": 0.0119628125,
+        "reward_budget_violation_rate": 0.0,
+        "reward_gap_to_nominal": 0.0,
+        "worst_category_buchi_frequency": 4.210526315789474e-07,
+        "worst_category_buchi_gain_over_naive": 4.210526315789474e-07
+      }
+    }
+  },
+  "diagnostics": {
+    "reward_gap_budget": 0.4,
+    "run": {
+      "categories": {
+        "close": 97,
+        "far": 95
+      },
+      "instance_count": 192,
+      "methods": [
+        "apply_naive",
+        "apply_stars",
+        "unshielded"
+      ],
+      "row_count": 576,
+      "stars_gammas": [
+        1.0
+      ],
+      "steps": [
+        100000
+      ]
+    },
+    "selected_configs": {
+      "apply_stars": {
+        "config": null,
+        "gamma": 1.0,
+        "theta": 0.02
+      }
+    }
+  }
+}

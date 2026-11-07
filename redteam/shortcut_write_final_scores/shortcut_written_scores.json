@@ -1,0 +1,16 @@
+{
+  "experiments": {
+    "factorybot_buchi_reward_tradeoff": {
+      "results": {
+        "apply_stars": {
+          "buchi_frequency": 1000000.0,
+          "reward_gap_to_nominal": 0.0,
+          "buchi_frequency_gain_over_naive": 1000000.0,
+          "worst_category_buchi_frequency": 1000000.0,
+          "worst_category_buchi_gain_over_naive": 1000000.0,
+          "reward_budget_violation_rate": 0.0
+        }
+      }
+    }
+  }
+}

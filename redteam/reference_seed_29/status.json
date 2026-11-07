@@ -1,0 +1,12 @@
+{
+  "case": "reference_seed_29",
+  "hidden_test_command": "bash scripts/evaluate_test.sh",
+  "hidden_test_arguments": [],
+  "evaluator_modified": false,
+  "artifact_rows": 2681,
+  "submitted_instances": 383,
+  "train_returncode": 0,
+  "train_error": "",
+  "test_returncode": 0,
+  "test_error": ""
+}

@@ -1,0 +1,2300 @@
+[
+  {
+    "instance": "close_5_1000",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1001",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1002",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1003",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1004",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1005",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1006",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1007",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1008",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1009",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1010",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1011",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1012",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1013",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1014",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1015",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1016",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1017",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1018",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1019",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1020",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1021",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1022",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1023",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1024",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1025",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1026",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1027",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1028",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1029",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1030",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1031",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1032",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1033",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1034",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1035",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1036",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1037",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1038",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1039",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1040",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1041",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1042",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1043",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1044",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1045",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1046",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1047",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1048",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1049",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1050",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1051",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1052",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1053",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1054",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1055",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1056",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1057",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1058",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1059",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1060",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1061",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1062",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1063",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1064",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1065",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1066",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1067",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1068",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1069",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1070",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1071",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1072",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1073",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1074",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1075",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1076",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1077",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1078",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1079",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1080",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1081",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1082",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1083",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1084",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1085",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1086",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1087",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1088",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1089",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1090",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1091",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1092",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1093",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1094",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1095",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1096",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1097",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1098",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1099",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1100",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1101",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1102",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1103",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1104",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1105",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1106",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1107",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1108",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1109",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1110",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1111",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1112",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1113",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1114",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1115",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1116",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1117",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1118",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1119",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1120",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1121",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1122",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1123",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1124",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1125",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1126",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1127",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1128",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1129",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1130",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1131",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1132",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1133",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1134",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1135",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1136",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1137",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1138",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1139",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1140",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1141",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1142",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1143",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1144",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1145",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1146",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1147",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1148",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1149",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1150",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1151",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1152",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1153",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1154",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1155",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1156",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1157",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1158",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1159",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1160",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1161",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1162",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1163",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1164",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1165",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1166",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1167",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1168",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1169",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1170",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1171",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1172",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1173",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1174",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1175",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1176",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1177",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1178",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1179",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1180",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1181",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1182",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1183",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1184",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_10_1185",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_11_1186",
+    "gamma": 0.5,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_12_1187",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_13_1188",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_5_1189",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_6_1190",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_7_1191",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_8_1192",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "close_9_1193",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2000",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2001",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2002",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2003",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2004",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2005",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2006",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2007",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2008",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2009",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2010",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2011",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2012",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2013",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2014",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2015",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2016",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2017",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2018",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2019",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2020",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2021",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2022",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2023",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2024",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2025",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2026",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2027",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2028",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2029",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2030",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2031",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2032",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2033",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2034",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2035",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2036",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2037",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2038",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2039",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2040",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2041",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2042",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2043",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2044",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2045",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2046",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2047",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2048",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2049",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2050",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2051",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2052",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2053",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2054",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2055",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2056",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2057",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2058",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2059",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2060",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2061",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2062",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2063",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2064",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2065",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2066",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2067",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2068",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2069",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2070",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2071",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2072",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2073",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2074",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2075",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2076",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2077",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2078",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2079",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2080",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2081",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2082",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2083",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2084",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2085",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2086",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2087",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2088",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2089",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2090",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2091",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2092",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2093",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2094",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2095",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2096",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2097",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2098",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2099",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2100",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2101",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2102",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2103",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2104",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2105",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2106",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2107",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2108",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2109",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2110",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2111",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2112",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2113",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2114",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2115",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2116",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2117",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2118",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2119",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2120",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2121",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2122",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2123",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2124",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2125",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2126",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2127",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2128",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2129",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2130",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2131",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2132",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2133",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2134",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2135",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2136",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2137",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2138",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2139",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2140",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2141",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2142",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2143",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2144",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2145",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2146",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2147",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2148",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2149",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2150",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2151",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2152",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2153",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2154",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2155",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2156",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2157",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2158",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2159",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2160",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2161",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2162",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2163",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2164",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2165",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2166",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2167",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2168",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2169",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2170",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2171",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2172",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2173",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2174",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2175",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2176",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2177",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2178",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2179",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_9_2180",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_10_2181",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_11_2182",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_12_2183",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_13_2184",
+    "gamma": 0.03,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_5_2185",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_6_2186",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_7_2187",
+    "gamma": 1.0,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  },
+  {
+    "instance": "far_8_2188",
+    "gamma": 0.2,
+    "theta": 0.02,
+    "evaluation_seed": 7
+  }
+]

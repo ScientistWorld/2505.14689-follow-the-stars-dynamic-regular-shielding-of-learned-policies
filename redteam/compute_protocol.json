@@ -1,0 +1,23 @@
+{
+  "steps": 100000,
+  "seeds": [
+    7,
+    17,
+    29
+  ],
+  "gammas": [
+    0.03,
+    0.1,
+    0.2,
+    0.5,
+    1.0
+  ],
+  "better_budgets": [
+    0.15,
+    0.25,
+    0.35
+  ],
+  "instance_count": 383,
+  "workers": 4,
+  "reference_implementation": "method.factorybot_method.run_episode"
+}

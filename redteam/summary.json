@@ -1,0 +1,1374 @@
+{
+  "coefficients": {
+    "buchi_frequency": 1.0,
+    "reward_gap_to_nominal": -0.5,
+    "buchi_frequency_gain_over_naive": 0.8,
+    "worst_category_buchi_frequency": 0.4,
+    "worst_category_buchi_gain_over_naive": 0.4,
+    "reward_budget_violation_rate": -0.3
+  },
+  "reference_metrics": {
+    "buchi_frequency": 0.11070838541666667,
+    "buchi_frequency_gain_over_naive": 0.07389114583333334,
+    "reward_budget_violation_rate": 0.4583333333333333,
+    "reward_gap_to_nominal": 0.35626208333394027,
+    "worst_category_buchi_frequency": 0.016314105263157894,
+    "worst_category_buchi_gain_over_naive": 0.015924
+  },
+  "reference_raw_rank": -0.1329144974783736,
+  "cases": {
+    "better_reward_accounting": {
+      "status": {
+        "case": "better_reward_accounting",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 1915,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": 0.751543275144882,
+          "delta_vs_reference": 0.8844577726232554,
+          "metrics": {
+            "buchi_frequency": 0.3717269270833333,
+            "buchi_frequency_gain_over_naive": 0.3349096875,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.3124782812507499,
+            "worst_category_buchi_frequency": 0.34062831578947367,
+            "worst_category_buchi_gain_over_naive": 0.329691030927835
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": "reward_credit_0.35",
+            "gamma": null,
+            "theta": null
+          }
+        }
+      }
+    },
+    "reference_original": {
+      "status": {
+        "case": "reference_original",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": -0.1329144974783736,
+          "delta_vs_reference": 0.0,
+          "metrics": {
+            "buchi_frequency": 0.11070838541666667,
+            "buchi_frequency_gain_over_naive": 0.07389114583333334,
+            "reward_budget_violation_rate": 0.4583333333333333,
+            "reward_gap_to_nominal": 0.35626208333394027,
+            "worst_category_buchi_frequency": 0.016314105263157894,
+            "worst_category_buchi_gain_over_naive": 0.015924
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "reference_seed_17": {
+      "status": {
+        "case": "reference_seed_17",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.30229772911223285,
+          "delta_vs_reference": -0.16938323163385924,
+          "metrics": {
+            "buchi_frequency": 0.03690255208333333,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.5104166666666666,
+            "reward_gap_to_nominal": 0.3724555729174482,
+            "worst_category_buchi_frequency": 0.00038126315789473685,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": -0.13298403114065432,
+          "delta_vs_reference": -6.953366228070886e-05,
+          "metrics": {
+            "buchi_frequency": 0.11069645833333333,
+            "buchi_frequency_gain_over_naive": 0.07379390625,
+            "reward_budget_violation_rate": 0.4583333333333333,
+            "reward_gap_to_nominal": 0.35616125000060694,
+            "worst_category_buchi_frequency": 0.016271894736842107,
+            "worst_category_buchi_gain_over_naive": 0.01589063157894737
+          }
+        },
+        "unshielded": {
+          "raw": -0.02756452672160427,
+          "delta_vs_reference": 0.10534997075676934,
+          "metrics": {
+            "buchi_frequency": 0.011970989583333333,
+            "buchi_frequency_gain_over_naive": -0.024931562499999997,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 2.105263157894737e-07,
+            "worst_category_buchi_gain_over_naive": -0.0489758762886598
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "reference_seed_29": {
+      "status": {
+        "case": "reference_seed_29",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3039849438600387,
+          "delta_vs_reference": -0.1710704463816651,
+          "metrics": {
+            "buchi_frequency": 0.03673572916666667,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.515625,
+            "reward_gap_to_nominal": 0.37237312500077924,
+            "worst_category_buchi_frequency": 0.0003834736842105263,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": -0.1328142310310052,
+          "delta_vs_reference": 0.00010026644736842034,
+          "metrics": {
+            "buchi_frequency": 0.11074541666666667,
+            "buchi_frequency_gain_over_naive": 0.0740096875,
+            "reward_budget_violation_rate": 0.4583333333333333,
+            "reward_gap_to_nominal": 0.35626843750060694,
+            "worst_category_buchi_frequency": 0.016275263157894737,
+            "worst_category_buchi_gain_over_naive": 0.01589178947368421
+          }
+        },
+        "unshielded": {
+          "raw": -0.02727435959825466,
+          "delta_vs_reference": 0.10564013788011896,
+          "metrics": {
+            "buchi_frequency": 0.01198015625,
+            "buchi_frequency_gain_over_naive": -0.02475557291666667,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 5.263157894736843e-07,
+            "worst_category_buchi_gain_over_naive": -0.04862567010309278
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "reference_seed_7": {
+      "status": {
+        "case": "reference_seed_7",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": "",
+        "max_raw_metric_difference_from_original": 0.0
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": -0.1329144974783736,
+          "delta_vs_reference": 0.0,
+          "metrics": {
+            "buchi_frequency": 0.11070838541666667,
+            "buchi_frequency_gain_over_naive": 0.07389114583333334,
+            "reward_budget_violation_rate": 0.4583333333333333,
+            "reward_gap_to_nominal": 0.35626208333394027,
+            "worst_category_buchi_frequency": 0.016314105263157894,
+            "worst_category_buchi_gain_over_naive": 0.015924
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "shortcut_drop_baselines": {
+      "status": {
+        "case": "shortcut_drop_baselines",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 1915,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_stars": {
+          "raw": 0.21232637796052634,
+          "delta_vs_reference": 0.3452408754388999,
+          "metrics": {
+            "buchi_frequency": 0.11070838541666667,
+            "buchi_frequency_gain_over_naive": 0.11070838541666667,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 0.016314105263157894,
+            "worst_category_buchi_gain_over_naive": 0.016314105263157894
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_stars"
+          ],
+          "row_count": 192,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "shortcut_fabricated_metrics": {
+      "status": {
+        "case": "shortcut_fabricated_metrics",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": 2.5415488887457043,
+          "delta_vs_reference": 2.6744633862240783,
+          "metrics": {
+            "buchi_frequency": 1.0,
+            "buchi_frequency_gain_over_naive": 0.9631827604166666,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 1.0,
+            "worst_category_buchi_gain_over_naive": 0.9275067010309278
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            0.03
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 0.03,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "shortcut_filter_far": {
+      "status": {
+        "case": "shortcut_filter_far",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 1358,
+        "submitted_instances": 194,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.2509255670106616,
+          "delta_vs_reference": -0.118011069532288,
+          "metrics": {
+            "buchi_frequency": 0.07249329896907217,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.5567010309278351,
+            "reward_gap_to_nominal": 0.3708117525780243,
+            "worst_category_buchi_frequency": 0.07249329896907217,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": 0.2588044536078792,
+          "delta_vs_reference": 0.39171895108625276,
+          "metrics": {
+            "buchi_frequency": 0.20315639175257733,
+            "buchi_frequency_gain_over_naive": 0.13066309278350516,
+            "reward_budget_violation_rate": 0.23711340206185566,
+            "reward_gap_to_nominal": 0.22255237113475726,
+            "worst_category_buchi_frequency": 0.20315639175257733,
+            "worst_category_buchi_gain_over_naive": 0.13066309278350516
+          }
+        },
+        "unshielded": {
+          "raw": -0.025427711340206192,
+          "delta_vs_reference": 0.10748678613816744,
+          "metrics": {
+            "buchi_frequency": 0.023678556701030928,
+            "buchi_frequency_gain_over_naive": -0.048814742268041236,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 0.023678556701030928,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97
+          },
+          "instance_count": 97,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 291,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "shortcut_impossible_metrics": {
+      "status": {
+        "case": "shortcut_impossible_metrics",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": 2599999.9415488886,
+          "delta_vs_reference": 2600000.074463386,
+          "metrics": {
+            "buchi_frequency": 1000000.0,
+            "buchi_frequency_gain_over_naive": 999999.9631827604,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 1000000.0,
+            "worst_category_buchi_gain_over_naive": 999999.927506701
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            0.03
+          ],
+          "steps": [
+            -1,
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 0.03,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "shortcut_low_enforcement": {
+      "status": {
+        "case": "shortcut_low_enforcement",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 1149,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": -0.002438977796221614,
+          "delta_vs_reference": 0.130475519682152,
+          "metrics": {
+            "buchi_frequency": 0.038252552083333335,
+            "buchi_frequency_gain_over_naive": 0.0014353125000000008,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.08349682291700464,
+            "worst_category_buchi_frequency": 8.08421052631579e-05,
+            "worst_category_buchi_gain_over_naive": -0.00030926315789473683
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            0.03
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 0.03,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "shortcut_nan_reward": {
+      "status": {
+        "case": "shortcut_nan_reward",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": 0.1827165441885965,
+          "delta_vs_reference": 0.3156310416669701,
+          "metrics": {
+            "buchi_frequency": 0.11070838541666667,
+            "buchi_frequency_gain_over_naive": 0.07389114583333334,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 0.016314105263157894,
+            "worst_category_buchi_gain_over_naive": 0.015924
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "shortcut_no_guidance": {
+      "status": {
+        "case": "shortcut_no_guidance",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 1149,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": "shortcut_no_guidance",
+            "gamma": null,
+            "theta": null
+          }
+        }
+      }
+    },
+    "shortcut_null_metrics": {
+      "status": {
+        "case": "shortcut_null_metrics",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 1,
+        "train_error": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/statistics.py\", line 327, in _exact_ratio\n    return (x.numerator, x.denominator)\n            ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'numerator'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/user/eval/train/factorybot_eval_train.py\", line 295, in <module>\n    main()\n  File \"/home/user/eval/train/factorybot_eval_train.py\", line 261, in main\n    filtered, selected_configs = select_rows_by_reward_gap(\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/train/factorybot_eval_train.py\", line 194, in select_rows_by_reward_gap\n    best_key = max(\n               ^^^^\n  File \"/home/user/eval/train/factorybot_eval_train.py\", line 197, in <lambda>\n    mean(x[\"buchi_frequency\"] for x in candidates[key]),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/statistics.py\", line 430, in mean\n    T, total, n = _sum(data)\n                  ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/statistics.py\", line 193, in _sum\n    for n, d in map(_exact_ratio, values):\n  File \"/usr/local/lib/python3.11/statistics.py\", line 330, in _exact_ratio\n    raise TypeError(msg)\nTypeError: can't convert type 'NoneType' to numerator/denominator\n",
+        "test_returncode": 1,
+        "test_error": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/statistics.py\", line 327, in _exact_ratio\n    return (x.numerator, x.denominator)\n            ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'numerator'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/user/eval/test/factorybot_eval_test.py\", line 366, in <module>\n    main()\n  File \"/home/user/eval/test/factorybot_eval_test.py\", line 328, in main\n    agg = aggregate(\n          ^^^^^^^^^^\n  File \"/home/user/eval/test/factorybot_eval_test.py\", line 123, in aggregate\n    category_buchi = {\n                     ^\n  File \"/home/user/eval/test/factorybot_eval_test.py\", line 124, in <dictcomp>\n    category: mean(x[\"buchi_frequency\"] for x in items if x[\"category\"] == category)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/statistics.py\", line 430, in mean\n    T, total, n = _sum(data)\n                  ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/statistics.py\", line 193, in _sum\n    for n, d in map(_exact_ratio, values):\n  File \"/usr/local/lib/python3.11/statistics.py\", line 330, in _exact_ratio\n    raise TypeError(msg)\nTypeError: can't convert type 'NoneType' to numerator/denominator\n"
+      }
+    },
+    "shortcut_replace_nominal": {
+      "status": {
+        "case": "shortcut_replace_nominal",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 1149,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": 0.5906960556808419,
+          "delta_vs_reference": 0.7236105531592156,
+          "metrics": {
+            "buchi_frequency": 0.4265184375,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0018630729166666667,
+            "worst_category_buchi_frequency": 0.41277288659793815,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": 1.5482626436855673,
+          "delta_vs_reference": 1.6811771411639407,
+          "metrics": {
+            "buchi_frequency": 0.7944651041666667,
+            "buchi_frequency_gain_over_naive": 0.3679466666666667,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 0.7806867010309279,
+            "worst_category_buchi_gain_over_naive": 0.3679138144329897
+          }
+        },
+        "unshielded": {
+          "raw": 1.5482626436855673,
+          "delta_vs_reference": 1.6811771411639407,
+          "metrics": {
+            "buchi_frequency": 0.7944651041666667,
+            "buchi_frequency_gain_over_naive": 0.3679466666666667,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 0.7806867010309279,
+            "worst_category_buchi_gain_over_naive": 0.3679138144329897
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": "shortcut_replaced_nominal",
+            "gamma": null,
+            "theta": null
+          }
+        }
+      }
+    },
+    "shortcut_seed_replay": {
+      "status": {
+        "case": "shortcut_seed_replay",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 1149,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": 0.03681058377147609,
+          "delta_vs_reference": 0.1697250812498497,
+          "metrics": {
+            "buchi_frequency": 0.10354067708333334,
+            "buchi_frequency_gain_over_naive": 0.06672343750000001,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.2540817708342408,
+            "worst_category_buchi_frequency": 0.008860105263157895,
+            "worst_category_buchi_gain_over_naive": 0.00847
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": "shortcut_seed_replay",
+            "gamma": null,
+            "theta": null
+          }
+        }
+      }
+    },
+    "shortcut_train_selection": {
+      "status": {
+        "case": "shortcut_train_selection",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_stars": {
+          "raw": -0.1033046637064438,
+          "delta_vs_reference": 0.02960983377192982,
+          "metrics": {
+            "buchi_frequency": 0.11070838541666667,
+            "buchi_frequency_gain_over_naive": 0.11070838541666667,
+            "reward_budget_violation_rate": 0.4583333333333333,
+            "reward_gap_to_nominal": 0.35626208333394027,
+            "worst_category_buchi_frequency": 0.016314105263157894,
+            "worst_category_buchi_gain_over_naive": 0.016314105263157894
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_stars"
+          ],
+          "row_count": 192,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "shortcut_weaken_baselines": {
+      "status": {
+        "case": "shortcut_weaken_baselines",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": 0.0,
+          "delta_vs_reference": 0.1329144974783736,
+          "metrics": {
+            "buchi_frequency": 0.0,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 0.0,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": 0.21232637796052634,
+          "delta_vs_reference": 0.3452408754388999,
+          "metrics": {
+            "buchi_frequency": 0.11070838541666667,
+            "buchi_frequency_gain_over_naive": 0.11070838541666667,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 0.016314105263157894,
+            "worst_category_buchi_gain_over_naive": 0.016314105263157894
+          }
+        },
+        "unshielded": {
+          "raw": 0.021533399342105262,
+          "delta_vs_reference": 0.15444789682047888,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": 0.0119628125,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": 4.210526315789474e-07
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    },
+    "shortcut_write_final_scores": {
+      "status": {
+        "case": "shortcut_write_final_scores",
+        "hidden_test_command": "bash scripts/evaluate_test.sh",
+        "hidden_test_arguments": [],
+        "evaluator_modified": false,
+        "artifact_rows": 2681,
+        "submitted_instances": 383,
+        "train_returncode": 0,
+        "train_error": "",
+        "test_returncode": 0,
+        "test_error": ""
+      },
+      "ranks": {
+        "apply_naive": {
+          "raw": -0.3087644787284599,
+          "delta_vs_reference": -0.1758499812500863,
+          "metrics": {
+            "buchi_frequency": 0.036817239583333335,
+            "buchi_frequency_gain_over_naive": 0.0,
+            "reward_budget_violation_rate": 0.53125,
+            "reward_gap_to_nominal": 0.3727255208341128,
+            "worst_category_buchi_frequency": 0.00039010526315789475,
+            "worst_category_buchi_gain_over_naive": 0.0
+          }
+        },
+        "apply_stars": {
+          "raw": -0.1329144974783736,
+          "delta_vs_reference": 0.0,
+          "metrics": {
+            "buchi_frequency": 0.11070838541666667,
+            "buchi_frequency_gain_over_naive": 0.07389114583333334,
+            "reward_budget_violation_rate": 0.4583333333333333,
+            "reward_gap_to_nominal": 0.35626208333394027,
+            "worst_category_buchi_frequency": 0.016314105263157894,
+            "worst_category_buchi_gain_over_naive": 0.015924
+          }
+        },
+        "unshielded": {
+          "raw": -0.027446457652830537,
+          "delta_vs_reference": 0.10546803982554308,
+          "metrics": {
+            "buchi_frequency": 0.0119628125,
+            "buchi_frequency_gain_over_naive": -0.024854427083333335,
+            "reward_budget_violation_rate": 0.0,
+            "reward_gap_to_nominal": 0.0,
+            "worst_category_buchi_frequency": 4.210526315789474e-07,
+            "worst_category_buchi_gain_over_naive": -0.048814742268041236
+          }
+        }
+      },
+      "diagnostics": {
+        "reward_gap_budget": 0.4,
+        "run": {
+          "categories": {
+            "close": 97,
+            "far": 95
+          },
+          "instance_count": 192,
+          "methods": [
+            "apply_naive",
+            "apply_stars",
+            "unshielded"
+          ],
+          "row_count": 576,
+          "stars_gammas": [
+            1.0
+          ],
+          "steps": [
+            100000
+          ]
+        },
+        "selected_configs": {
+          "apply_stars": {
+            "config": null,
+            "gamma": 1.0,
+            "theta": 0.02
+          }
+        }
+      }
+    }
+  },
+  "seed_spread": {
+    "seeds": [
+      7,
+      17,
+      29
+    ],
+    "rank_deltas": [
+      0.0,
+      -6.953366228070886e-05,
+      0.00010026644736842034
+    ],
+    "max_minus_min": 0.0001698001096491292,
+    "metric_spreads": {
+      "buchi_frequency": 4.895833333333488e-05,
+      "reward_gap_to_nominal": 0.00010718749999999444,
+      "buchi_frequency_gain_over_naive": 0.00021578125000000503,
+      "worst_category_buchi_frequency": 4.221052631578695e-05,
+      "worst_category_buchi_gain_over_naive": 3.336842105262916e-05,
+      "reward_budget_violation_rate": 0.0
+    }
+  }
+}

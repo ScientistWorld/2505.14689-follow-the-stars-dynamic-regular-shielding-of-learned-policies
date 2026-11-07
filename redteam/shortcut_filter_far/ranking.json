@@ -1,0 +1,80 @@
+{
+  "status": {
+    "case": "shortcut_filter_far",
+    "hidden_test_command": "bash scripts/evaluate_test.sh",
+    "hidden_test_arguments": [],
+    "evaluator_modified": false,
+    "artifact_rows": 1358,
+    "submitted_instances": 194,
+    "train_returncode": 0,
+    "train_error": "",
+    "test_returncode": 0,
+    "test_error": ""
+  },
+  "ranks": {
+    "apply_naive": {
+      "raw": -0.2509255670106616,
+      "delta_vs_reference": -0.118011069532288,
+      "metrics": {
+        "buchi_frequency": 0.07249329896907217,
+        "buchi_frequency_gain_over_naive": 0.0,
+        "reward_budget_violation_rate": 0.5567010309278351,
+        "reward_gap_to_nominal": 0.3708117525780243,
+        "worst_category_buchi_frequency": 0.07249329896907217,
+        "worst_category_buchi_gain_over_naive": 0.0
+      }
+    },
+    "apply_stars": {
+      "raw": 0.2588044536078792,
+      "delta_vs_reference": 0.39171895108625276,
+      "metrics": {
+        "buchi_frequency": 0.20315639175257733,
+        "buchi_frequency_gain_over_naive": 0.13066309278350516,
+        "reward_budget_violation_rate": 0.23711340206185566,
+        "reward_gap_to_nominal": 0.22255237113475726,
+        "worst_category_buchi_frequency": 0.20315639175257733,
+        "worst_category_buchi_gain_over_naive": 0.13066309278350516
+      }
+    },
+    "unshielded": {
+      "raw": -0.025427711340206192,
+      "delta_vs_reference": 0.10748678613816744,
+      "metrics": {
+        "buchi_frequency": 0.023678556701030928,
+        "buchi_frequency_gain_over_naive": -0.048814742268041236,
+        "reward_budget_violation_rate": 0.0,
+        "reward_gap_to_nominal": 0.0,
+        "worst_category_buchi_frequency": 0.023678556701030928,
+        "worst_category_buchi_gain_over_naive": -0.048814742268041236
+      }
+    }
+  },
+  "diagnostics": {
+    "reward_gap_budget": 0.4,
+    "run": {
+      "categories": {
+        "close": 97
+      },
+      "instance_count": 97,
+      "methods": [
+        "apply_naive",
+        "apply_stars",
+        "unshielded"
+      ],
+      "row_count": 291,
+      "stars_gammas": [
+        1.0
+      ],
+      "steps": [
+        100000
+      ]
+    },
+    "selected_configs": {
+      "apply_stars": {
+        "config": null,
+        "gamma": 1.0,
+        "theta": 0.02
+      }
+    }
+  }
+}
