@@ -1,0 +1,38 @@
+{
+  "iteration_anchor": "c6399e2",
+  "original_regular_tracked_files_checked": 115,
+  "unchanged_original_regular_tracked_files": 114,
+  "original_files_differing": [
+    "action.yaml"
+  ],
+  "allowed_completion_signal": "action.yaml",
+  "git_restore_applied_to": [
+    "scripts/run.sh",
+    "scoring/scores.json",
+    "scoring/scores_train.json",
+    "scoring/scores_test.json",
+    "data/factorybot_nominal.py",
+    "data/factorybot_suite.json"
+  ],
+  "original_checkpoint_sha256": "78a6bdb72b5a16b0c81da0073ae98b7d1bdad6e5082814b53bf40f6201150e9d",
+  "restored_checkpoint_sha256": "78a6bdb72b5a16b0c81da0073ae98b7d1bdad6e5082814b53bf40f6201150e9d",
+  "evaluator_and_method_hashes_match_start": true,
+  "pre_existing_system_changes_preserved": [
+    "README.md",
+    "manifest.json",
+    "trajectory/"
+  ],
+  "syntax_validation": {
+    "python_files": 27,
+    "shell_files": 20,
+    "result": "pass"
+  },
+  "run_evidence": {
+    "cases": 18,
+    "shortcuts": 13,
+    "strict_shortcut_wins": 11,
+    "shortcut_ties": 1,
+    "rejected_shortcuts": 1,
+    "all_hidden_tests_no_arguments": true
+  }
+}

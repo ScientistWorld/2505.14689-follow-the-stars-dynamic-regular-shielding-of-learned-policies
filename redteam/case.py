@@ -31,7 +31,7 @@ def write_rows(path, rows):
 
 def source_rows():
     # Audit request explicitly permits reusing original trained outputs for
-    # summary-only shortcuts. No test answers or metrics are read here.
+    # summary-only shortcuts. No hidden score files are read here.
     path = STATE / "checkpoints/factorybot_results.jsonl"
     if not path.exists():
         path = ROOT / "redteam/reference_seed_7/rollouts.jsonl"
@@ -47,6 +47,26 @@ def visible_config(rows):
     train = with_reward_gap(train, nominal_rewards(train))
     _, configs = select_rows_by_reward_gap(train, 0.4, baseline_methods=BASELINE_METHODS)
     return configs["apply_stars"]
+
+
+def ensure_inputs(name, folder):
+    """Make each case runnable after cloning, without committed raw caches.
+
+    This preparation runs only inside the submitted compute job, just like
+    the full audit. With existing reference outputs it does no simulation.
+    """
+    subprocess.run([sys.executable, "redteam/bootstrap.py"], cwd=ROOT, check=True)
+    if name.startswith("reference_seed_"):
+        required = [folder / "rollouts.jsonl"]
+    elif name == "better_reward_accounting":
+        required = [folder / "rollouts.jsonl",
+                    ROOT / "redteam/reference_seed_7/rollouts.jsonl"]
+    else:
+        required = [] if (STATE / "checkpoints/factorybot_results.jsonl").exists() else [
+            ROOT / "redteam/reference_seed_7/rollouts.jsonl"]
+    if any(not path.exists() for path in required):
+        subprocess.run([sys.executable, "redteam/compute.py", "--steps", "100000",
+                        "--workers", "4"], cwd=ROOT, check=True)
 
 
 def prepare(name, folder):
@@ -160,6 +180,7 @@ def main():
     status = {"case": args.name, "hidden_test_command": "bash scripts/evaluate_test.sh",
               "hidden_test_arguments": [], "evaluator_modified": False}
     try:
+        ensure_inputs(args.name, folder)
         submission = runpy.run_path(str(folder / "submission.py"))
         rows = submission["build_submission"]()
         write_rows(ARTIFACT, rows)

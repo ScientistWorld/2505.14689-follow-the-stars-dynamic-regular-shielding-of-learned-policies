@@ -1,4 +1,2 @@
-action: submit
-gpus: 0
-test: false
-notes: "FactoryBot audit: full 383-instance/100000-step reference at 3 seeds, stronger reward-accounting guide, weaker ablations, and 13 shortcut trials with unmodified hidden tests."
+action: done
+notes: "Audit complete: genuine improvement gains 0.884458 but no-guidance shortcut gains 0.105468; seed spread 0.0001698; 11 shortcut wins, one tie, one rejection. Report and reproducible runs committed; original gym files restored."

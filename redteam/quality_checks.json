@@ -1,0 +1,198 @@
+{
+  "job": {
+    "id": "b9e9808a-b2f",
+    "exit_code": 0,
+    "gpus": 0,
+    "hidden_command": "bash scripts/evaluate_test.sh",
+    "hidden_arguments": []
+  },
+  "reference_seed_7_exact_reproduction": true,
+  "better_dominates_all_scored_metrics": true,
+  "weaker_nominal_zero_visit_instances": 92,
+  "weaker_nominal_far_zero_visit_instances": 91,
+  "test_instance_count": 192,
+  "test_far_count": 95,
+  "weaker_rank_contributions": {
+    "buchi_frequency": -0.09874557291666666,
+    "reward_gap_to_nominal": 0.17813104166697014,
+    "buchi_frequency_gain_over_naive": -0.07899645833333335,
+    "worst_category_buchi_frequency": -0.006525473684210525,
+    "worst_category_buchi_gain_over_naive": -0.0258954969072165,
+    "reward_budget_violation_rate": 0.13749999999999998
+  },
+  "original_nominal_average_reward": 0.7921178125007443,
+  "replacement_nominal_average_reward": 0.004362239583333333,
+  "better_diagnostics_by_category": {
+    "close": {
+      "results": {
+        "apply_naive": {
+          "average_reward": 0.40502927835051,
+          "buchi_frequency": 0.07249329896907217,
+          "buchi_frequency_gain_over_naive": 0.0,
+          "mean_tv_interference": 0.2886185195879755,
+          "override_rate": 0.4893901030927835,
+          "reward_budget_violation_rate": 0.5567010309278351,
+          "reward_gap_to_nominal": 0.3708117525780243,
+          "worst_category_buchi_frequency": 0.07249329896907217,
+          "worst_category_buchi_gain_over_naive": 0.0
+        },
+        "apply_stars": {
+          "average_reward": 0.4781222680412371,
+          "buchi_frequency": 0.4021843298969072,
+          "buchi_frequency_gain_over_naive": 0.329691030927835,
+          "mean_tv_interference": 0.3741276268041317,
+          "override_rate": 0.4568438144329897,
+          "reward_budget_violation_rate": 0.0,
+          "reward_gap_to_nominal": 0.29899247422751446,
+          "worst_category_buchi_frequency": 0.4021843298969072,
+          "worst_category_buchi_gain_over_naive": 0.329691030927835
+        },
+        "unshielded": {
+          "average_reward": 0.7758410309285343,
+          "buchi_frequency": 0.023678556701030928,
+          "buchi_frequency_gain_over_naive": -0.048814742268041236,
+          "mean_tv_interference": 0.0,
+          "override_rate": 0.24223711340206186,
+          "reward_budget_violation_rate": 0.0,
+          "reward_gap_to_nominal": 0.0,
+          "worst_category_buchi_frequency": 0.023678556701030928,
+          "worst_category_buchi_gain_over_naive": -0.048814742268041236
+        }
+      }
+    },
+    "far": {
+      "results": {
+        "apply_naive": {
+          "average_reward": 0.4340576842104608,
+          "buchi_frequency": 0.00039010526315789475,
+          "buchi_frequency_gain_over_naive": 0.0,
+          "mean_tv_interference": 0.291173709474055,
+          "override_rate": 0.4917638947368421,
+          "reward_budget_violation_rate": 0.5052631578947369,
+          "reward_gap_to_nominal": 0.37467957894822423,
+          "worst_category_buchi_frequency": 0.00039010526315789475,
+          "worst_category_buchi_gain_over_naive": 0.0
+        },
+        "apply_stars": {
+          "average_reward": 0.48248926315789475,
+          "buchi_frequency": 0.34062831578947367,
+          "buchi_frequency_gain_over_naive": 0.34023821052631575,
+          "mean_tv_interference": 0.3689578905262941,
+          "override_rate": 0.4730355789473684,
+          "reward_budget_violation_rate": 0.0,
+          "reward_gap_to_nominal": 0.3262480000007903,
+          "worst_category_buchi_frequency": 0.34062831578947367,
+          "worst_category_buchi_gain_over_naive": 0.34023821052631575
+        },
+        "unshielded": {
+          "average_reward": 0.808737263158685,
+          "buchi_frequency": 4.210526315789474e-07,
+          "buchi_frequency_gain_over_naive": -0.0003896842105263158,
+          "mean_tv_interference": 0.0,
+          "override_rate": 0.26323694736842107,
+          "reward_budget_violation_rate": 0.0,
+          "reward_gap_to_nominal": 0.0,
+          "worst_category_buchi_frequency": 4.210526315789474e-07,
+          "worst_category_buchi_gain_over_naive": -0.0003896842105263158
+        }
+      }
+    }
+  },
+  "reference_diagnostics_by_category": {
+    "close": {
+      "results": {
+        "apply_naive": {
+          "average_reward": 0.40502927835051,
+          "buchi_frequency": 0.07249329896907217,
+          "buchi_frequency_gain_over_naive": 0.0,
+          "mean_tv_interference": 0.2886185195879755,
+          "override_rate": 0.4893901030927835,
+          "reward_budget_violation_rate": 0.5567010309278351,
+          "reward_gap_to_nominal": 0.3708117525780243,
+          "worst_category_buchi_frequency": 0.07249329896907217,
+          "worst_category_buchi_gain_over_naive": 0.0
+        },
+        "apply_stars": {
+          "average_reward": 0.5558518556700557,
+          "buchi_frequency": 0.20315639175257733,
+          "buchi_frequency_gain_over_naive": 0.13066309278350516,
+          "mean_tv_interference": 0.25091280748110745,
+          "override_rate": 0.3800703092783505,
+          "reward_budget_violation_rate": 0.23711340206185566,
+          "reward_gap_to_nominal": 0.22255237113475726,
+          "worst_category_buchi_frequency": 0.20315639175257733,
+          "worst_category_buchi_gain_over_naive": 0.13066309278350516
+        },
+        "unshielded": {
+          "average_reward": 0.7758410309285343,
+          "buchi_frequency": 0.023678556701030928,
+          "buchi_frequency_gain_over_naive": -0.048814742268041236,
+          "mean_tv_interference": 0.0,
+          "override_rate": 0.24223711340206186,
+          "reward_budget_violation_rate": 0.0,
+          "reward_gap_to_nominal": 0.0,
+          "worst_category_buchi_frequency": 0.023678556701030928,
+          "worst_category_buchi_gain_over_naive": -0.048814742268041236
+        }
+      }
+    },
+    "far": {
+      "results": {
+        "apply_naive": {
+          "average_reward": 0.4340576842104608,
+          "buchi_frequency": 0.00039010526315789475,
+          "buchi_frequency_gain_over_naive": 0.0,
+          "mean_tv_interference": 0.291173709474055,
+          "override_rate": 0.4917638947368421,
+          "reward_budget_violation_rate": 0.5052631578947369,
+          "reward_gap_to_nominal": 0.37467957894822423,
+          "worst_category_buchi_frequency": 0.00039010526315789475,
+          "worst_category_buchi_gain_over_naive": 0.0
+        },
+        "apply_stars": {
+          "average_reward": 0.31595052631610526,
+          "buchi_frequency": 0.016314105263157894,
+          "buchi_frequency_gain_over_naive": 0.015924,
+          "mean_tv_interference": 0.3592233358364313,
+          "override_rate": 0.49348831578947366,
+          "reward_budget_violation_rate": 0.6842105263157895,
+          "reward_gap_to_nominal": 0.4927867368425798,
+          "worst_category_buchi_frequency": 0.016314105263157894,
+          "worst_category_buchi_gain_over_naive": 0.015924
+        },
+        "unshielded": {
+          "average_reward": 0.808737263158685,
+          "buchi_frequency": 4.210526315789474e-07,
+          "buchi_frequency_gain_over_naive": -0.0003896842105263158,
+          "mean_tv_interference": 0.0,
+          "override_rate": 0.26323694736842107,
+          "reward_budget_violation_rate": 0.0,
+          "reward_gap_to_nominal": 0.0,
+          "worst_category_buchi_frequency": 4.210526315789474e-07,
+          "worst_category_buchi_gain_over_naive": -0.0003896842105263158
+        }
+      }
+    }
+  },
+  "seed_spread": {
+    "seeds": [
+      7,
+      17,
+      29
+    ],
+    "rank_deltas": [
+      0.0,
+      -6.953366228070886e-05,
+      0.00010026644736842034
+    ],
+    "max_minus_min": 0.0001698001096491292,
+    "metric_spreads": {
+      "buchi_frequency": 4.895833333333488e-05,
+      "reward_gap_to_nominal": 0.00010718749999999444,
+      "buchi_frequency_gain_over_naive": 0.00021578125000000503,
+      "worst_category_buchi_frequency": 4.221052631578695e-05,
+      "worst_category_buchi_gain_over_naive": 3.336842105262916e-05,
+      "reward_budget_violation_rate": 0.0
+    }
+  }
+}
