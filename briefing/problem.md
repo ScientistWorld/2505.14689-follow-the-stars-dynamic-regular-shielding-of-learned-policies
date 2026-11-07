@@ -2,9 +2,9 @@
 
 ## Research Question
 
-How can an already learned probabilistic policy for a finite robot-control environment be guided at runtime so that it satisfies safety and recurring-goal requirements while preserving the policy's original reward-seeking behavior?
+How can an already learned probabilistic policy for a finite robot-control environment be guided at runtime so that it satisfies recurring-goal (liveness) requirements while preserving the policy's original reward-seeking behavior?
 
-The FactoryBot-centered benchmark asks this question in gridworlds where the nominal policy is trained or computed to maximize average reward without the recurring-goal objective. At evaluation time, the agent must still collect high reward but must also repeatedly visit a designated Buchi region and respect any safety constraints. A future method should be evaluated as a post-processing runtime guide: it may observe the current state/history and the nominal action distribution, but it should not retrain the nominal policy for the new objective during evaluation.
+The FactoryBot-centered benchmark asks this question in gridworlds where the nominal policy is computed to maximize average reward without the recurring-goal objective. At evaluation time, the robot must still collect reward but must also repeatedly visit a designated Büchi cell. A method is a post-processing **runtime guide**: at each step it sees the current state, its own execution history, the nominal action distribution, and the known transition graph with the Büchi cell, and it returns the action distribution to execute. It may not retrain or replace the nominal policy, and it is not told where the reward is.
 
 ## Why It Matters
 
@@ -12,10 +12,10 @@ Autonomous systems often receive new correctness requirements after a policy has
 
 ## Success Criteria
 
-A successful solution should:
+A successful guide should:
 
-- Increase the frequency of required recurring-goal visits.
-- Preserve average reward close to the per-instance reward optimum.
-- Avoid safety violations and unsatisfied runtime objectives.
-- Handle both Close and Far settings, where the reward region may be near or far from the required recurring-goal region.
-- Be evaluated without relying on implementation details of any particular shielding algorithm.
+- Increase how often the robot visits the required Büchi cell.
+- Keep the average reward within a prescribed budget of what the unmodified nominal policy earns on the same grid — at several budgets, from tight (0.1) to loose (0.4).
+- Achieve this on both Close grids (reward near the Büchi cell) and Far grids (reward far from it), where the compromise is much harder.
+- Visit the Büchi cell at a meaningful rate on as many grids as possible, not only on average.
+- Work from information available at runtime; it must not depend on knowing the evaluation grids or random numbers in advance.

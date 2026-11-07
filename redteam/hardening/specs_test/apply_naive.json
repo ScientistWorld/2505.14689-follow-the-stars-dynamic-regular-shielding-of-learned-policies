@@ -1,0 +1,7 @@
+{
+  "name": "apply_naive",
+  "module": "redteam/hardening/guides/shortcuts.py",
+  "factory": "make_terrible_guide",
+  "params": {},
+  "audit_role": "old 'weaken/drop baselines' shortcut via reserved name"
+}

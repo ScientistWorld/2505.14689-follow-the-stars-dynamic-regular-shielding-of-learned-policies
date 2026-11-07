@@ -1,59 +1,44 @@
 {
   "experiments": {
     "factorybot_buchi_reward_tradeoff": {
-      "description": "FactoryBot matched-reward shielding quality, based on the paper's Figure 4b/Figure 5 visual estimates at the epsilon=0.4 reward-gap operating point. The paper reports the proposed shield achieving much higher Buchi frequency than the naive exploratory shield while staying within the same reward-closeness condition.",
+      "description": "FactoryBot matched-reward liveness (paper Sec. 4.1, Fig. 4b / Fig. 5). Each runtime guide is run by the scorer for 100,000 steps from a random start on every grid, once per reward budget eps in {0.1, 0.2, 0.3, 0.4}; a run counts only if its average reward is within eps of the unshielded nominal policy on the same grid and random numbers, otherwise its Buchi frequency counts as 0. Paper values (read from Fig. 4b, average Buchi frequency of instances within eps of the maximal reward): ApplySTARs 0.042 / 0.090 / 0.138 / 0.122 and ApplyNaive 0.031 / 0.033 / 0.029 / 0.028 at eps = 0.1 / 0.2 / 0.3 / 0.4 (0.243 / 0.014 at eps = 0.5, outside the scored range); the results below are their means over the four scored budgets. Scaling note: the paper averages only over instances that meet the budget, whereas this benchmark counts over-budget instances as zero, measures closeness against the nominal policy's realized reward on the same grid and seed, uses a reward-only nominal computed by relative value iteration (4% epsilon perturbation, theta = 0.02), and scores 256 held-out grids (128 Close / 128 Far) instead of the paper's 383.",
       "weight": 1.0,
-      "primary_metric": "buchi_frequency",
+      "primary_metric": "matched_reward_buchi_frequency",
       "metrics": {
-        "buchi_frequency": {
+        "matched_reward_buchi_frequency": {
           "higher_is_better": true,
           "coefficient": 1.0,
-          "description": "Mean frequency of visits to the required Buchi region; this is the paper's headline liveness benefit."
+          "description": "Mean over reward budgets {0.1, 0.2, 0.3, 0.4} and grids of the run's Buchi-region visit frequency, counted as 0 when the run's reward gap to the nominal policy exceeds the budget. The paper's headline quantity: recurring-goal frequency at matched reward closeness."
         },
-        "reward_gap_to_nominal": {
-          "higher_is_better": false,
-          "coefficient": -0.5,
-          "description": "Mean drop in average reward relative to the unshielded nominal policy, measuring the reward-preservation constraint."
-        },
-        "buchi_frequency_gain_over_naive": {
+        "matched_reward_gain_over_naive": {
           "higher_is_better": true,
-          "coefficient": 0.8,
-          "description": "Mean Buchi-frequency improvement over the naive exploratory shielding baseline at the same evaluation slice."
+          "coefficient": 0.5,
+          "description": "matched_reward_buchi_frequency minus that of the naive exploration guide, which the scorer runs itself with its best global mixing weight per budget. The paper's comparative claim against ApplyNaive."
         },
-        "worst_category_buchi_frequency": {
+        "worst_category_matched_reward_buchi_frequency": {
           "higher_is_better": true,
-          "coefficient": 0.4,
-          "description": "Lowest category-level Buchi frequency across FactoryBot Close/Far groups, catching methods that improve only one regime."
+          "coefficient": 0.5,
+          "description": "Minimum over the Close and Far grid categories of the category's matched-reward Buchi frequency. The paper reports that Far grids (reward region far from the Buchi region) need a much stronger reward/liveness compromise; a guide must not win on Close grids only."
         },
-        "worst_category_buchi_gain_over_naive": {
+        "liveness_success_rate": {
           "higher_is_better": true,
-          "coefficient": 0.4,
-          "description": "Lowest category-level Buchi-frequency gain over the naive baseline, checking that the advantage generalizes across regimes."
-        },
-        "reward_budget_violation_rate": {
-          "higher_is_better": false,
-          "coefficient": -0.3,
-          "description": "Fraction of evaluated instances exceeding the reward-gap budget, catching methods that hide constraint failures in the mean."
+          "coefficient": 0.25,
+          "description": "Fraction of (grid, budget) runs that both stay within the reward budget and visit the Buchi region with frequency at least 1/|Q| (|Q| = number of free cells, the level Thm. 12 says suitable parameters guarantee). Constraint-and-liveness satisfaction per instance."
         }
       },
       "results": {
         "unshielded": {
-          "type": "baseline",
-          "buchi_frequency": 0.015,
-          "reward_gap_to_nominal": 0.0,
-          "buchi_frequency_gain_over_naive": -0.018
+          "type": "baseline"
         },
         "apply_naive": {
           "type": "baseline",
-          "buchi_frequency": 0.033,
-          "reward_gap_to_nominal": 0.4,
-          "buchi_frequency_gain_over_naive": 0.0
+          "matched_reward_buchi_frequency": 0.030,
+          "matched_reward_gain_over_naive": 0.0
         },
         "apply_stars": {
           "type": "proposed",
-          "buchi_frequency": 0.12,
-          "reward_gap_to_nominal": 0.4,
-          "buchi_frequency_gain_over_naive": 0.087
+          "matched_reward_buchi_frequency": 0.098,
+          "matched_reward_gain_over_naive": 0.068
         }
       }
     }

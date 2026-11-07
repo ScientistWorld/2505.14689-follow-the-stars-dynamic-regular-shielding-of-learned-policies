@@ -1,0 +1,7 @@
+{
+  "name": "unnormalized_output",
+  "factory": "make_unnormalized_guide",
+  "module": "redteam/hardening/guides/shortcuts.py",
+  "params": {},
+  "audit_role": "old 'impossible metrics' shortcut"
+}

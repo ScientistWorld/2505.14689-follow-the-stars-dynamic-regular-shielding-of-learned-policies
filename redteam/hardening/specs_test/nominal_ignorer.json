@@ -1,0 +1,7 @@
+{
+  "name": "nominal_ignorer",
+  "factory": "make_nominal_ignorer_guide",
+  "module": "redteam/hardening/guides/shortcuts.py",
+  "params": {},
+  "audit_role": "old 'replace nominal' shortcut: drop the reward policy and chase the Buchi cell"
+}

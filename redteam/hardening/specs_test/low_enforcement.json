@@ -1,0 +1,15 @@
+{
+  "name": "low_enforcement",
+  "factory": "make_guide",
+  "module": "method/stars_guide.py",
+  "params": {
+    "theta": 0.02,
+    "gamma_by_budget": {
+      "0.1": 0.03,
+      "0.2": 0.03,
+      "0.3": 0.03,
+      "0.4": 0.03
+    }
+  },
+  "audit_role": "weaker variant / old 'low enforcement' shortcut: fixed small gamma"
+}

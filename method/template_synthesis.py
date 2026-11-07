@@ -13,12 +13,11 @@ from __future__ import annotations
 from collections import deque
 from collections.abc import Iterable, Mapping
 
-from data.factorybot import ACTIONS, FactoryBotInstance
 from method.stars import Edge, State, StrategyTemplate
 
 
 def synthesize_buchi_reach_template(
-    instance: FactoryBotInstance,
+    instance,
     accepting: Iterable[State],
 ) -> StrategyTemplate:
     """Compute the Büchi live-group template for a deterministic grid MDP.
@@ -27,6 +26,10 @@ def synthesize_buchi_reach_template(
     FactoryBot setting: all states in the generated grids are in one strongly
     connected winning region, so the template has no unsafe or co-live edges
     and its live groups enforce recurring progress back to the accepting set.
+
+    ``instance`` may be any finite-graph model exposing ``states``,
+    ``actions`` and ``successor(state, action)`` (the FactoryBot instance or
+    the read-only model handed to runtime guides).
     """
 
     layers = attractor_layers(instance, set(accepting))
@@ -45,8 +48,8 @@ def synthesize_buchi_reach_template(
     for layer_idx in range(1, max(layers) + 1):
         edges = []
         for state in layers[layer_idx]:
-            for action in ACTIONS:
-                successor = instance.step(state, action)
+            for action in instance.actions:
+                successor = instance.successor(state, action)
                 if state_to_layer.get(successor, 10**9) < layer_idx:
                     edges.append((state, action))
         if edges:
@@ -60,7 +63,7 @@ def synthesize_buchi_reach_template(
 
 
 def attractor_layers(
-    instance: FactoryBotInstance,
+    instance,
     target_states: set[State],
 ) -> dict[int, set[State]]:
     """Return attractor partitions Q_i for deterministic reachability."""
@@ -68,11 +71,12 @@ def attractor_layers(
     layers: dict[int, set[State]] = {0: set(target_states)}
     state_to_layer: dict[State, int] = {state: 0 for state in target_states}
     queue: deque[State] = deque(target_states)
+    pred_map = predecessor_map(instance)
 
     while queue:
         state = queue.popleft()
         current_layer = state_to_layer[state]
-        for predecessor, action in predecessors(instance, state):
+        for predecessor, action in pred_map.get(state, ()):
             if predecessor in state_to_layer:
                 continue
             state_to_layer[predecessor] = current_layer + 1
@@ -82,24 +86,31 @@ def attractor_layers(
     return layers
 
 
-def predecessors(instance: FactoryBotInstance, state: State) -> Iterable[tuple[State, str]]:
+def predecessor_map(instance) -> dict[State, list[tuple[State, str]]]:
+    """All (predecessor, action) pairs per state, in state/action order."""
+
+    pred: dict[State, list[tuple[State, str]]] = {}
     for candidate in instance.states:
-        for action in ACTIONS:
-            if instance.step(candidate, action) == state:
-                yield candidate, action
+        for action in instance.actions:
+            pred.setdefault(instance.successor(candidate, action), []).append((candidate, action))
+    return pred
 
 
-def _unsafe_edges(instance: FactoryBotInstance, unreachable: set[State]) -> set[Edge]:
+def predecessors(instance, state: State) -> Iterable[tuple[State, str]]:
+    return iter(predecessor_map(instance).get(state, ()))
+
+
+def _unsafe_edges(instance, unreachable: set[State]) -> set[Edge]:
     unsafe: set[Edge] = set()
     if not unreachable:
         return unsafe
     winning = set(instance.states) - unreachable
     for state in winning:
-        for action in ACTIONS:
-            if instance.step(state, action) not in winning:
+        for action in instance.actions:
+            if instance.successor(state, action) not in winning:
                 unsafe.add((state, action))
     for state in unreachable:
-        for action in ACTIONS:
+        for action in instance.actions:
             unsafe.add((state, action))
     return unsafe
 

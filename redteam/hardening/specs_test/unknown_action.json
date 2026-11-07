@@ -1,0 +1,7 @@
+{
+  "name": "unknown_action",
+  "factory": "make_unknown_action_guide",
+  "module": "redteam/hardening/guides/shortcuts.py",
+  "params": {},
+  "audit_role": "teleport attempt"
+}

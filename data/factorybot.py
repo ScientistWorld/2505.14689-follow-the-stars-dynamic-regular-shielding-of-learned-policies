@@ -67,6 +67,13 @@ class FactoryBotInstance:
             category=payload["category"],
         )
 
+    @property
+    def actions(self) -> tuple[str, ...]:
+        return ACTIONS
+
+    def successor(self, state: tuple[int, int], action: str) -> tuple[int, int]:
+        return self.step(state, action)
+
     def step(self, state: tuple[int, int], action: str) -> tuple[int, int]:
         dr, dc = DELTAS[action]
         nxt = (state[0] + dr, state[1] + dc)

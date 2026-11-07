@@ -1,0 +1,10 @@
+{
+  "name": "credit_tour",
+  "factory": "make_guide",
+  "module": "redteam/hardening/guides/credit_tour.py",
+  "params": {
+    "margin": 0.05,
+    "dwell_factor": 16
+  },
+  "audit_role": "genuinely better alternative guide (iteration-10 red-team reward-credit tours)"
+}

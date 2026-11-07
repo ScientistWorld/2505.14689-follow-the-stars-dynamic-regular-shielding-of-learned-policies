@@ -1,8 +1,8 @@
 # Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends.
-action: pending
+action: submit
 gpus: 0
 test: false
 milestone: core_claim_plus
-notes: ""
+notes: "Hardened FactoryBot gym: retune ApplySTARs (paper gamma grid, 383 visible grids, 100k steps), score reference on train/test with the new evaluator-run guide interface, then run the hardening audit (better/weaker variants, shortcuts, tamper check, seed noise). CPU, resumable."

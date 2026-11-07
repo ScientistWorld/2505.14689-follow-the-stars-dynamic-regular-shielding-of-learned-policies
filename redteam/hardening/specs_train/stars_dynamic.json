@@ -1,0 +1,11 @@
+{
+  "name": "stars_dynamic",
+  "factory": "make_guide",
+  "module": "redteam/hardening/guides/stars_dynamic.py",
+  "params": {
+    "gamma_high": 1.0,
+    "safety": 0.8,
+    "theta": 0.02
+  },
+  "audit_role": "better variant inside the paper's framework: gamma switched at runtime"
+}

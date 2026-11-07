@@ -2,23 +2,20 @@
 
 ## Research Problem
 
-This benchmark studies runtime guidance for learned probabilistic policies under formal recurring-goal and safety requirements. The central question is whether a method can take an already reward-optimized FactoryBot policy and, without retraining it for the new objective, make executions satisfy required recurring visits while preserving average reward.
+This benchmark studies runtime guidance for learned probabilistic policies under formal recurring-goal requirements. The central question is whether a method can take an already reward-optimized FactoryBot policy and, without retraining it, make executions visit a required cell recurrently while keeping the reward within a prescribed budget of the policy's own.
 
 ## Core Contribution Scope
 
-Future scientists should work on post hoc runtime guidance for finite robot-control MDPs with omega-regular or recurring-goal objectives. The contribution being tested is not a better gridworld policy learner; it is a better way to mediate between an existing policy's action preferences and formal deployment-time obligations.
+Future scientists should work on post hoc runtime guidance for finite robot-control MDPs with omega-regular or recurring-goal objectives. The contribution being tested is not a better gridworld policy learner; it is a better way to mediate between an existing policy's action preferences and deployment-time obligations, across a range of reward budgets and on both easy (Close) and hard (Far) grids.
 
 ## Approach Scope
 
-In-bounds approaches may redesign how runtime guidance scores, filters, reweights, samples, or schedules actions using the nominal action distribution, current state, execution history, and formal objective. They may introduce new progress measures, intervention schedules, online adaptation rules, objective-composition logic, or safety-handling mechanisms, as long as the method remains a runtime guide over the existing nominal policy.
-
-Methods may use model information supplied by the benchmark, such as the finite transition graph and formal objective labels, because the FactoryBot setting is explicitly a known finite MDP. They may also tune global hyperparameters on development instances, provided final scoring follows the fixed evaluation protocol.
+In-bounds approaches may redesign how runtime guidance scores, filters, reweights, samples, or schedules actions using the nominal action distribution, current state, execution history, observed rewards, the known transition graph and the Büchi cell. They may introduce new progress measures, intervention schedules, online adaptation of enforcement strength to the budget, or composition logic, as long as the method remains a runtime guide over the existing nominal policy. Global hyperparameters may be tuned on the visible suite.
 
 ## Out of Bounds
 
-- Replacing the task with end-to-end policy training on the Buchi objective.
-- Reporting a policy that ignores or discards the nominal reward-optimized policy.
-- Changing the FactoryBot reward function, grid distribution, safety rules, Buchi-region definitions, or Far/Close split for scored results.
-- Optimizing only Buchi frequency while allowing reward collapse or safety violations.
+- End-to-end policy training on the Büchi objective that replaces the nominal policy.
+- A guide that ignores or discards the nominal reward-optimized policy.
+- Changing the FactoryBot reward, grid distribution, Büchi cell, budgets, horizon, baselines, or Close/Far split for scored results (the scorers own all of these).
+- Reading or reconstructing the held-out grids or random numbers in `eval/test/`, inspecting the scorer process, or carrying information between scoring runs.
 - Switching the benchmark focus to Overcooked-AI, LunarLander, or another environment for the primary score.
-- Using evaluation rollouts to tune per-instance behavior after seeing their outcomes.

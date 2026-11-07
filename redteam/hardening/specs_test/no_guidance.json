@@ -1,0 +1,7 @@
+{
+  "name": "no_guidance",
+  "factory": "make_identity_guide",
+  "module": "baseline/factorybot_baseline.py",
+  "params": {},
+  "audit_role": "old 'no guidance' shortcut: return the nominal unchanged"
+}

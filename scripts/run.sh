@@ -1,23 +1,22 @@
 #!/bin/bash
-# Example job script submitted via the end-of-turn YAML block.
-#
-# This runs inside the compute container with:
-#   - Your workspace mounted at /home/user
-#   - GPU(s) available
-#   - No internet access
-#
-# Make sure all data, code, and dependencies are already in the
-# workspace or baked into the container before submitting.
+# Job script: reproduce the reference end to end, then run the
+# iteration-11 hardening audit (variants and shortcuts through the hidden test).
 
 set -e
 
 cd /home/user
-
-export REWARD_GAP_BUDGET="${REWARD_GAP_BUDGET:-0.4}"
-export STEPS="${STEPS:-100000}"
-export REGENERATE_SUITE=1
+export PYTHONDONTWRITEBYTECODE=1
+mkdir -p tmp
 
 bash scripts/download.sh
-bash scripts/method.sh
-bash scripts/evaluate_train.sh checkpoints/factorybot_results.jsonl
-bash scripts/evaluate_test.sh checkpoints/factorybot_results.jsonl
+python method/factorybot_method.py
+if [ ! -f tmp/.done_ref_train ]; then
+  bash scripts/evaluate_train.sh
+  cp scoring/scores_train.json scoring/scores.json
+  touch tmp/.done_ref_train
+fi
+if [ ! -f tmp/.done_ref_test ]; then
+  bash scripts/evaluate_test.sh
+  touch tmp/.done_ref_test
+fi
+bash redteam/hardening/run_hardening.sh

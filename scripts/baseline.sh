@@ -1,24 +1,16 @@
 #!/bin/bash
-# Run a baseline method from the paper.
+# Baselines.
 #
-# Baselines are simple reference methods the paper compares against. 
-# Implement this only if applicable, i.e. the paper has baselines.
-# You do not need to implement all baselines to begin — 
-# just enough to validate that the evaluation pipeline works 
-# and provide a reference point. You can decide to expand more baselines later.
-# Each baseline must be actually run and scored through evaluate.sh
-# so the numbers are verified, not self-reported.
-# You can decide what this baseline script should do yourself.
+# The two baselines -- the unshielded nominal policy ("unshielded") and the
+# naive exploration guide ("apply_naive", best global mixing weight per
+# reward budget) -- are computed by the scorers themselves on every
+# evaluation, so they can never be edited by a method. baseline/ holds the
+# same behaviours as ordinary runtime guides for development use.
 #
-# Usage:
-#   bash scripts/baseline.sh <name>
+# Usage: bash scripts/baseline.sh
 
 set -e
 
 cd /home/user
 
-STEPS="${STEPS:-20000}"
-OUTPUT="${OUTPUT:-checkpoints/factorybot_baseline_results.jsonl}"
-
-python baseline/factorybot_baseline.py --steps "$STEPS" --output "$OUTPUT"
-bash scripts/evaluate.sh "$OUTPUT"
+bash scripts/evaluate.sh

@@ -1,0 +1,7 @@
+{
+  "name": "crash_on_far",
+  "factory": "make_crash_on_far_guide",
+  "module": "redteam/hardening/guides/shortcuts.py",
+  "params": {},
+  "audit_role": "old 'filter Far' shortcut: refuse hard instances"
+}

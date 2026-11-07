@@ -1,0 +1,7 @@
+{
+  "name": "nan_output",
+  "factory": "make_nan_guide",
+  "module": "redteam/hardening/guides/shortcuts.py",
+  "params": {},
+  "audit_role": "old 'NaN reward' / 'null metrics' shortcut"
+}
