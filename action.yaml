@@ -1,6 +1,8 @@
-# The system reads this file after every turn.
-action: done
+# Once you set action to 'submit' or 'done', STOP immediately.
+# Do NOT sleep, poll, or wait for jobs. The system reads this file
+# only after your turn ends.
+action: pending
 gpus: 0
 test: false
 milestone: core_claim_plus
-notes: "Verified the refreshed 383-instance FactoryBot random-start reproduction; main/train/test scores validate and the gym is ready at core_claim_plus."
+notes: ""
