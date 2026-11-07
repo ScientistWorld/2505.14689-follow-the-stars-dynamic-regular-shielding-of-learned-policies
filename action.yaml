@@ -1,2 +1,8 @@
-action: done
-notes: "Audit complete: genuine improvement gains 0.884458 but no-guidance shortcut gains 0.105468; seed spread 0.0001698; 11 shortcut wins, one tie, one rejection. Report and reproducible runs committed; original gym files restored."
+# Once you set action to 'submit' or 'done', STOP immediately.
+# Do NOT sleep, poll, or wait for jobs. The system reads this file
+# only after your turn ends.
+action: pending
+gpus: 0
+test: false
+milestone: core_claim_plus
+notes: ""
