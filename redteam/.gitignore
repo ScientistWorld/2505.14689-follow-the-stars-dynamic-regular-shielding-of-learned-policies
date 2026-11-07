@@ -1,0 +1,6 @@
+# Rebuildable raw rollout caches and restoration copies.
+*.jsonl
+_state/
+*.log
+__pycache__/
+*.pyc
