@@ -1,5 +1,7 @@
 # Train/Test Evaluation Design Notes
 
+> **Superseded by iteration 11 (see `HARDENING.md`).** Scoring now runs submitted runtime guides inside the scorers (`eval/train/`, `eval/test/`) on scorer-owned grids, nominal policy, random numbers and baselines, with matched-reward metrics; the self-reported JSONL artifact and the metrics described below are retired.
+
 ## Checks
 
 - Reviewed `scripts/evaluate_train.sh` and `scripts/evaluate_test.sh`; train invokes `eval/train/` and writes `scoring/scores_train.json`, while test invokes `eval/test/` and writes `scoring/scores_test.json`.

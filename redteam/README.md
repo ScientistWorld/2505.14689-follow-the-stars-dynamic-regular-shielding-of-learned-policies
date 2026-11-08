@@ -27,3 +27,7 @@ The `_state/` directory and raw JSONL rollouts are ignored restoration/caching
 artifacts. `run_audit.sh` restores the original default artifact, data files,
 and scoring files when it exits. The temporary job launcher is restored at
 the end of the audit.
+
+## Iteration 11 hardening audit
+
+The scripts above target the retired self-reported JSONL interface. The audit against the hardened scorer is `redteam/hardening/run_hardening.sh` (run after `scripts/run.sh`); its results are in `redteam/hardening/out/` and summarized in `HARDENING.md`.

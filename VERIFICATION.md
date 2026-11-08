@@ -1,5 +1,7 @@
 # Verification Report
 
+> **Superseded by iteration 11 (see `HARDENING.md`).** Scoring now runs submitted runtime guides inside the scorers (`eval/train/`, `eval/test/`) on scorer-owned grids, nominal policy, random numbers and baselines, with matched-reward metrics; the self-reported JSONL artifact and the metrics described below are retired.
+
 ## Initial Assessment
 
 The workspace starts this final check at `core_claim_plus`. That milestone is justified by the completed FactoryBot runs: the implemented method contains the paper's STARs runtime distribution update and a FactoryBot Buchi strategy-template specialization, and the scored artifact shows higher Buchi frequency than the nominal and naive baselines while tracking reward loss.

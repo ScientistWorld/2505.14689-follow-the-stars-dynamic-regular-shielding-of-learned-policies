@@ -1,8 +1,6 @@
 # Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends.
-action: submit
-gpus: 0
-test: false
+action: done
 milestone: core_claim_plus
-notes: "Hardened FactoryBot gym: retune ApplySTARs (paper gamma grid, 383 visible grids, 100k steps), score reference on train/test with the new evaluator-run guide interface, then run the hardening audit (better/weaker variants, shortcuts, tamper check, seed noise). CPU, resumable."
+notes: "Hardened: scorers run each submitted runtime guide on hidden grids with their own nominal policy, random numbers and baselines; scoring is gated matched-reward liveness. Hidden-test deltas: better guide +0.450, dynamic-gamma STARs +0.025 (seed spread 0.0014); every red-team shortcut now scores below the reference, fails, or leaves scores unchanged. See HARDENING.md."

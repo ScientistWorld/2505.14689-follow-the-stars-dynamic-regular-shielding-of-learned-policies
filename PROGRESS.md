@@ -1,5 +1,7 @@
 # Progress
 
+> **Superseded by iteration 11 (see `HARDENING.md`).** Scoring now runs submitted runtime guides inside the scorers (`eval/train/`, `eval/test/`) on scorer-owned grids, nominal policy, random numbers and baselines, with matched-reward metrics; the self-reported JSONL artifact and the metrics described below are retired.
+
 ## What Works
 
 - FactoryBot-style finite grid MDP suite is generated from fixed seeds in `data/factorybot.py`.

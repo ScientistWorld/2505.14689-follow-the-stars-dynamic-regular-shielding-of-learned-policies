@@ -53,5 +53,9 @@
 - `apply_stars` reached Buchi frequency 0.11431 at reward gap 0.34310, versus `apply_naive` Buchi frequency 0.03910 at reward gap 0.36740.
 - The final main/train/test score files now all reflect the current 383-instance protocol and pass `python validate.py --compare`.
 
+### [2026-11-08] - core_claim_plus
+- Hardening iteration: scorers now run each submitted runtime guide themselves on scorer-owned grids (256 hidden test grids), nominal policy, random numbers and baselines; scored metrics are Büchi frequency at matched reward (budgets 0.1-0.4, over-budget runs count as zero), gain over naive, worst Close/Far category, and per-run liveness success.
+- Job `4e266a0c-988`: ApplySTARs (unchanged algorithm, γ tuned per budget on the visible 383-grid suite) scores matched frequency 0.072 on the hidden test vs naive 0.027 and unshielded 0.017, beating naive at every budget; a genuinely better guide scores +0.450, a dynamic-γ STARs variant +0.025 (seed spread 0.0014), and every iteration-10 shortcut now scores below the reference, fails, or leaves scores unchanged. Details in `HARDENING.md`.
+
 ## Stop Justification
 - Completed at milestone `core_claim_plus`.
