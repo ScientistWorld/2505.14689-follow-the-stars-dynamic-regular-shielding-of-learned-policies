@@ -1,0 +1,414 @@
+{
+  "baselines_test": {
+    "apply_naive": {
+      "liveness_success_rate": 0.3828125,
+      "matched_reward_buchi_frequency": 0.027165126953124986,
+      "matched_reward_gain_over_naive": 0.0,
+      "worst_category_matched_reward_buchi_frequency": 2.9667968749999994e-05
+    },
+    "unshielded": {
+      "liveness_success_rate": 0.12109375,
+      "matched_reward_buchi_frequency": 0.017106093749999995,
+      "matched_reward_gain_over_naive": -0.010059033203124991,
+      "worst_category_matched_reward_buchi_frequency": 4.6875e-07
+    }
+  },
+  "coefficients": {
+    "liveness_success_rate": 0.25,
+    "matched_reward_buchi_frequency": 1.0,
+    "matched_reward_gain_over_naive": 0.5,
+    "worst_category_matched_reward_buchi_frequency": 0.5
+  },
+  "reference_test_metrics": {
+    "liveness_success_rate": 0.4287109375,
+    "matched_reward_buchi_frequency": 0.072222783203125,
+    "matched_reward_gain_over_naive": 0.045057656250000015,
+    "worst_category_matched_reward_buchi_frequency": 0.00385939453125
+  },
+  "reference_test_raw": 0.20385904296875001,
+  "reference_train_metrics": {
+    "liveness_success_rate": 0.45887728459530025,
+    "matched_reward_buchi_frequency": 0.07408407963446476,
+    "matched_reward_gain_over_naive": 0.0481531984334204,
+    "worst_category_matched_reward_buchi_frequency": 0.004643439153439153
+  },
+  "reference_train_raw": 0.21520171957671957,
+  "seed_noise": {
+    "max_minus_min": 0.001371425781249963,
+    "reference_raw_by_rng_salt": {
+      "alt1": 0.20351777343750002,
+      "alt2": 0.20488919921874998,
+      "default": 0.20385904296875001
+    },
+    "stars_minus_naive_matched_frequency_by_salt": {
+      "alt1": 0.04501128906250002,
+      "alt2": 0.04507105468750001,
+      "default": 0.045057656250000015
+    }
+  },
+  "tamper": {
+    "delta_vs_clean_reference": 0.0,
+    "identical_to_clean": {
+      "apply_naive": true,
+      "apply_stars": true,
+      "unshielded": true
+    },
+    "methods_scored": [
+      "apply_naive",
+      "apply_stars",
+      "unshielded"
+    ],
+    "rejected_specs": [
+      {
+        "file": "apply_naive.json",
+        "name": "apply_naive",
+        "reason": "reserved or invalid method name (baselines are evaluator-owned)"
+      },
+      {
+        "file": "unshielded.json",
+        "name": "unshielded",
+        "reason": "reserved or invalid method name (baselines are evaluator-owned)"
+      }
+    ]
+  },
+  "test_paired": {
+    "apply_naive": {
+      "mean_diff": -0.07906109374999995,
+      "n": 256,
+      "paired_se": 0.006549729227208213,
+      "z": -12.070894995410264
+    },
+    "credit_tour": {
+      "mean_diff": 0.357905234375,
+      "n": 256,
+      "paired_se": 0.014024620111490478,
+      "z": 25.519781037189414
+    },
+    "low_enforcement": {
+      "mean_diff": -0.03881987792968748,
+      "n": 256,
+      "paired_se": 0.006083485423804278,
+      "z": -6.381190259417382
+    },
+    "no_guidance": {
+      "mean_diff": -0.15957933105468733,
+      "n": 256,
+      "paired_se": 0.013265810232998516,
+      "z": -12.029369352633735
+    },
+    "nominal_ignorer": {
+      "mean_diff": -0.19988726074218743,
+      "n": 256,
+      "paired_se": 0.0162032631713518,
+      "z": -12.336234907027762
+    },
+    "seed_replay": {
+      "mean_diff": 0.0,
+      "n": 256,
+      "paired_se": 0.0,
+      "z": null
+    },
+    "stars_dynamic": {
+      "mean_diff": 0.025046972656250027,
+      "n": 256,
+      "paired_se": 0.002831931667013702,
+      "z": 8.844483413211128
+    },
+    "unshielded": {
+      "mean_diff": -0.15957933105468733,
+      "n": 256,
+      "paired_se": 0.013265810232998516,
+      "z": -12.029369352633735
+    }
+  },
+  "test_rejected_specs": [
+    {
+      "file": "apply_naive.json",
+      "name": "apply_naive",
+      "reason": "reserved or invalid method name (baselines are evaluator-owned)"
+    }
+  ],
+  "test_variants": {
+    "apply_naive": {
+      "delta_vs_reference": -0.08097595703125003,
+      "metrics": {
+        "liveness_success_rate": 0.3828125,
+        "matched_reward_buchi_frequency": 0.027165126953124986,
+        "matched_reward_gain_over_naive": 0.0,
+        "worst_category_matched_reward_buchi_frequency": 2.9667968749999994e-05
+      },
+      "raw": 0.12288308593749998,
+      "reason": null,
+      "status": "ok"
+    },
+    "apply_stars": {
+      "delta_vs_reference": 0.0,
+      "metrics": {
+        "liveness_success_rate": 0.4287109375,
+        "matched_reward_buchi_frequency": 0.072222783203125,
+        "matched_reward_gain_over_naive": 0.045057656250000015,
+        "worst_category_matched_reward_buchi_frequency": 0.00385939453125
+      },
+      "raw": 0.20385904296875001,
+      "reason": null,
+      "status": "ok"
+    },
+    "crash_on_far": {
+      "delta_vs_reference": -0.21744160644531252,
+      "metrics": {
+        "liveness_success_rate": 0.0,
+        "matched_reward_buchi_frequency": 0.0,
+        "matched_reward_gain_over_naive": -0.027165126953124986,
+        "worst_category_matched_reward_buchi_frequency": 0.0
+      },
+      "raw": -0.013582563476562493,
+      "reason": "far_5_t000: guide raised RuntimeError: refusing hard (Far-like) instance",
+      "status": "failed"
+    },
+    "credit_tour": {
+      "delta_vs_reference": 0.45017623046875,
+      "metrics": {
+        "liveness_success_rate": 0.9345703125,
+        "matched_reward_buchi_frequency": 0.22651637695312501,
+        "matched_reward_gain_over_naive": 0.19935125000000004,
+        "worst_category_matched_reward_buchi_frequency": 0.18840138671874995
+      },
+      "raw": 0.6540352734375,
+      "reason": null,
+      "status": "ok"
+    },
+    "low_enforcement": {
+      "delta_vs_reference": -0.040707104492187535,
+      "metrics": {
+        "liveness_success_rate": 0.45703125,
+        "matched_reward_buchi_frequency": 0.04162281249999998,
+        "matched_reward_gain_over_naive": 0.014457685546874995,
+        "worst_category_matched_reward_buchi_frequency": 8.494140624999997e-05
+      },
+      "raw": 0.16315193847656248,
+      "reason": null,
+      "status": "ok"
+    },
+    "nan_output": {
+      "delta_vs_reference": -0.21744160644531252,
+      "metrics": {
+        "liveness_success_rate": 0.0,
+        "matched_reward_buchi_frequency": 0.0,
+        "matched_reward_gain_over_naive": -0.027165126953124986,
+        "worst_category_matched_reward_buchi_frequency": 0.0
+      },
+      "raw": -0.013582563476562493,
+      "reason": "close_6_t001: guide returned invalid probability nan for 'up'",
+      "status": "failed"
+    },
+    "no_guidance": {
+      "delta_vs_reference": -0.1615087939453125,
+      "metrics": {
+        "liveness_success_rate": 0.12109375,
+        "matched_reward_buchi_frequency": 0.017106093749999995,
+        "matched_reward_gain_over_naive": -0.010059033203124991,
+        "worst_category_matched_reward_buchi_frequency": 4.6875e-07
+      },
+      "raw": 0.0423502490234375,
+      "reason": null,
+      "status": "ok"
+    },
+    "nominal_ignorer": {
+      "delta_vs_reference": -0.20181695800781252,
+      "metrics": {
+        "liveness_success_rate": 0.015625,
+        "matched_reward_buchi_frequency": 0.007812265624999999,
+        "matched_reward_gain_over_naive": -0.019352861328124988,
+        "worst_category_matched_reward_buchi_frequency": 0.0
+      },
+      "raw": 0.0020420849609375053,
+      "reason": null,
+      "status": "ok"
+    },
+    "seed_replay": {
+      "delta_vs_reference": 0.0,
+      "metrics": {
+        "liveness_success_rate": 0.4287109375,
+        "matched_reward_buchi_frequency": 0.072222783203125,
+        "matched_reward_gain_over_naive": 0.045057656250000015,
+        "worst_category_matched_reward_buchi_frequency": 0.00385939453125
+      },
+      "raw": 0.20385904296875001,
+      "reason": null,
+      "status": "ok"
+    },
+    "stars_dynamic": {
+      "delta_vs_reference": 0.025011992187499943,
+      "metrics": {
+        "liveness_success_rate": 0.462890625,
+        "matched_reward_buchi_frequency": 0.08322415039062497,
+        "matched_reward_gain_over_naive": 0.05605902343749999,
+        "worst_category_matched_reward_buchi_frequency": 0.003789433593749999
+      },
+      "raw": 0.22887103515624996,
+      "reason": null,
+      "status": "ok"
+    },
+    "unknown_action": {
+      "delta_vs_reference": -0.21744160644531252,
+      "metrics": {
+        "liveness_success_rate": 0.0,
+        "matched_reward_buchi_frequency": 0.0,
+        "matched_reward_gain_over_naive": -0.027165126953124986,
+        "worst_category_matched_reward_buchi_frequency": 0.0
+      },
+      "raw": -0.013582563476562493,
+      "reason": "close_5_t000: guide returned unknown action 'teleport'",
+      "status": "failed"
+    },
+    "unnormalized_output": {
+      "delta_vs_reference": -0.21744160644531252,
+      "metrics": {
+        "liveness_success_rate": 0.0,
+        "matched_reward_buchi_frequency": 0.0,
+        "matched_reward_gain_over_naive": -0.027165126953124986,
+        "worst_category_matched_reward_buchi_frequency": 0.0
+      },
+      "raw": -0.013582563476562493,
+      "reason": "close_5_t000: guide probabilities sum to 2.0, expected 1",
+      "status": "failed"
+    },
+    "unshielded": {
+      "delta_vs_reference": -0.1615087939453125,
+      "metrics": {
+        "liveness_success_rate": 0.12109375,
+        "matched_reward_buchi_frequency": 0.017106093749999995,
+        "matched_reward_gain_over_naive": -0.010059033203124991,
+        "worst_category_matched_reward_buchi_frequency": 4.6875e-07
+      },
+      "raw": 0.0423502490234375,
+      "reason": null,
+      "status": "ok"
+    }
+  },
+  "test_variants_consistent_reference": true,
+  "train_paired": {
+    "apply_naive": {
+      "mean_diff": -0.08610055483028724,
+      "n": 383,
+      "paired_se": 0.005246373249146411,
+      "z": -16.411442865658834
+    },
+    "credit_tour": {
+      "mean_diff": 0.3407053916449088,
+      "n": 383,
+      "paired_se": 0.011777638978571956,
+      "z": 28.928157185390265
+    },
+    "low_enforcement": {
+      "mean_diff": -0.04618604765013054,
+      "n": 383,
+      "paired_se": 0.00492053574163435,
+      "z": -9.386385969993972
+    },
+    "seed_replay": {
+      "mean_diff": 0.03820514686684073,
+      "n": 383,
+      "paired_se": 0.003582003486448209,
+      "z": 10.665859765737872
+    },
+    "stars_dynamic": {
+      "mean_diff": 0.023299533289817206,
+      "n": 383,
+      "paired_se": 0.0021048850881646357,
+      "z": 11.069266166037284
+    },
+    "unshielded": {
+      "mean_diff": -0.18126563642297663,
+      "n": 383,
+      "paired_se": 0.011205734743971586,
+      "z": -16.176149138323407
+    }
+  },
+  "train_variants": {
+    "apply_naive": {
+      "delta_vs_reference": -0.08840749266097506,
+      "metrics": {
+        "liveness_success_rate": 0.40339425587467365,
+        "matched_reward_buchi_frequency": 0.025930881201044358,
+        "matched_reward_gain_over_naive": 0.0,
+        "worst_category_matched_reward_buchi_frequency": 2.9563492063492055e-05
+      },
+      "raw": 0.12679422691574452,
+      "reason": null,
+      "status": "ok"
+    },
+    "apply_stars": {
+      "delta_vs_reference": 0.0,
+      "metrics": {
+        "liveness_success_rate": 0.45887728459530025,
+        "matched_reward_buchi_frequency": 0.07408407963446476,
+        "matched_reward_gain_over_naive": 0.0481531984334204,
+        "worst_category_matched_reward_buchi_frequency": 0.004643439153439153
+      },
+      "raw": 0.21520171957671957,
+      "reason": null,
+      "status": "ok"
+    },
+    "credit_tour": {
+      "delta_vs_reference": 0.43293149614226295,
+      "metrics": {
+        "liveness_success_rate": 0.9360313315926894,
+        "matched_reward_buchi_frequency": 0.22169533289817228,
+        "matched_reward_gain_over_naive": 0.19576445169712792,
+        "worst_category_matched_reward_buchi_frequency": 0.1890956481481481
+      },
+      "raw": 0.6481332157189825,
+      "reason": null,
+      "status": "ok"
+    },
+    "low_enforcement": {
+      "delta_vs_reference": -0.048456537068119976,
+      "metrics": {
+        "liveness_success_rate": 0.47258485639686687,
+        "matched_reward_buchi_frequency": 0.041008785900783266,
+        "matched_reward_gain_over_naive": 0.015077904699738909,
+        "worst_category_matched_reward_buchi_frequency": 0.00010246031746031744
+      },
+      "raw": 0.1667451825085996,
+      "reason": null,
+      "status": "ok"
+    },
+    "seed_replay": {
+      "delta_vs_reference": 0.03871500136419531,
+      "metrics": {
+        "liveness_success_rate": 0.5254569190600522,
+        "matched_reward_buchi_frequency": 0.08845757180156663,
+        "matched_reward_gain_over_naive": 0.06252669060052227,
+        "worst_category_matched_reward_buchi_frequency": 0.00566314814814815
+      },
+      "raw": 0.2539167209409149,
+      "reason": null,
+      "status": "ok"
+    },
+    "stars_dynamic": {
+      "delta_vs_reference": 0.023333111332145356,
+      "metrics": {
+        "liveness_success_rate": 0.48825065274151436,
+        "matched_reward_buchi_frequency": 0.08472154046997393,
+        "matched_reward_gain_over_naive": 0.058790659268929575,
+        "worst_category_matched_reward_buchi_frequency": 0.0047105952380952386
+      },
+      "raw": 0.23853483090886493,
+      "reason": null,
+      "status": "ok"
+    },
+    "unshielded": {
+      "delta_vs_reference": -0.1835871708145109,
+      "metrics": {
+        "liveness_success_rate": 0.09399477806788512,
+        "matched_reward_buchi_frequency": 0.014054073107049597,
+        "matched_reward_gain_over_naive": -0.01187680809399476,
+        "worst_category_matched_reward_buchi_frequency": 3.703703703703704e-07
+      },
+      "raw": 0.03161454876220868,
+      "reason": null,
+      "status": "ok"
+    }
+  }
+}

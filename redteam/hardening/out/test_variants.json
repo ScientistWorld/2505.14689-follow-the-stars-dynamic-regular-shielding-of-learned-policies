@@ -1,0 +1,3966 @@
+{
+  "experiments": {
+    "_diagnostics": {
+      "categories": {
+        "close": 128,
+        "far": 128
+      },
+      "guides_dir": "tmp/hardening_specs/test",
+      "horizon": 100000,
+      "instance_count": 256,
+      "methods": {
+        "apply_naive": {
+          "mix_weight_by_budget": {
+            "0.1": 0.1,
+            "0.2": 0.2,
+            "0.3": 0.2,
+            "0.4": 0.35
+          },
+          "status": "ok",
+          "summary": {
+            "by_category_matched_reward_buchi_frequency": {
+              "close": 0.05430058593750001,
+              "far": 2.9667968749999994e-05
+            },
+            "liveness_success_rate": 0.3828125,
+            "matched_reward_buchi_frequency": 0.027165126953124986,
+            "per_budget": {
+              "0.1": {
+                "all": {
+                  "average_reward": 0.7250764453130881,
+                  "liveness_success_rate": 0.2890625,
+                  "matched_reward_buchi_frequency": 0.02193085937499999,
+                  "mean_buchi_frequency_ungated": 0.02193085937499999,
+                  "mean_reward_gap_to_nominal": 0.05996195312513728,
+                  "mean_tv_interference": 0.05463163406250658,
+                  "override_rate": 0.30366812500000034,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.02193085937499999
+                },
+                "close": {
+                  "average_reward": 0.6997276562505386,
+                  "liveness_success_rate": 0.578125,
+                  "matched_reward_buchi_frequency": 0.043859375000000006,
+                  "mean_buchi_frequency_ungated": 0.043859375000000006,
+                  "mean_reward_gap_to_nominal": 0.05991687500011673,
+                  "mean_tv_interference": 0.054400539375013025,
+                  "override_rate": 0.29614437499999996,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.043859375000000006
+                },
+                "far": {
+                  "average_reward": 0.7504252343756386,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 2.3437500000000006e-06,
+                  "mean_buchi_frequency_ungated": 2.3437500000000006e-06,
+                  "mean_reward_gap_to_nominal": 0.060007031250157904,
+                  "mean_tv_interference": 0.0548627287500002,
+                  "override_rate": 0.31119187500000006,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 2.3437500000000006e-06
+                }
+              },
+              "0.2": {
+                "all": {
+                  "average_reward": 0.6585448046879031,
+                  "liveness_success_rate": 0.3828125,
+                  "matched_reward_buchi_frequency": 0.026724921874999998,
+                  "mean_buchi_frequency_ungated": 0.026724921874999998,
+                  "mean_reward_gap_to_nominal": 0.1264935937503229,
+                  "mean_tv_interference": 0.11075922937501254,
+                  "override_rate": 0.34836277343749983,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.026724921874999998
+                },
+                "close": {
+                  "average_reward": 0.6334188281253794,
+                  "liveness_success_rate": 0.765625,
+                  "matched_reward_buchi_frequency": 0.05343710937500002,
+                  "mean_buchi_frequency_ungated": 0.05343710937500002,
+                  "mean_reward_gap_to_nominal": 0.1262257031252757,
+                  "mean_tv_interference": 0.1102898437500242,
+                  "override_rate": 0.34278789062499987,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.05343710937500002
+                },
+                "far": {
+                  "average_reward": 0.6836707812504265,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 1.2734375000000003e-05,
+                  "mean_buchi_frequency_ungated": 1.2734375000000003e-05,
+                  "mean_reward_gap_to_nominal": 0.1267614843753701,
+                  "mean_tv_interference": 0.11122861500000072,
+                  "override_rate": 0.3539376562500001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 1.2734375000000003e-05
+                }
+              },
+              "0.3": {
+                "all": {
+                  "average_reward": 0.6585448046879031,
+                  "liveness_success_rate": 0.3828125,
+                  "matched_reward_buchi_frequency": 0.026724921874999998,
+                  "mean_buchi_frequency_ungated": 0.026724921874999998,
+                  "mean_reward_gap_to_nominal": 0.1264935937503229,
+                  "mean_tv_interference": 0.11075922937501254,
+                  "override_rate": 0.34836277343749983,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.026724921874999998
+                },
+                "close": {
+                  "average_reward": 0.6334188281253794,
+                  "liveness_success_rate": 0.765625,
+                  "matched_reward_buchi_frequency": 0.05343710937500002,
+                  "mean_buchi_frequency_ungated": 0.05343710937500002,
+                  "mean_reward_gap_to_nominal": 0.1262257031252757,
+                  "mean_tv_interference": 0.1102898437500242,
+                  "override_rate": 0.34278789062499987,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.05343710937500002
+                },
+                "far": {
+                  "average_reward": 0.6836707812504265,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 1.2734375000000003e-05,
+                  "mean_buchi_frequency_ungated": 1.2734375000000003e-05,
+                  "mean_reward_gap_to_nominal": 0.1267614843753701,
+                  "mean_tv_interference": 0.11122861500000072,
+                  "override_rate": 0.3539376562500001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 1.2734375000000003e-05
+                }
+              },
+              "0.4": {
+                "all": {
+                  "average_reward": 0.5451770312499663,
+                  "liveness_success_rate": 0.4765625,
+                  "matched_reward_buchi_frequency": 0.03327980468749996,
+                  "mean_buchi_frequency_ungated": 0.03327980468749996,
+                  "mean_reward_gap_to_nominal": 0.23986136718825893,
+                  "mean_tv_interference": 0.19758704109395236,
+                  "override_rate": 0.4194366015625001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.03327980468749996
+                },
+                "close": {
+                  "average_reward": 0.5211935156249926,
+                  "liveness_success_rate": 0.953125,
+                  "matched_reward_buchi_frequency": 0.06646874999999998,
+                  "mean_buchi_frequency_ungated": 0.06646874999999998,
+                  "mean_reward_gap_to_nominal": 0.23845101562566248,
+                  "mean_tv_interference": 0.19668711562520613,
+                  "override_rate": 0.41645609375,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.06646874999999998
+                },
+                "far": {
+                  "average_reward": 0.569160546874941,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 9.085937499999997e-05,
+                  "mean_buchi_frequency_ungated": 9.085937499999997e-05,
+                  "mean_reward_gap_to_nominal": 0.24127171875085537,
+                  "mean_tv_interference": 0.1984869665626985,
+                  "override_rate": 0.42241710937499993,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 9.085937499999997e-05
+                }
+              }
+            },
+            "worst_category_matched_reward_buchi_frequency": 2.9667968749999994e-05
+          }
+        },
+        "apply_stars": {
+          "gain_over_naive_by_budget": {
+            "0.1": 0.009607031250000005,
+            "0.2": 0.03967140625000001,
+            "0.3": 0.06827703125000001,
+            "0.4": 0.06267515625000003
+          },
+          "spec": {
+            "factory": "make_guide",
+            "module": "method/stars_guide.py",
+            "name": "apply_stars",
+            "params": {
+              "gamma_by_budget": {
+                "0.1": 0.01,
+                "0.2": 0.2,
+                "0.3": 1.0,
+                "0.4": 1.0
+              },
+              "theta": 0.02
+            }
+          },
+          "status": "ok",
+          "summary": {
+            "by_category_matched_reward_buchi_frequency": {
+              "close": 0.14058617187500003,
+              "far": 0.00385939453125
+            },
+            "liveness_success_rate": 0.4287109375,
+            "matched_reward_buchi_frequency": 0.072222783203125,
+            "per_budget": {
+              "0.1": {
+                "all": {
+                  "average_reward": 0.7444263281255453,
+                  "liveness_success_rate": 0.390625,
+                  "matched_reward_buchi_frequency": 0.031537890624999995,
+                  "mean_buchi_frequency_ungated": 0.031537890624999995,
+                  "mean_reward_gap_to_nominal": 0.04061207031267978,
+                  "mean_tv_interference": 0.061518351843939806,
+                  "override_rate": 0.284514765625,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.031537890624999995
+                },
+                "close": {
+                  "average_reward": 0.7332765625005072,
+                  "liveness_success_rate": 0.78125,
+                  "matched_reward_buchi_frequency": 0.063060390625,
+                  "mean_buchi_frequency_ungated": 0.063060390625,
+                  "mean_reward_gap_to_nominal": 0.02636796875014792,
+                  "mean_tv_interference": 0.05400408403972011,
+                  "override_rate": 0.2687039843749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.063060390625
+                },
+                "far": {
+                  "average_reward": 0.7555760937505848,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 1.5390625000000003e-05,
+                  "mean_buchi_frequency_ungated": 1.5390625000000003e-05,
+                  "mean_reward_gap_to_nominal": 0.054856171875211614,
+                  "mean_tv_interference": 0.06903261964815949,
+                  "override_rate": 0.30032554687499996,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 1.5390625000000003e-05
+                }
+              },
+              "0.2": {
+                "all": {
+                  "average_reward": 0.5821249999999069,
+                  "liveness_success_rate": 0.38671875,
+                  "matched_reward_buchi_frequency": 0.06639632812500001,
+                  "mean_buchi_frequency_ungated": 0.07239976562500001,
+                  "mean_reward_gap_to_nominal": 0.20291339843831882,
+                  "mean_tv_interference": 0.20017979193190924,
+                  "override_rate": 0.3722112109374998,
+                  "reward_budget_violation_rate": 0.45703125,
+                  "within_budget_mean_buchi_frequency": 0.12228388489208636
+                },
+                "close": {
+                  "average_reward": 0.6295561718750177,
+                  "liveness_success_rate": 0.7734375,
+                  "matched_reward_buchi_frequency": 0.13180898437500002,
+                  "mean_buchi_frequency_ungated": 0.14293234375000002,
+                  "mean_reward_gap_to_nominal": 0.1300883593756373,
+                  "mean_tv_interference": 0.16599302395298102,
+                  "override_rate": 0.335970859375,
+                  "reward_budget_violation_rate": 0.2265625,
+                  "within_budget_mean_buchi_frequency": 0.170419696969697
+                },
+                "far": {
+                  "average_reward": 0.534693828124796,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 0.0009836718750000002,
+                  "mean_buchi_frequency_ungated": 0.0018671874999999995,
+                  "mean_reward_gap_to_nominal": 0.27573843750100024,
+                  "mean_tv_interference": 0.23436655991083735,
+                  "override_rate": 0.40845156250000014,
+                  "reward_budget_violation_rate": 0.6875,
+                  "within_budget_mean_buchi_frequency": 0.0031477500000000004
+                }
+              },
+              "0.3": {
+                "all": {
+                  "average_reward": 0.43353214843761956,
+                  "liveness_success_rate": 0.453125,
+                  "matched_reward_buchi_frequency": 0.09500195312500001,
+                  "mean_buchi_frequency_ungated": 0.11235996093750004,
+                  "mean_reward_gap_to_nominal": 0.3515062500006061,
+                  "mean_tv_interference": 0.3014892193583977,
+                  "override_rate": 0.4398648437500003,
+                  "reward_budget_violation_rate": 0.5,
+                  "within_budget_mean_buchi_frequency": 0.19000390625000002
+                },
+                "close": {
+                  "average_reward": 0.5535758593749288,
+                  "liveness_success_rate": 0.7734375,
+                  "matched_reward_buchi_frequency": 0.18373765625000002,
+                  "mean_buchi_frequency_ungated": 0.20800453124999999,
+                  "mean_reward_gap_to_nominal": 0.20606867187572633,
+                  "mean_tv_interference": 0.2422599418292892,
+                  "override_rate": 0.3799192187500002,
+                  "reward_budget_violation_rate": 0.2265625,
+                  "within_budget_mean_buchi_frequency": 0.237559797979798
+                },
+                "far": {
+                  "average_reward": 0.3134884375003104,
+                  "liveness_success_rate": 0.1328125,
+                  "matched_reward_buchi_frequency": 0.00626625,
+                  "mean_buchi_frequency_ungated": 0.016715390625,
+                  "mean_reward_gap_to_nominal": 0.49694382812548593,
+                  "mean_tv_interference": 0.3607184968875062,
+                  "override_rate": 0.49981046874999985,
+                  "reward_budget_violation_rate": 0.7734375,
+                  "within_budget_mean_buchi_frequency": 0.02765793103448276
+                }
+              },
+              "0.4": {
+                "all": {
+                  "average_reward": 0.43353214843761956,
+                  "liveness_success_rate": 0.484375,
+                  "matched_reward_buchi_frequency": 0.0959549609375,
+                  "mean_buchi_frequency_ungated": 0.11235996093750004,
+                  "mean_reward_gap_to_nominal": 0.3515062500006061,
+                  "mean_tv_interference": 0.3014892193583977,
+                  "override_rate": 0.4398648437500003,
+                  "reward_budget_violation_rate": 0.45703125,
+                  "within_budget_mean_buchi_frequency": 0.17672280575539567
+                },
+                "close": {
+                  "average_reward": 0.5535758593749288,
+                  "liveness_success_rate": 0.7734375,
+                  "matched_reward_buchi_frequency": 0.18373765625000002,
+                  "mean_buchi_frequency_ungated": 0.20800453124999999,
+                  "mean_reward_gap_to_nominal": 0.20606867187572633,
+                  "mean_tv_interference": 0.2422599418292892,
+                  "override_rate": 0.3799192187500002,
+                  "reward_budget_violation_rate": 0.2265625,
+                  "within_budget_mean_buchi_frequency": 0.237559797979798
+                },
+                "far": {
+                  "average_reward": 0.3134884375003104,
+                  "liveness_success_rate": 0.1953125,
+                  "matched_reward_buchi_frequency": 0.008172265625000001,
+                  "mean_buchi_frequency_ungated": 0.016715390625,
+                  "mean_reward_gap_to_nominal": 0.49694382812548593,
+                  "mean_tv_interference": 0.3607184968875062,
+                  "override_rate": 0.49981046874999985,
+                  "reward_budget_violation_rate": 0.6875,
+                  "within_budget_mean_buchi_frequency": 0.026151250000000004
+                }
+              }
+            },
+            "worst_category_matched_reward_buchi_frequency": 0.00385939453125
+          }
+        },
+        "crash_on_far": {
+          "reason": "far_5_t000: guide raised RuntimeError: refusing hard (Far-like) instance",
+          "spec": {
+            "factory": "make_crash_on_far_guide",
+            "module": "redteam/hardening/guides/shortcuts.py",
+            "name": "crash_on_far",
+            "params": {}
+          },
+          "status": "failed"
+        },
+        "credit_tour": {
+          "gain_over_naive_by_budget": {
+            "0.1": 0.0461696484375,
+            "0.2": 0.14704003906250013,
+            "0.3": 0.25256996093749995,
+            "0.4": 0.3516253515625
+          },
+          "spec": {
+            "factory": "make_guide",
+            "module": "redteam/hardening/guides/credit_tour.py",
+            "name": "credit_tour",
+            "params": {
+              "dwell_factor": 16,
+              "margin": 0.05
+            }
+          },
+          "status": "ok",
+          "summary": {
+            "by_category_matched_reward_buchi_frequency": {
+              "close": 0.2646313671875,
+              "far": 0.18840138671874995
+            },
+            "liveness_success_rate": 0.9345703125,
+            "matched_reward_buchi_frequency": 0.22651637695312501,
+            "per_budget": {
+              "0.1": {
+                "all": {
+                  "average_reward": 0.7614944921882061,
+                  "liveness_success_rate": 0.73828125,
+                  "matched_reward_buchi_frequency": 0.06810050781249999,
+                  "mean_buchi_frequency_ungated": 0.06810050781249999,
+                  "mean_reward_gap_to_nominal": 0.023543906250019887,
+                  "mean_tv_interference": 0.051703211718734876,
+                  "override_rate": 0.2745637499999998,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.06810050781249999
+                },
+                "close": {
+                  "average_reward": 0.7387062500006369,
+                  "liveness_success_rate": 0.8203125,
+                  "matched_reward_buchi_frequency": 0.10660867187500002,
+                  "mean_buchi_frequency_ungated": 0.10660867187500002,
+                  "mean_reward_gap_to_nominal": 0.020938281250018616,
+                  "mean_tv_interference": 0.07362866718747056,
+                  "override_rate": 0.26247820312500003,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.10660867187500002
+                },
+                "far": {
+                  "average_reward": 0.784282734375775,
+                  "liveness_success_rate": 0.65625,
+                  "matched_reward_buchi_frequency": 0.029592343750000007,
+                  "mean_buchi_frequency_ungated": 0.029592343750000007,
+                  "mean_reward_gap_to_nominal": 0.026149531250021184,
+                  "mean_tv_interference": 0.02977775624999921,
+                  "override_rate": 0.2866492968750001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.029592343750000007
+                }
+              },
+              "0.2": {
+                "all": {
+                  "average_reward": 0.6673274609380768,
+                  "liveness_success_rate": 1.0,
+                  "matched_reward_buchi_frequency": 0.17376496093750013,
+                  "mean_buchi_frequency_ungated": 0.17376496093750013,
+                  "mean_reward_gap_to_nominal": 0.11771093750014888,
+                  "mean_tv_interference": 0.15879183437499086,
+                  "override_rate": 0.3415878906250001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.17376496093750013
+                },
+                "close": {
+                  "average_reward": 0.6504184375005277,
+                  "liveness_success_rate": 1.0,
+                  "matched_reward_buchi_frequency": 0.2120547656250001,
+                  "mean_buchi_frequency_ungated": 0.2120547656250001,
+                  "mean_reward_gap_to_nominal": 0.10922609375012739,
+                  "mean_tv_interference": 0.17903579140623238,
+                  "override_rate": 0.33160585937500003,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.2120547656250001
+                },
+                "far": {
+                  "average_reward": 0.6842364843756259,
+                  "liveness_success_rate": 1.0,
+                  "matched_reward_buchi_frequency": 0.13547515624999992,
+                  "mean_buchi_frequency_ungated": 0.13547515624999992,
+                  "mean_reward_gap_to_nominal": 0.1261957812501706,
+                  "mean_tv_interference": 0.1385478773437495,
+                  "override_rate": 0.35156992187500014,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.13547515624999992
+                }
+              },
+              "0.3": {
+                "all": {
+                  "average_reward": 0.5731891796876118,
+                  "liveness_success_rate": 1.0,
+                  "matched_reward_buchi_frequency": 0.2792948828124999,
+                  "mean_buchi_frequency_ungated": 0.2792948828124999,
+                  "mean_reward_gap_to_nominal": 0.21184921875061394,
+                  "mean_tv_interference": 0.2657495234374788,
+                  "override_rate": 0.40852476562499995,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.2792948828124999
+                },
+                "close": {
+                  "average_reward": 0.5621451562500958,
+                  "liveness_success_rate": 1.0,
+                  "matched_reward_buchi_frequency": 0.31730703125,
+                  "mean_buchi_frequency_ungated": 0.31730703125,
+                  "mean_reward_gap_to_nominal": 0.19749937500055936,
+                  "mean_tv_interference": 0.28426791406247026,
+                  "override_rate": 0.40058234374999996,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.31730703125
+                },
+                "far": {
+                  "average_reward": 0.5842332031251276,
+                  "liveness_success_rate": 1.0,
+                  "matched_reward_buchi_frequency": 0.24128273437500003,
+                  "mean_buchi_frequency_ungated": 0.24128273437500003,
+                  "mean_reward_gap_to_nominal": 0.2261990625006687,
+                  "mean_tv_interference": 0.2472311328124872,
+                  "override_rate": 0.4164671874999999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.24128273437500003
+                }
+              },
+              "0.4": {
+                "all": {
+                  "average_reward": 0.47898074218702835,
+                  "liveness_success_rate": 1.0,
+                  "matched_reward_buchi_frequency": 0.38490515625,
+                  "mean_buchi_frequency_ungated": 0.38490515625,
+                  "mean_reward_gap_to_nominal": 0.30605765625119746,
+                  "mean_tv_interference": 0.3727572839843772,
+                  "override_rate": 0.47556621093749996,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.38490515625
+                },
+                "close": {
+                  "average_reward": 0.4738484374995508,
+                  "liveness_success_rate": 1.0,
+                  "matched_reward_buchi_frequency": 0.422555,
+                  "mean_buchi_frequency_ungated": 0.422555,
+                  "mean_reward_gap_to_nominal": 0.2857960937511042,
+                  "mean_tv_interference": 0.3894646953125169,
+                  "override_rate": 0.469578359375,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.422555
+                },
+                "far": {
+                  "average_reward": 0.48411304687450585,
+                  "liveness_success_rate": 1.0,
+                  "matched_reward_buchi_frequency": 0.34725531249999986,
+                  "mean_buchi_frequency_ungated": 0.34725531249999986,
+                  "mean_reward_gap_to_nominal": 0.3263192187512906,
+                  "mean_tv_interference": 0.35604987265623717,
+                  "override_rate": 0.48155406250000005,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.34725531249999986
+                }
+              }
+            },
+            "worst_category_matched_reward_buchi_frequency": 0.18840138671874995
+          }
+        },
+        "low_enforcement": {
+          "gain_over_naive_by_budget": {
+            "0.1": 0.018562148437500012,
+            "0.2": 0.015274492187499978,
+            "0.3": 0.015274492187499978,
+            "0.4": 0.008719609375000013
+          },
+          "spec": {
+            "factory": "make_guide",
+            "module": "method/stars_guide.py",
+            "name": "low_enforcement",
+            "params": {
+              "gamma_by_budget": {
+                "0.1": 0.03,
+                "0.2": 0.03,
+                "0.3": 0.03,
+                "0.4": 0.03
+              },
+              "theta": 0.02
+            }
+          },
+          "status": "ok",
+          "summary": {
+            "by_category_matched_reward_buchi_frequency": {
+              "close": 0.08316068359375003,
+              "far": 8.494140624999997e-05
+            },
+            "liveness_success_rate": 0.45703125,
+            "matched_reward_buchi_frequency": 0.04162281249999998,
+            "per_budget": {
+              "0.1": {
+                "all": {
+                  "average_reward": 0.7036342578128806,
+                  "liveness_success_rate": 0.38671875,
+                  "matched_reward_buchi_frequency": 0.0404930078125,
+                  "mean_buchi_frequency_ungated": 0.041999414062499976,
+                  "mean_reward_gap_to_nominal": 0.0814041406253457,
+                  "mean_tv_interference": 0.09787482309341415,
+                  "override_rate": 0.30843738281250016,
+                  "reward_budget_violation_rate": 0.45703125,
+                  "within_budget_mean_buchi_frequency": 0.07457705035971224
+                },
+                "close": {
+                  "average_reward": 0.7045851562503853,
+                  "liveness_success_rate": 0.7734375,
+                  "matched_reward_buchi_frequency": 0.08092585937500002,
+                  "mean_buchi_frequency_ungated": 0.08390562500000003,
+                  "mean_reward_gap_to_nominal": 0.05505937500026996,
+                  "mean_tv_interference": 0.08421619515547181,
+                  "override_rate": 0.2881700781250002,
+                  "reward_budget_violation_rate": 0.2265625,
+                  "within_budget_mean_buchi_frequency": 0.10463141414141416
+                },
+                "far": {
+                  "average_reward": 0.7026833593753748,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 6.015624999999999e-05,
+                  "mean_buchi_frequency_ungated": 9.320312499999997e-05,
+                  "mean_reward_gap_to_nominal": 0.10774890625042143,
+                  "mean_tv_interference": 0.11153345103135665,
+                  "override_rate": 0.32870468750000004,
+                  "reward_budget_violation_rate": 0.6875,
+                  "within_budget_mean_buchi_frequency": 0.00019249999999999996
+                }
+              },
+              "0.2": {
+                "all": {
+                  "average_reward": 0.7036342578128806,
+                  "liveness_success_rate": 0.48046875,
+                  "matched_reward_buchi_frequency": 0.041999414062499976,
+                  "mean_buchi_frequency_ungated": 0.041999414062499976,
+                  "mean_reward_gap_to_nominal": 0.0814041406253457,
+                  "mean_tv_interference": 0.09787482309341415,
+                  "override_rate": 0.30843738281250016,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.041999414062499976
+                },
+                "close": {
+                  "average_reward": 0.7045851562503853,
+                  "liveness_success_rate": 0.9609375,
+                  "matched_reward_buchi_frequency": 0.08390562500000003,
+                  "mean_buchi_frequency_ungated": 0.08390562500000003,
+                  "mean_reward_gap_to_nominal": 0.05505937500026996,
+                  "mean_tv_interference": 0.08421619515547181,
+                  "override_rate": 0.2881700781250002,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.08390562500000003
+                },
+                "far": {
+                  "average_reward": 0.7026833593753748,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 9.320312499999997e-05,
+                  "mean_buchi_frequency_ungated": 9.320312499999997e-05,
+                  "mean_reward_gap_to_nominal": 0.10774890625042143,
+                  "mean_tv_interference": 0.11153345103135665,
+                  "override_rate": 0.32870468750000004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 9.320312499999997e-05
+                }
+              },
+              "0.3": {
+                "all": {
+                  "average_reward": 0.7036342578128806,
+                  "liveness_success_rate": 0.48046875,
+                  "matched_reward_buchi_frequency": 0.041999414062499976,
+                  "mean_buchi_frequency_ungated": 0.041999414062499976,
+                  "mean_reward_gap_to_nominal": 0.0814041406253457,
+                  "mean_tv_interference": 0.09787482309341415,
+                  "override_rate": 0.30843738281250016,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.041999414062499976
+                },
+                "close": {
+                  "average_reward": 0.7045851562503853,
+                  "liveness_success_rate": 0.9609375,
+                  "matched_reward_buchi_frequency": 0.08390562500000003,
+                  "mean_buchi_frequency_ungated": 0.08390562500000003,
+                  "mean_reward_gap_to_nominal": 0.05505937500026996,
+                  "mean_tv_interference": 0.08421619515547181,
+                  "override_rate": 0.2881700781250002,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.08390562500000003
+                },
+                "far": {
+                  "average_reward": 0.7026833593753748,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 9.320312499999997e-05,
+                  "mean_buchi_frequency_ungated": 9.320312499999997e-05,
+                  "mean_reward_gap_to_nominal": 0.10774890625042143,
+                  "mean_tv_interference": 0.11153345103135665,
+                  "override_rate": 0.32870468750000004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 9.320312499999997e-05
+                }
+              },
+              "0.4": {
+                "all": {
+                  "average_reward": 0.7036342578128806,
+                  "liveness_success_rate": 0.48046875,
+                  "matched_reward_buchi_frequency": 0.041999414062499976,
+                  "mean_buchi_frequency_ungated": 0.041999414062499976,
+                  "mean_reward_gap_to_nominal": 0.0814041406253457,
+                  "mean_tv_interference": 0.09787482309341415,
+                  "override_rate": 0.30843738281250016,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.041999414062499976
+                },
+                "close": {
+                  "average_reward": 0.7045851562503853,
+                  "liveness_success_rate": 0.9609375,
+                  "matched_reward_buchi_frequency": 0.08390562500000003,
+                  "mean_buchi_frequency_ungated": 0.08390562500000003,
+                  "mean_reward_gap_to_nominal": 0.05505937500026996,
+                  "mean_tv_interference": 0.08421619515547181,
+                  "override_rate": 0.2881700781250002,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.08390562500000003
+                },
+                "far": {
+                  "average_reward": 0.7026833593753748,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 9.320312499999997e-05,
+                  "mean_buchi_frequency_ungated": 9.320312499999997e-05,
+                  "mean_reward_gap_to_nominal": 0.10774890625042143,
+                  "mean_tv_interference": 0.11153345103135665,
+                  "override_rate": 0.32870468750000004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 9.320312499999997e-05
+                }
+              }
+            },
+            "worst_category_matched_reward_buchi_frequency": 8.494140624999997e-05
+          }
+        },
+        "nan_output": {
+          "reason": "close_6_t001: guide returned invalid probability nan for 'up'",
+          "spec": {
+            "factory": "make_nan_guide",
+            "module": "redteam/hardening/guides/shortcuts.py",
+            "name": "nan_output",
+            "params": {}
+          },
+          "status": "failed"
+        },
+        "no_guidance": {
+          "gain_over_naive_by_budget": {
+            "0.1": -0.004824765624999994,
+            "0.2": -0.009618828125000003,
+            "0.3": -0.009618828125000003,
+            "0.4": -0.016173710937499967
+          },
+          "spec": {
+            "factory": "make_identity_guide",
+            "module": "baseline/factorybot_baseline.py",
+            "name": "no_guidance",
+            "params": {}
+          },
+          "status": "ok",
+          "summary": {
+            "by_category_matched_reward_buchi_frequency": {
+              "close": 0.03421171875000001,
+              "far": 4.6875e-07
+            },
+            "liveness_success_rate": 0.12109375,
+            "matched_reward_buchi_frequency": 0.017106093749999995,
+            "per_budget": {
+              "0.1": {
+                "all": {
+                  "average_reward": 0.7850383984382259,
+                  "liveness_success_rate": 0.12109375,
+                  "matched_reward_buchi_frequency": 0.017106093749999995,
+                  "mean_buchi_frequency_ungated": 0.017106093749999995,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.26100664062500006,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.017106093749999995
+                },
+                "close": {
+                  "average_reward": 0.7596445312506552,
+                  "liveness_success_rate": 0.2421875,
+                  "matched_reward_buchi_frequency": 0.03421171875000001,
+                  "mean_buchi_frequency_ungated": 0.03421171875000001,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.25154085937500004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.03421171875000001
+                },
+                "far": {
+                  "average_reward": 0.8104322656257965,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 4.6875e-07,
+                  "mean_buchi_frequency_ungated": 4.6875e-07,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.2704724218749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 4.6875e-07
+                }
+              },
+              "0.2": {
+                "all": {
+                  "average_reward": 0.7850383984382259,
+                  "liveness_success_rate": 0.12109375,
+                  "matched_reward_buchi_frequency": 0.017106093749999995,
+                  "mean_buchi_frequency_ungated": 0.017106093749999995,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.26100664062500006,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.017106093749999995
+                },
+                "close": {
+                  "average_reward": 0.7596445312506552,
+                  "liveness_success_rate": 0.2421875,
+                  "matched_reward_buchi_frequency": 0.03421171875000001,
+                  "mean_buchi_frequency_ungated": 0.03421171875000001,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.25154085937500004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.03421171875000001
+                },
+                "far": {
+                  "average_reward": 0.8104322656257965,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 4.6875e-07,
+                  "mean_buchi_frequency_ungated": 4.6875e-07,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.2704724218749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 4.6875e-07
+                }
+              },
+              "0.3": {
+                "all": {
+                  "average_reward": 0.7850383984382259,
+                  "liveness_success_rate": 0.12109375,
+                  "matched_reward_buchi_frequency": 0.017106093749999995,
+                  "mean_buchi_frequency_ungated": 0.017106093749999995,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.26100664062500006,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.017106093749999995
+                },
+                "close": {
+                  "average_reward": 0.7596445312506552,
+                  "liveness_success_rate": 0.2421875,
+                  "matched_reward_buchi_frequency": 0.03421171875000001,
+                  "mean_buchi_frequency_ungated": 0.03421171875000001,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.25154085937500004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.03421171875000001
+                },
+                "far": {
+                  "average_reward": 0.8104322656257965,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 4.6875e-07,
+                  "mean_buchi_frequency_ungated": 4.6875e-07,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.2704724218749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 4.6875e-07
+                }
+              },
+              "0.4": {
+                "all": {
+                  "average_reward": 0.7850383984382259,
+                  "liveness_success_rate": 0.12109375,
+                  "matched_reward_buchi_frequency": 0.017106093749999995,
+                  "mean_buchi_frequency_ungated": 0.017106093749999995,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.26100664062500006,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.017106093749999995
+                },
+                "close": {
+                  "average_reward": 0.7596445312506552,
+                  "liveness_success_rate": 0.2421875,
+                  "matched_reward_buchi_frequency": 0.03421171875000001,
+                  "mean_buchi_frequency_ungated": 0.03421171875000001,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.25154085937500004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.03421171875000001
+                },
+                "far": {
+                  "average_reward": 0.8104322656257965,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 4.6875e-07,
+                  "mean_buchi_frequency_ungated": 4.6875e-07,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.2704724218749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 4.6875e-07
+                }
+              }
+            },
+            "worst_category_matched_reward_buchi_frequency": 4.6875e-07
+          }
+        },
+        "nominal_ignorer": {
+          "gain_over_naive_by_budget": {
+            "0.1": -0.014118593749999991,
+            "0.2": -0.01891265625,
+            "0.3": -0.01891265625,
+            "0.4": -0.025467539062499964
+          },
+          "spec": {
+            "factory": "make_nominal_ignorer_guide",
+            "module": "redteam/hardening/guides/shortcuts.py",
+            "name": "nominal_ignorer",
+            "params": {}
+          },
+          "status": "ok",
+          "summary": {
+            "by_category_matched_reward_buchi_frequency": {
+              "close": 0.015624531249999999,
+              "far": 0.0
+            },
+            "liveness_success_rate": 0.015625,
+            "matched_reward_buchi_frequency": 0.007812265624999999,
+            "per_budget": {
+              "0.1": {
+                "all": {
+                  "average_reward": 0.0036732421875018397,
+                  "liveness_success_rate": 0.015625,
+                  "matched_reward_buchi_frequency": 0.007812265624999999,
+                  "mean_buchi_frequency_ungated": 0.8398015234374987,
+                  "mean_reward_gap_to_nominal": 0.7813651562507241,
+                  "mean_tv_interference": 0.8540455781256175,
+                  "override_rate": 0.8144360937499995,
+                  "reward_budget_violation_rate": 0.984375,
+                  "within_budget_mean_buchi_frequency": 0.49998499999999996
+                },
+                "close": {
+                  "average_reward": 0.017346171874996093,
+                  "liveness_success_rate": 0.03125,
+                  "matched_reward_buchi_frequency": 0.015624531249999999,
+                  "mean_buchi_frequency_ungated": 0.8202706249999994,
+                  "mean_reward_gap_to_nominal": 0.7422983593756592,
+                  "mean_tv_interference": 0.839973225000621,
+                  "override_rate": 0.8124701562499997,
+                  "reward_budget_violation_rate": 0.96875,
+                  "within_budget_mean_buchi_frequency": 0.49998499999999996
+                },
+                "far": {
+                  "average_reward": -0.009999687499992374,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 0.0,
+                  "mean_buchi_frequency_ungated": 0.8593324218749996,
+                  "mean_reward_gap_to_nominal": 0.8204319531257889,
+                  "mean_tv_interference": 0.8681179312506184,
+                  "override_rate": 0.8164020312499995,
+                  "reward_budget_violation_rate": 1.0,
+                  "within_budget_mean_buchi_frequency": 0.0
+                }
+              },
+              "0.2": {
+                "all": {
+                  "average_reward": 0.0036732421875018397,
+                  "liveness_success_rate": 0.015625,
+                  "matched_reward_buchi_frequency": 0.007812265624999999,
+                  "mean_buchi_frequency_ungated": 0.8398015234374987,
+                  "mean_reward_gap_to_nominal": 0.7813651562507241,
+                  "mean_tv_interference": 0.8540455781256175,
+                  "override_rate": 0.8144360937499995,
+                  "reward_budget_violation_rate": 0.984375,
+                  "within_budget_mean_buchi_frequency": 0.49998499999999996
+                },
+                "close": {
+                  "average_reward": 0.017346171874996093,
+                  "liveness_success_rate": 0.03125,
+                  "matched_reward_buchi_frequency": 0.015624531249999999,
+                  "mean_buchi_frequency_ungated": 0.8202706249999994,
+                  "mean_reward_gap_to_nominal": 0.7422983593756592,
+                  "mean_tv_interference": 0.839973225000621,
+                  "override_rate": 0.8124701562499997,
+                  "reward_budget_violation_rate": 0.96875,
+                  "within_budget_mean_buchi_frequency": 0.49998499999999996
+                },
+                "far": {
+                  "average_reward": -0.009999687499992374,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 0.0,
+                  "mean_buchi_frequency_ungated": 0.8593324218749996,
+                  "mean_reward_gap_to_nominal": 0.8204319531257889,
+                  "mean_tv_interference": 0.8681179312506184,
+                  "override_rate": 0.8164020312499995,
+                  "reward_budget_violation_rate": 1.0,
+                  "within_budget_mean_buchi_frequency": 0.0
+                }
+              },
+              "0.3": {
+                "all": {
+                  "average_reward": 0.0036732421875018397,
+                  "liveness_success_rate": 0.015625,
+                  "matched_reward_buchi_frequency": 0.007812265624999999,
+                  "mean_buchi_frequency_ungated": 0.8398015234374987,
+                  "mean_reward_gap_to_nominal": 0.7813651562507241,
+                  "mean_tv_interference": 0.8540455781256175,
+                  "override_rate": 0.8144360937499995,
+                  "reward_budget_violation_rate": 0.984375,
+                  "within_budget_mean_buchi_frequency": 0.49998499999999996
+                },
+                "close": {
+                  "average_reward": 0.017346171874996093,
+                  "liveness_success_rate": 0.03125,
+                  "matched_reward_buchi_frequency": 0.015624531249999999,
+                  "mean_buchi_frequency_ungated": 0.8202706249999994,
+                  "mean_reward_gap_to_nominal": 0.7422983593756592,
+                  "mean_tv_interference": 0.839973225000621,
+                  "override_rate": 0.8124701562499997,
+                  "reward_budget_violation_rate": 0.96875,
+                  "within_budget_mean_buchi_frequency": 0.49998499999999996
+                },
+                "far": {
+                  "average_reward": -0.009999687499992374,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 0.0,
+                  "mean_buchi_frequency_ungated": 0.8593324218749996,
+                  "mean_reward_gap_to_nominal": 0.8204319531257889,
+                  "mean_tv_interference": 0.8681179312506184,
+                  "override_rate": 0.8164020312499995,
+                  "reward_budget_violation_rate": 1.0,
+                  "within_budget_mean_buchi_frequency": 0.0
+                }
+              },
+              "0.4": {
+                "all": {
+                  "average_reward": 0.0036732421875018397,
+                  "liveness_success_rate": 0.015625,
+                  "matched_reward_buchi_frequency": 0.007812265624999999,
+                  "mean_buchi_frequency_ungated": 0.8398015234374987,
+                  "mean_reward_gap_to_nominal": 0.7813651562507241,
+                  "mean_tv_interference": 0.8540455781256175,
+                  "override_rate": 0.8144360937499995,
+                  "reward_budget_violation_rate": 0.984375,
+                  "within_budget_mean_buchi_frequency": 0.49998499999999996
+                },
+                "close": {
+                  "average_reward": 0.017346171874996093,
+                  "liveness_success_rate": 0.03125,
+                  "matched_reward_buchi_frequency": 0.015624531249999999,
+                  "mean_buchi_frequency_ungated": 0.8202706249999994,
+                  "mean_reward_gap_to_nominal": 0.7422983593756592,
+                  "mean_tv_interference": 0.839973225000621,
+                  "override_rate": 0.8124701562499997,
+                  "reward_budget_violation_rate": 0.96875,
+                  "within_budget_mean_buchi_frequency": 0.49998499999999996
+                },
+                "far": {
+                  "average_reward": -0.009999687499992374,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 0.0,
+                  "mean_buchi_frequency_ungated": 0.8593324218749996,
+                  "mean_reward_gap_to_nominal": 0.8204319531257889,
+                  "mean_tv_interference": 0.8681179312506184,
+                  "override_rate": 0.8164020312499995,
+                  "reward_budget_violation_rate": 1.0,
+                  "within_budget_mean_buchi_frequency": 0.0
+                }
+              }
+            },
+            "worst_category_matched_reward_buchi_frequency": 0.0
+          }
+        },
+        "seed_replay": {
+          "gain_over_naive_by_budget": {
+            "0.1": 0.009607031250000005,
+            "0.2": 0.03967140625000001,
+            "0.3": 0.06827703125000001,
+            "0.4": 0.06267515625000003
+          },
+          "spec": {
+            "factory": "make_seed_replay_guide",
+            "module": "redteam/hardening/guides/shortcuts.py",
+            "name": "seed_replay",
+            "params": {
+              "fallback_gamma_by_budget": {
+                "0.1": 0.01,
+                "0.2": 0.2,
+                "0.3": 1.0,
+                "0.4": 1.0
+              },
+              "per_instance": {
+                "000e256cb16bd2d7": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "0075c9e87a7a6178": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "01daa22958a711c5": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "01ebfd2b6474e48a": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "033aa086ea3e63c1": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.5
+                },
+                "03fbc6621c9922b6": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "04abe68a17ca43b0": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "04d7d5d6c593dace": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "050531b903883ef4": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "066377fe5911c4f4": {
+                  "0.1": 0.001,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "06bfa66346708e46": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "071e3a9690a1836b": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "073add033cf60167": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "09806b821705f481": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "09b51f9dc1bf18d0": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "0b11c951da1b6a9b": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "0caef60d2dcadad2": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "0f33cf6d4e785c31": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "0f8b479707a6c135": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "11e5d211999b7060": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "13cca1ed737b1b73": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "1472ffbe5b3757f8": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "14cedf456c327640": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "15101ebdaa11e9f3": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "1518a37204189d8a": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "16e44afc8756d832": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "184033fb9e3355b7": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "1aa99a275d158d95": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "1ab5d14addd6e2b0": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "1ac2abbc2adcc233": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "1be6f22aef84bbf5": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "1c23a182bc37d1d9": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "1c5306eaa28ad39f": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "1d253110b94fa3b0": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "1dea359443a3e0f1": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "1e8fac1aa5ac8162": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "1eeb0b5269801788": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "1f65bd99469f0197": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "1f774edb3f7e1020": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "1f97f8521f5d1e61": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "1fde1e4e3dc76f8b": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "203a38c76d42f1dd": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "207447f1bce2f7b2": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "2139523143ffb071": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "222501c00ad4671a": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "2300e53faaffc762": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "23222bf10a7824b6": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "237801392a826c2e": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "25a85c52d4ec8a41": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "25be901024c8e950": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "25f91c4d48bdbf48": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "263062e6cf23853f": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "26324bd48112498d": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "27fa9025a72d9bc6": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "29312027fd50db6a": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "2943ba155b35e278": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "2b627b9414a91bd7": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "2c755a2d81fa17fc": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "2dbd181958590c49": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "2ec2fc461100b9e8": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "2fdb4087f1f49bad": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "302eace674043c43": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "30d1c1a7490db96b": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "30d3c9acfdc512da": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "33e07e6f3936a74a": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "341ae189dba7e27e": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "3496254631ff6f57": {
+                  "0.1": 0.001,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "34f4d5a58bf2aeec": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "3509db373f26eb97": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "35cacbda7115f06a": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "36147174610e8725": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "36ab2fd13782683e": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "36e503b7912f57e7": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "37cdf36ee4c2a4b6": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "38c9945068f23c77": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "38fd39d8c696726d": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "3a257f37ecca2194": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "3bcc953ee62a0e96": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "3bf4d30d2912aab5": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "3c329909f951a31f": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "3cc0cb676842e405": {
+                  "0.1": 0.2,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "3ccadc81d33da2c8": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "3df033ddd6cdb368": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "3e861d20d93a0698": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "3ea0067703ac439b": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "3ef8f75afb41dae6": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "3f3b0bb5f542a156": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "40b0cc6358b286a7": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "40e7454aaa69fe6e": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "40ff66420bbf6798": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "4140a479eabfdf89": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "42894f40a8b585bb": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "438e20eac932c6d9": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "454b6727ef4e43b0": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "4550d7c4a1391b86": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "46203f1073d9e4b6": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "46530f4bbf49887e": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "4693d8a3c5132229": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "4694a3150a9d02fc": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "46f1d7337e351100": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "473445574f20c7c6": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "47c49154c1f6cae4": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "48243e6cb9a4d29d": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "49f550d13d83d6f3": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "4b04cc9072a74543": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "4b87bb9d12ee6297": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "4beabceb913ab957": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "4e549ec6802deb02": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "4ef9fcea173286e1": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "4f094eed8daaf2b8": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "501611b8576d62b0": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "50187b28bfd60ad0": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "51355d0bd8e82569": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "51c3c44ead78a59f": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "521883d6c68522bf": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "527fa077832dee1c": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "532de97a2128234e": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "536cd19942cf14cd": {
+                  "0.1": 0.01,
+                  "0.2": 0.01,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "538d29bf079c784a": {
+                  "0.1": 0.001,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "540361741fd99115": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "54b63d77f753355a": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "54f93833b4a8e097": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "56b36ed629298de2": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "5725bb8fdae315a3": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "590e3557fc21c2c4": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "5cd80279673f59df": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "5cecb79e16442dff": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "5fd44bd901c5dd14": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "5fe15e94d75b221f": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "604c7fa24c8afa5b": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "60a0568e9f39879a": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "6112734976c0651f": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "614bc2b544e590f6": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "61cd1b505b99ced3": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "63eb7477d94f5458": {
+                  "0.1": 0.2,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "643b8f789663ad83": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "6538416d175a0bff": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "6544bf24bd575153": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "65d092c9858fff98": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "65d15d58afaa13b2": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "6678f6ee492ea6fe": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "66b4a4d808d9787a": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "69f660f5f18e36ce": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "6aea69d15fc28973": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "6b27b0c2a2d5ea5c": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "6c34d01c8afe1a69": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "6c72261c97c8a633": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "6cc9cca95f43b747": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "6d3e4fdda37bec91": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "6dee472d5317079d": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "6e1bef6a9ee5f127": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "6f7bbc48fa545ef7": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "6f8ce97efd0ea565": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "700cb34136acfaf0": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "703bc1ff5bf8b247": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "709d74a4e48a9af4": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "7142bb6004516f51": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "723e1177f8cb371b": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "724e10449c02b26f": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "72d510ca195f54c9": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "738a4bd3503e098c": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "749d428e2c6a74b6": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "76d8db6744a2cb6a": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "7712692442aff5e5": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "77c17b9d22260ff2": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "7a39eb3a7ad66a3c": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "7adf5946b7370fca": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "7b9924d146cbcf6e": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "7ca5de0ad8b0977a": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "7d08f4b8de4bb7b4": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "7d72a75d2897107f": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "7db0aa729bd28a93": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "7e2f272269566089": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "7eae396bcbec0916": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "7f1b7adffbf58b6f": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "7f338643b880f8ab": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "800aa2f80a91af95": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "803d7ad29d803236": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "80ba1a89a40ad9f9": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "8122ab84f669dcc8": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "816e9c5601a83aa6": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "8224640f24b72ce3": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "8297fed7660a01eb": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "82bbf4aa78f03de2": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "82f27c3a8d6696c1": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "8308669916f261d2": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "84d40f74cda6626a": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "86217d26c2f47c75": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "86ce92f101a76359": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "86f760355309c84a": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "86f9651fda015fe1": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "87240ac06760f3ab": {
+                  "0.1": 0.001,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "88427b4f5742b009": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "886d32bfa72faf20": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "88ffb9353c6b0ea2": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "8ac0be55c3df3efc": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "8b2eac3887eb4408": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "8bc1dfae5f2a5a16": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "8c87c074c28e252e": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "8d0041b499db5382": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "8de9641806919cfc": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "8e28e170964b3413": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "8f40989cead70bcb": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "8f650d451692044f": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "901051692efde256": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "90328f3c5fae4331": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "907723cb212253d9": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "91c0e82136e60a0b": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "94df2cae9d4d0a18": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "9616fb7137e884bc": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "963d0a1aa52c053e": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "970e7010e7a032bb": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "98f6a16607d2bb73": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "98fbd755d5580a9c": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "992e1d21ef76a1dc": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "99a30d903b3f1bd7": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "99cc467adb400d53": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "99d8a3436bbeb5cd": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "9a5417339525f59b": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "9ae77b32ed4ddf9b": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "9b0567ddd651cc32": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "9c1356222cb03f3a": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "9c2810000064cb88": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "9c8383422922055f": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.5
+                },
+                "9d1133c07ec7a352": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "9e4607c9464b3e39": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "9e9984df45005f04": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "9ef67f777bcb2619": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "9fb0a5bf0425085b": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "a04275ceffd90507": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "a0e0cf8e80e542db": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "a10fdf7e2254f35c": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "a19ea719bf64b556": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "a25126d93c796624": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "a2519c281fe3041d": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "a25315bda55cb37c": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "a2c0a1f074c913e6": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "a2cf36f4fa4c11eb": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "a47f16d0dade66c0": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "a5d046184fef3e9e": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "a5ea9f2de97d3714": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "a667f6d6a3a5e981": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "a92754b6a351b40f": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "a97ce04e03f15920": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "a991182e0250c4e2": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "aad2fbf1fc724a95": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "ab057cc046575efc": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "ab3c75913c9167c6": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "ac8ab6d689d0b919": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "acf32a0e96f9c814": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "ae3f17fb0b110a01": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "ae561bd869bab2f3": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "ae8da7720a1daee2": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "ae97baff492286bd": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "aec090eaceed96cd": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "af641ba9b4b58850": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "af8dc003413cac59": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b09317f56d49a7e1": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "b1881ae834efc3d3": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "b2bb66d5635b5d61": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b2ce05a40435eebd": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b2ece17154831c4a": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b30516f9a43b63f6": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b406a79ed9922aa1": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "b48bce6e6d92a690": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b49c6734c7ba7c44": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b4bc33628fdd2567": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b56aa143eb06e14f": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b5bfd8e146dd130e": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b5c9599021d34d3b": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "b71fd82ec5e2a8ea": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "b730cb45ffaf7fd6": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "b8767d84f843ac12": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "b8a766fb68d0461d": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "b8cf9fe8a9350af6": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "bbb2d0898993f4b0": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "bdbbda6e2e986960": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "bf8b50d041b5e04f": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "bf90bc17bc3b6266": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "c00edd2c8f5b8815": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "c0922f0ba372650c": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "c11272d11a6caa6a": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "c2f6432469143af6": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "c357597ee63715a1": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "c3b67facf6677fe9": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "c44aa60f43b7551f": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "c53731cc52d480b9": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "c6538ae626c0af5b": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "c77d6ac14e45e4c5": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "c82d53a8b974bff9": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "c8765b4bc9febbd6": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "c9307efb36708624": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "cc71eaeacea2b585": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "cc8097eed3ce4bb2": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "cde665cfce53dba7": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "ce3045523b5114a8": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "cf96c433ea65b5c3": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d01b0c70dc619458": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d03248ce476f8fac": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "d1920552ce08e253": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "d20980c19cd87d45": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "d2b809f9dc89468e": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d3a0ab4004c0109e": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "d4b5aae05394f8ba": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "d4d09aed73beed0e": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d4e72e014c11565f": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d4efda0e4326c5b9": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d54ce429fd70c89c": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d5696f095f5108cd": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d6f3a1aeadc864ce": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d7383af0ca59fb21": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d73f9266f41a0375": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "d7443d9df72f6635": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d8ca9ddc3f0f2c22": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "d96d95fa3a17c170": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "d99be105d1a0cb05": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "da7569994c9dc56d": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.5
+                },
+                "da875f2bda59e665": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "dc1a3a3b4b6b837a": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "ddb845d4a0438e1c": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "de37944264176102": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "deacd5bf0e659cf0": {
+                  "0.1": 0.2,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "dedd8ba76e9330e1": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "defe6332eb93a275": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "dfb9e8f4a3503c45": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "e06f30a1d6a6b305": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "e08f33a96aa16d3e": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "e18f042a8f96768f": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "e1bcc6244f16bfd4": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "e23dc579896b5d42": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "e2c064910dadd768": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "e41305ec08fe3d6a": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "e478e4058be5d7e3": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "e52b4c2a9c13de41": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "e603a42b5e704cbc": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "e670d31768447eef": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "e6c49ea1c1cf04b5": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "e70cc98fa187adf6": {
+                  "0.1": 0.01,
+                  "0.2": 0.01,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "e7f76b76a963b042": {
+                  "0.1": 0.5,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "e93a0bc48b80782b": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.001
+                },
+                "e9d24556b9ee37d0": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "ea5a98a5232b8492": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "ea88931fe9f110aa": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "eadc4c3783daaec7": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "eb39818f09f63385": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "ec9a60b44366435a": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "eda5f2f86ad614b4": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "ee83f2ffd4aa0d5f": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "ef1d50d7db05a745": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.2
+                },
+                "ef5f818d8ff6498a": {
+                  "0.1": 0.01,
+                  "0.2": 0.1,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "f10122948dd2f66e": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f10516aa6dbc8c2d": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f176c15730ed01a9": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f19592470a758958": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f1f370fa3c902dea": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f20de837d49c745f": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "f2196ba51fcb0fbb": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "f2b965501c61c120": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f2ba9fe6f4d24ac4": {
+                  "0.1": 0.2,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f398f28bec7659bc": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "f4090ee056fd7ee4": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f48faa0b822de0b3": {
+                  "0.1": 0.2,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f4921f47654d4b4c": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "f588e63a897bfa07": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f5ecb8ea19eb49c3": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f67bdd485b1a6f61": {
+                  "0.1": 0.01,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f6ef3bb23aeafe36": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "f740fd3872986e90": {
+                  "0.1": 0.1,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f7707823d6427346": {
+                  "0.1": 0.2,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f7800e19fc9cf47d": {
+                  "0.1": 0.1,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f79a0a2cea237fea": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "f8370451471ac6f1": {
+                  "0.1": 0.001,
+                  "0.2": 0.2,
+                  "0.3": 0.5,
+                  "0.4": 1.0
+                },
+                "f88b3bc4019f9be9": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "f9a1efc63b641c06": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "fa5ca0da386cf4d1": {
+                  "0.1": 0.2,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "fac17ba4c7fc7641": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "fb41077439f93567": {
+                  "0.1": 0.001,
+                  "0.2": 0.001,
+                  "0.3": 0.001,
+                  "0.4": 0.2
+                },
+                "fb78d877d8cac74e": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.2,
+                  "0.4": 0.5
+                },
+                "fbd726c9c3aa3637": {
+                  "0.1": 1.0,
+                  "0.2": 1.0,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "fe3e7b81828a6def": {
+                  "0.1": 0.001,
+                  "0.2": 0.5,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                },
+                "fe597a9fd0940bb1": {
+                  "0.1": 0.001,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "fe8161fbdda7b957": {
+                  "0.1": 0.01,
+                  "0.2": 0.05,
+                  "0.3": 0.1,
+                  "0.4": 0.2
+                },
+                "ffc4669427c24371": {
+                  "0.1": 0.05,
+                  "0.2": 0.2,
+                  "0.3": 1.0,
+                  "0.4": 1.0
+                }
+              },
+              "theta": 0.02
+            }
+          },
+          "status": "ok",
+          "summary": {
+            "by_category_matched_reward_buchi_frequency": {
+              "close": 0.14058617187500003,
+              "far": 0.00385939453125
+            },
+            "liveness_success_rate": 0.4287109375,
+            "matched_reward_buchi_frequency": 0.072222783203125,
+            "per_budget": {
+              "0.1": {
+                "all": {
+                  "average_reward": 0.7444263281255453,
+                  "liveness_success_rate": 0.390625,
+                  "matched_reward_buchi_frequency": 0.031537890624999995,
+                  "mean_buchi_frequency_ungated": 0.031537890624999995,
+                  "mean_reward_gap_to_nominal": 0.04061207031267978,
+                  "mean_tv_interference": 0.061518351843939806,
+                  "override_rate": 0.284514765625,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.031537890624999995
+                },
+                "close": {
+                  "average_reward": 0.7332765625005072,
+                  "liveness_success_rate": 0.78125,
+                  "matched_reward_buchi_frequency": 0.063060390625,
+                  "mean_buchi_frequency_ungated": 0.063060390625,
+                  "mean_reward_gap_to_nominal": 0.02636796875014792,
+                  "mean_tv_interference": 0.05400408403972011,
+                  "override_rate": 0.2687039843749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.063060390625
+                },
+                "far": {
+                  "average_reward": 0.7555760937505848,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 1.5390625000000003e-05,
+                  "mean_buchi_frequency_ungated": 1.5390625000000003e-05,
+                  "mean_reward_gap_to_nominal": 0.054856171875211614,
+                  "mean_tv_interference": 0.06903261964815949,
+                  "override_rate": 0.30032554687499996,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 1.5390625000000003e-05
+                }
+              },
+              "0.2": {
+                "all": {
+                  "average_reward": 0.5821249999999069,
+                  "liveness_success_rate": 0.38671875,
+                  "matched_reward_buchi_frequency": 0.06639632812500001,
+                  "mean_buchi_frequency_ungated": 0.07239976562500001,
+                  "mean_reward_gap_to_nominal": 0.20291339843831882,
+                  "mean_tv_interference": 0.20017979193190924,
+                  "override_rate": 0.3722112109374998,
+                  "reward_budget_violation_rate": 0.45703125,
+                  "within_budget_mean_buchi_frequency": 0.12228388489208636
+                },
+                "close": {
+                  "average_reward": 0.6295561718750177,
+                  "liveness_success_rate": 0.7734375,
+                  "matched_reward_buchi_frequency": 0.13180898437500002,
+                  "mean_buchi_frequency_ungated": 0.14293234375000002,
+                  "mean_reward_gap_to_nominal": 0.1300883593756373,
+                  "mean_tv_interference": 0.16599302395298102,
+                  "override_rate": 0.335970859375,
+                  "reward_budget_violation_rate": 0.2265625,
+                  "within_budget_mean_buchi_frequency": 0.170419696969697
+                },
+                "far": {
+                  "average_reward": 0.534693828124796,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 0.0009836718750000002,
+                  "mean_buchi_frequency_ungated": 0.0018671874999999995,
+                  "mean_reward_gap_to_nominal": 0.27573843750100024,
+                  "mean_tv_interference": 0.23436655991083735,
+                  "override_rate": 0.40845156250000014,
+                  "reward_budget_violation_rate": 0.6875,
+                  "within_budget_mean_buchi_frequency": 0.0031477500000000004
+                }
+              },
+              "0.3": {
+                "all": {
+                  "average_reward": 0.43353214843761956,
+                  "liveness_success_rate": 0.453125,
+                  "matched_reward_buchi_frequency": 0.09500195312500001,
+                  "mean_buchi_frequency_ungated": 0.11235996093750004,
+                  "mean_reward_gap_to_nominal": 0.3515062500006061,
+                  "mean_tv_interference": 0.3014892193583977,
+                  "override_rate": 0.4398648437500003,
+                  "reward_budget_violation_rate": 0.5,
+                  "within_budget_mean_buchi_frequency": 0.19000390625000002
+                },
+                "close": {
+                  "average_reward": 0.5535758593749288,
+                  "liveness_success_rate": 0.7734375,
+                  "matched_reward_buchi_frequency": 0.18373765625000002,
+                  "mean_buchi_frequency_ungated": 0.20800453124999999,
+                  "mean_reward_gap_to_nominal": 0.20606867187572633,
+                  "mean_tv_interference": 0.2422599418292892,
+                  "override_rate": 0.3799192187500002,
+                  "reward_budget_violation_rate": 0.2265625,
+                  "within_budget_mean_buchi_frequency": 0.237559797979798
+                },
+                "far": {
+                  "average_reward": 0.3134884375003104,
+                  "liveness_success_rate": 0.1328125,
+                  "matched_reward_buchi_frequency": 0.00626625,
+                  "mean_buchi_frequency_ungated": 0.016715390625,
+                  "mean_reward_gap_to_nominal": 0.49694382812548593,
+                  "mean_tv_interference": 0.3607184968875062,
+                  "override_rate": 0.49981046874999985,
+                  "reward_budget_violation_rate": 0.7734375,
+                  "within_budget_mean_buchi_frequency": 0.02765793103448276
+                }
+              },
+              "0.4": {
+                "all": {
+                  "average_reward": 0.43353214843761956,
+                  "liveness_success_rate": 0.484375,
+                  "matched_reward_buchi_frequency": 0.0959549609375,
+                  "mean_buchi_frequency_ungated": 0.11235996093750004,
+                  "mean_reward_gap_to_nominal": 0.3515062500006061,
+                  "mean_tv_interference": 0.3014892193583977,
+                  "override_rate": 0.4398648437500003,
+                  "reward_budget_violation_rate": 0.45703125,
+                  "within_budget_mean_buchi_frequency": 0.17672280575539567
+                },
+                "close": {
+                  "average_reward": 0.5535758593749288,
+                  "liveness_success_rate": 0.7734375,
+                  "matched_reward_buchi_frequency": 0.18373765625000002,
+                  "mean_buchi_frequency_ungated": 0.20800453124999999,
+                  "mean_reward_gap_to_nominal": 0.20606867187572633,
+                  "mean_tv_interference": 0.2422599418292892,
+                  "override_rate": 0.3799192187500002,
+                  "reward_budget_violation_rate": 0.2265625,
+                  "within_budget_mean_buchi_frequency": 0.237559797979798
+                },
+                "far": {
+                  "average_reward": 0.3134884375003104,
+                  "liveness_success_rate": 0.1953125,
+                  "matched_reward_buchi_frequency": 0.008172265625000001,
+                  "mean_buchi_frequency_ungated": 0.016715390625,
+                  "mean_reward_gap_to_nominal": 0.49694382812548593,
+                  "mean_tv_interference": 0.3607184968875062,
+                  "override_rate": 0.49981046874999985,
+                  "reward_budget_violation_rate": 0.6875,
+                  "within_budget_mean_buchi_frequency": 0.026151250000000004
+                }
+              }
+            },
+            "worst_category_matched_reward_buchi_frequency": 0.00385939453125
+          }
+        },
+        "stars_dynamic": {
+          "gain_over_naive_by_budget": {
+            "0.1": 0.036036406250000014,
+            "0.2": 0.05121351562500001,
+            "0.3": 0.06873769531249999,
+            "0.4": 0.06824847656249997
+          },
+          "spec": {
+            "factory": "make_guide",
+            "module": "redteam/hardening/guides/stars_dynamic.py",
+            "name": "stars_dynamic",
+            "params": {
+              "gamma_high": 1.0,
+              "safety": 0.8,
+              "theta": 0.02
+            }
+          },
+          "status": "ok",
+          "summary": {
+            "by_category_matched_reward_buchi_frequency": {
+              "close": 0.1626588671875,
+              "far": 0.003789433593749999
+            },
+            "liveness_success_rate": 0.462890625,
+            "matched_reward_buchi_frequency": 0.08322415039062497,
+            "per_budget": {
+              "0.1": {
+                "all": {
+                  "average_reward": 0.7168013671880793,
+                  "liveness_success_rate": 0.38671875,
+                  "matched_reward_buchi_frequency": 0.057967265625,
+                  "mean_buchi_frequency_ungated": 0.057967265625,
+                  "mean_reward_gap_to_nominal": 0.06823703125014624,
+                  "mean_tv_interference": 0.13376001231865925,
+                  "override_rate": 0.30477554687500014,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.057967265625
+                },
+                "close": {
+                  "average_reward": 0.703083203125492,
+                  "liveness_success_rate": 0.7734375,
+                  "matched_reward_buchi_frequency": 0.11582375000000003,
+                  "mean_buchi_frequency_ungated": 0.11582375000000003,
+                  "mean_reward_gap_to_nominal": 0.05656132812516319,
+                  "mean_tv_interference": 0.13402924334538674,
+                  "override_rate": 0.2920867187499999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.11582375000000003
+                },
+                "far": {
+                  "average_reward": 0.7305195312506672,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 0.00011078125000000001,
+                  "mean_buchi_frequency_ungated": 0.00011078125000000001,
+                  "mean_reward_gap_to_nominal": 0.07991273437512933,
+                  "mean_tv_interference": 0.13349078129193168,
+                  "override_rate": 0.317464375,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.00011078125000000001
+                }
+              },
+              "0.2": {
+                "all": {
+                  "average_reward": 0.6495133593753909,
+                  "liveness_success_rate": 0.38671875,
+                  "matched_reward_buchi_frequency": 0.07793843750000001,
+                  "mean_buchi_frequency_ungated": 0.07793843750000001,
+                  "mean_reward_gap_to_nominal": 0.13552503906283483,
+                  "mean_tv_interference": 0.194341504130865,
+                  "override_rate": 0.3481686328125003,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.07793843750000001
+                },
+                "close": {
+                  "average_reward": 0.6485063281252831,
+                  "liveness_success_rate": 0.7734375,
+                  "matched_reward_buchi_frequency": 0.15429148437499998,
+                  "mean_buchi_frequency_ungated": 0.15429148437499998,
+                  "mean_reward_gap_to_nominal": 0.11113820312537234,
+                  "mean_tv_interference": 0.18377327179717953,
+                  "override_rate": 0.3317185937500001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.15429148437499998
+                },
+                "far": {
+                  "average_reward": 0.6505203906254989,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 0.001585390625,
+                  "mean_buchi_frequency_ungated": 0.001585390625,
+                  "mean_reward_gap_to_nominal": 0.1599118750002975,
+                  "mean_tv_interference": 0.20490973646455052,
+                  "override_rate": 0.3646186718750002,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.001585390625
+                }
+              },
+              "0.3": {
+                "all": {
+                  "average_reward": 0.5866387500000041,
+                  "liveness_success_rate": 0.5,
+                  "matched_reward_buchi_frequency": 0.09546261718749999,
+                  "mean_buchi_frequency_ungated": 0.09546261718749999,
+                  "mean_reward_gap_to_nominal": 0.19839964843822197,
+                  "mean_tv_interference": 0.24558127484445774,
+                  "override_rate": 0.3858495703124999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.09546261718749999
+                },
+                "close": {
+                  "average_reward": 0.6016787499999702,
+                  "liveness_success_rate": 0.90625,
+                  "matched_reward_buchi_frequency": 0.18560328124999997,
+                  "mean_buchi_frequency_ungated": 0.18560328124999997,
+                  "mean_reward_gap_to_nominal": 0.1579657812506851,
+                  "mean_tv_interference": 0.22372001972620795,
+                  "override_rate": 0.3643149999999999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.18560328124999997
+                },
+                "far": {
+                  "average_reward": 0.5715987500000377,
+                  "liveness_success_rate": 0.09375,
+                  "matched_reward_buchi_frequency": 0.005321953124999998,
+                  "mean_buchi_frequency_ungated": 0.005321953124999998,
+                  "mean_reward_gap_to_nominal": 0.23883351562575872,
+                  "mean_tv_interference": 0.2674425299627079,
+                  "override_rate": 0.4073841406250001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.005321953124999998
+                }
+              },
+              "0.4": {
+                "all": {
+                  "average_reward": 0.5434511718747169,
+                  "liveness_success_rate": 0.578125,
+                  "matched_reward_buchi_frequency": 0.10152828124999994,
+                  "mean_buchi_frequency_ungated": 0.10152828124999994,
+                  "mean_reward_gap_to_nominal": 0.24158722656350845,
+                  "mean_tv_interference": 0.26452334104824876,
+                  "override_rate": 0.4015039453125001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.10152828124999994
+                },
+                "close": {
+                  "average_reward": 0.5828046093748454,
+                  "liveness_success_rate": 0.9609375,
+                  "matched_reward_buchi_frequency": 0.19491695312499996,
+                  "mean_buchi_frequency_ungated": 0.19491695312499996,
+                  "mean_reward_gap_to_nominal": 0.17683992187580988,
+                  "mean_tv_interference": 0.23165823678086683,
+                  "override_rate": 0.3703014062500001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.19491695312499996
+                },
+                "far": {
+                  "average_reward": 0.5040977343745893,
+                  "liveness_success_rate": 0.1953125,
+                  "matched_reward_buchi_frequency": 0.008139609374999997,
+                  "mean_buchi_frequency_ungated": 0.008139609374999997,
+                  "mean_reward_gap_to_nominal": 0.306334531251207,
+                  "mean_tv_interference": 0.29738844531563075,
+                  "override_rate": 0.4327064843750001,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.008139609374999997
+                }
+              }
+            },
+            "worst_category_matched_reward_buchi_frequency": 0.003789433593749999
+          }
+        },
+        "unknown_action": {
+          "reason": "close_5_t000: guide returned unknown action 'teleport'",
+          "spec": {
+            "factory": "make_unknown_action_guide",
+            "module": "redteam/hardening/guides/shortcuts.py",
+            "name": "unknown_action",
+            "params": {}
+          },
+          "status": "failed"
+        },
+        "unnormalized_output": {
+          "reason": "close_5_t000: guide probabilities sum to 2.0, expected 1",
+          "spec": {
+            "factory": "make_unnormalized_guide",
+            "module": "redteam/hardening/guides/shortcuts.py",
+            "name": "unnormalized_output",
+            "params": {}
+          },
+          "status": "failed"
+        },
+        "unshielded": {
+          "status": "ok",
+          "summary": {
+            "by_category_matched_reward_buchi_frequency": {
+              "close": 0.03421171875000001,
+              "far": 4.6875e-07
+            },
+            "liveness_success_rate": 0.12109375,
+            "matched_reward_buchi_frequency": 0.017106093749999995,
+            "per_budget": {
+              "0.1": {
+                "all": {
+                  "average_reward": 0.7850383984382259,
+                  "liveness_success_rate": 0.12109375,
+                  "matched_reward_buchi_frequency": 0.017106093749999995,
+                  "mean_buchi_frequency_ungated": 0.017106093749999995,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.26100664062500006,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.017106093749999995
+                },
+                "close": {
+                  "average_reward": 0.7596445312506552,
+                  "liveness_success_rate": 0.2421875,
+                  "matched_reward_buchi_frequency": 0.03421171875000001,
+                  "mean_buchi_frequency_ungated": 0.03421171875000001,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.25154085937500004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.03421171875000001
+                },
+                "far": {
+                  "average_reward": 0.8104322656257965,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 4.6875e-07,
+                  "mean_buchi_frequency_ungated": 4.6875e-07,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.2704724218749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 4.6875e-07
+                }
+              },
+              "0.2": {
+                "all": {
+                  "average_reward": 0.7850383984382259,
+                  "liveness_success_rate": 0.12109375,
+                  "matched_reward_buchi_frequency": 0.017106093749999995,
+                  "mean_buchi_frequency_ungated": 0.017106093749999995,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.26100664062500006,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.017106093749999995
+                },
+                "close": {
+                  "average_reward": 0.7596445312506552,
+                  "liveness_success_rate": 0.2421875,
+                  "matched_reward_buchi_frequency": 0.03421171875000001,
+                  "mean_buchi_frequency_ungated": 0.03421171875000001,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.25154085937500004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.03421171875000001
+                },
+                "far": {
+                  "average_reward": 0.8104322656257965,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 4.6875e-07,
+                  "mean_buchi_frequency_ungated": 4.6875e-07,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.2704724218749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 4.6875e-07
+                }
+              },
+              "0.3": {
+                "all": {
+                  "average_reward": 0.7850383984382259,
+                  "liveness_success_rate": 0.12109375,
+                  "matched_reward_buchi_frequency": 0.017106093749999995,
+                  "mean_buchi_frequency_ungated": 0.017106093749999995,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.26100664062500006,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.017106093749999995
+                },
+                "close": {
+                  "average_reward": 0.7596445312506552,
+                  "liveness_success_rate": 0.2421875,
+                  "matched_reward_buchi_frequency": 0.03421171875000001,
+                  "mean_buchi_frequency_ungated": 0.03421171875000001,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.25154085937500004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.03421171875000001
+                },
+                "far": {
+                  "average_reward": 0.8104322656257965,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 4.6875e-07,
+                  "mean_buchi_frequency_ungated": 4.6875e-07,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.2704724218749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 4.6875e-07
+                }
+              },
+              "0.4": {
+                "all": {
+                  "average_reward": 0.7850383984382259,
+                  "liveness_success_rate": 0.12109375,
+                  "matched_reward_buchi_frequency": 0.017106093749999995,
+                  "mean_buchi_frequency_ungated": 0.017106093749999995,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.26100664062500006,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.017106093749999995
+                },
+                "close": {
+                  "average_reward": 0.7596445312506552,
+                  "liveness_success_rate": 0.2421875,
+                  "matched_reward_buchi_frequency": 0.03421171875000001,
+                  "mean_buchi_frequency_ungated": 0.03421171875000001,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.25154085937500004,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 0.03421171875000001
+                },
+                "far": {
+                  "average_reward": 0.8104322656257965,
+                  "liveness_success_rate": 0.0,
+                  "matched_reward_buchi_frequency": 4.6875e-07,
+                  "mean_buchi_frequency_ungated": 4.6875e-07,
+                  "mean_reward_gap_to_nominal": 0.0,
+                  "mean_tv_interference": 0.0,
+                  "override_rate": 0.2704724218749999,
+                  "reward_budget_violation_rate": 0.0,
+                  "within_budget_mean_buchi_frequency": 4.6875e-07
+                }
+              }
+            },
+            "worst_category_matched_reward_buchi_frequency": 4.6875e-07
+          }
+        }
+      },
+      "nominal_epsilon": 0.04,
+      "rejected_specs": [
+        {
+          "file": "apply_naive.json",
+          "name": "apply_naive",
+          "reason": "reserved or invalid method name (baselines are evaluator-owned)"
+        }
+      ],
+      "reward_budgets": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "rng_salt": "",
+      "scored_metrics": [
+        "matched_reward_buchi_frequency",
+        "matched_reward_gain_over_naive",
+        "worst_category_matched_reward_buchi_frequency",
+        "liveness_success_rate"
+      ],
+      "slice": "test"
+    },
+    "factorybot_buchi_reward_tradeoff": {
+      "results": {
+        "apply_naive": {
+          "liveness_success_rate": 0.3828125,
+          "matched_reward_buchi_frequency": 0.027165126953124986,
+          "matched_reward_gain_over_naive": 0.0,
+          "worst_category_matched_reward_buchi_frequency": 2.9667968749999994e-05
+        },
+        "apply_stars": {
+          "liveness_success_rate": 0.4287109375,
+          "matched_reward_buchi_frequency": 0.072222783203125,
+          "matched_reward_gain_over_naive": 0.045057656250000015,
+          "worst_category_matched_reward_buchi_frequency": 0.00385939453125
+        },
+        "crash_on_far": {
+          "liveness_success_rate": 0.0,
+          "matched_reward_buchi_frequency": 0.0,
+          "matched_reward_gain_over_naive": -0.027165126953124986,
+          "worst_category_matched_reward_buchi_frequency": 0.0
+        },
+        "credit_tour": {
+          "liveness_success_rate": 0.9345703125,
+          "matched_reward_buchi_frequency": 0.22651637695312501,
+          "matched_reward_gain_over_naive": 0.19935125000000004,
+          "worst_category_matched_reward_buchi_frequency": 0.18840138671874995
+        },
+        "low_enforcement": {
+          "liveness_success_rate": 0.45703125,
+          "matched_reward_buchi_frequency": 0.04162281249999998,
+          "matched_reward_gain_over_naive": 0.014457685546874995,
+          "worst_category_matched_reward_buchi_frequency": 8.494140624999997e-05
+        },
+        "nan_output": {
+          "liveness_success_rate": 0.0,
+          "matched_reward_buchi_frequency": 0.0,
+          "matched_reward_gain_over_naive": -0.027165126953124986,
+          "worst_category_matched_reward_buchi_frequency": 0.0
+        },
+        "no_guidance": {
+          "liveness_success_rate": 0.12109375,
+          "matched_reward_buchi_frequency": 0.017106093749999995,
+          "matched_reward_gain_over_naive": -0.010059033203124991,
+          "worst_category_matched_reward_buchi_frequency": 4.6875e-07
+        },
+        "nominal_ignorer": {
+          "liveness_success_rate": 0.015625,
+          "matched_reward_buchi_frequency": 0.007812265624999999,
+          "matched_reward_gain_over_naive": -0.019352861328124988,
+          "worst_category_matched_reward_buchi_frequency": 0.0
+        },
+        "seed_replay": {
+          "liveness_success_rate": 0.4287109375,
+          "matched_reward_buchi_frequency": 0.072222783203125,
+          "matched_reward_gain_over_naive": 0.045057656250000015,
+          "worst_category_matched_reward_buchi_frequency": 0.00385939453125
+        },
+        "stars_dynamic": {
+          "liveness_success_rate": 0.462890625,
+          "matched_reward_buchi_frequency": 0.08322415039062497,
+          "matched_reward_gain_over_naive": 0.05605902343749999,
+          "worst_category_matched_reward_buchi_frequency": 0.003789433593749999
+        },
+        "unknown_action": {
+          "liveness_success_rate": 0.0,
+          "matched_reward_buchi_frequency": 0.0,
+          "matched_reward_gain_over_naive": -0.027165126953124986,
+          "worst_category_matched_reward_buchi_frequency": 0.0
+        },
+        "unnormalized_output": {
+          "liveness_success_rate": 0.0,
+          "matched_reward_buchi_frequency": 0.0,
+          "matched_reward_gain_over_naive": -0.027165126953124986,
+          "worst_category_matched_reward_buchi_frequency": 0.0
+        },
+        "unshielded": {
+          "liveness_success_rate": 0.12109375,
+          "matched_reward_buchi_frequency": 0.017106093749999995,
+          "matched_reward_gain_over_naive": -0.010059033203124991,
+          "worst_category_matched_reward_buchi_frequency": 4.6875e-07
+        }
+      }
+    }
+  }
+}
